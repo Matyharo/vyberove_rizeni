@@ -1,8 +1,12 @@
+# Aktuální stav protokolu
+
+Klasifikace dokončena v sedmi kolech; atributový audit dosud nezměřen. Čas klasifikace nebyl měřen. Markdown export je volitelný doplněk, bez nového požadavku na nativní export. Následující průběžné záznamy včetně tehdejších čekajících kroků jsou historie, nikoli současný seznam úkolů.
+
 # Protokol práce s AI
 
-Toto je shrnutí postupu, **nikoli originální transcript**. Veřejné zprávy jsou mechanicky exportované v conversation-snapshot.md; finální nativní export se doplní po skončení práce.
+Toto je shrnutí postupu, **nikoli originální transcript**. Veřejné zprávy jsou mechanicky exportované v conversation-snapshot.md; uživatelem dodaný Markdown export je doplňkový podklad. Nativní export není podmínkou zadání.
 
-## Skutečné pokyny a rozdělení práce
+## Historie: skutečné pokyny a rozdělení práce
 
 Uživatel poskytl e-mail se zadáním, zvolil A („Můžeme A.“) a zadal „Tak pokračuj.“. Poté zvolil společnou ruční kontrolu v chatu. Pracoval jeden Codex asistent. Subagenti nebyli použiti; pokyny imaginárním agentům nedoplňujeme zpětně.
 
@@ -79,3 +83,7 @@ Uživatel předal Markdown export konverzace v příloze. AI ověřila začátek
 ## Databázové ověření na pokyn uživatele — 22. 10. 2026
 
 Doplněno pět testů nad novým SQLite exportem se skutečnými lidskými štítky: shoda s publikovaným SQL obsahem a JSON vstupy, opakovatelnost, peněžní význam a odmítání čtyř neplatných zápisů. Doplněn samostatný read-only audit sedmi invariantů a jeho spuštění v CI. Lokálně všech 22 testů a audit prošly. Limity SQL schématu a nutnost zapnutí FK na každém spojení jsou výslovně popsané v reports/DATABASE_TESTING.md.
+
+## Finální opravy - 22. 10. 2026
+
+Uživatel poskytl podrobné nové zadání finálních oprav. Pracoval jeden asistent bez subagentů. Odděleny původní a aktuální predikce AI od lidské reference, definována publikace shodou AI a člověka, odstraněn nejednoznačný příznak human_verified a doplněna odvozená klasifikační a atributová ověření. Připraven předem pevný audit 18 tvrzení bez vyplnění lidských rozhodnutí. AI otevřela oficiální a institucionální zdroje pro devět chybějících kapitálových údajů; nové pomocné částky nejsou současným AUM. Rozsah hledání je v reports/CAPITAL_RESEARCH.md. Odstraněna povinná kontrola exportu konverzace. Výsledky skutečných lokálních kontrol a omezení CI jsou v reports/FINAL_CHECKS.md. Nebyl proveden push ani změna vzdáleného repozitáře.

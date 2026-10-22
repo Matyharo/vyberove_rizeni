@@ -1,0 +1,24 @@
+{
+  "prepared_on": "2026-10-22",
+  "selection_rule": "Předem pevný záměrný stratifikovaný výběr 18 pozitivních tvrzení napříč všemi 11 investory: 4 sektory, 4 fáze, 5 ticketů a 5 kapitálových údajů. Povinně zahrnuje oba rozporné tickety Purple, historický ticket Tensor, oba částečné mandáty Reflex, historický kapitál Credo, obě nesrovnatelné částky i&i Bio a obě současná self-reported AUM. Zbývající místa pokrývají další investory a typy atributů. Seznam ID je zmrazen v data/claim_audit_sample.json; nemění se podle výsledků kontroly. Výběr není náhodný a zvýrazňuje rizikové výroky.",
+  "claim_ids": [
+    "credo.sectors.1",
+    "depo.sectors.1",
+    "inibio.sectors.1",
+    "reflex.sectors.1",
+    "inven.stage.1",
+    "tilia.stage.1",
+    "jt.stage.1",
+    "reflex.stage.1",
+    "kaya.ticket.1",
+    "nation1.ticket.1",
+    "tensor.ticket.1",
+    "purple.ticket.1",
+    "purple.ticket.2",
+    "credo.capital_reference.1",
+    "inibio.capital_reference.1",
+    "inibio.capital_reference.2",
+    "kaya.total_investment_capital.1",
+    "nation1.total_investment_capital.1"
+  ]
+}

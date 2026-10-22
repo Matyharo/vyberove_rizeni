@@ -26,8 +26,7 @@ def claim(iid, field, value, sid, note="", status="supported", scope="organizati
 
 
 def investor(iid, name, website, sid, office, sectors, stage, geography, ticket, note=""):
-    investors.append(dict(id=iid, name=name, website=website, entity_level="investment_organization",
-                          human_verified=False))
+    investors.append(dict(id=iid, name=name, website=website, entity_level="investment_organization"))
     claim(iid, "name", name, sid)
     claim(iid, "website", website, sid)
     claim(iid, "investor_type", "venture_capital", sid,
@@ -251,7 +250,7 @@ for inv in investors:
     iid = inv["id"]
     sids = list(dict.fromkeys([c["source_id"] for c in claims if c["investor_id"] == iid] +
                              [t["source_id"] for t in transactions if t["investor_id"] == iid]))
-    reason = "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu."
+    reason = "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv."
     if iid == "purple":
         reason += " Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor."
     decision(iid, "include", reason, sids)

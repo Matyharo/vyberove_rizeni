@@ -1,8 +1,14 @@
 # Výsledek měření
 
-Ruční přesnost: **100.0%**.
+Precision původních pozitivních klasifikací: **10/10 na záměrně vybraném vzorku** (100.0%).
 
-Zkontrolováno člověkem: 20/20 kandidátů. Precision TP/(TP+FP): 10/10.
+Zkontrolováno člověkem: 20/20 kandidátů. Precision TP/(TP+FP).
+
+Recall v kontrolovaném seznamu: 10/11 (90.9%). Původní abstence u Purple s lidským include snižuje recall; opravená AI predikce nepřepisuje původní měření.
+
+Výsledek precision neznamená 100% správnost celé databáze ani odhad přesnosti na světovém trhu. Správnost atributů se měří odděleně; úplnost měří dostupnost údajů, nikoli jejich pravdivost.
+
+Audit pozitivních faktických tvrzení: 0 lidských kontrol; přesnost nezměřena. Podklady: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).
 
 Bez lidské kontroly neuvádíme procento přesnosti. Automatická validace kontroluje strukturu, nikoli pravdivost.
 

@@ -1,12 +1,12 @@
-﻿id,name,website,entity_level,human_verified
-credo,Credo Ventures,https://www.credoventures.com/,investment_organization,False
-depo,DEPO Ventures,https://depoventures.com/,investment_organization,False
-inibio,i&i Biotech Fund,https://www.inibio.eu/,investment_organization,False
-inven,INVEN Capital,https://www.invencapital.cz/,investment_organization,False
-kaya,KAYA VC,https://www.kaya.vc/,investment_organization,False
-nation1,Nation 1 / N1,https://n1.rocks/,investment_organization,False
-tensor,Tensor Ventures,https://tensor.ventures/,investment_organization,False
-tilia,Tilia Impact Ventures,https://tilia.vc/,investment_organization,False
-purple,Purple Ventures,https://www.purple-ventures.com/,investment_organization,False
-jt,J&T Ventures,https://www.jtventures.cz/,investment_organization,False
-reflex,Reflex Capital,https://www.reflexcapital.com/,investment_organization,False
+﻿id,name,website,entity_level,classification_human_verified,attributes_human_verified,published
+credo,Credo Ventures,https://www.credoventures.com/,investment_organization,True,False,True
+depo,DEPO Ventures,https://depoventures.com/,investment_organization,True,False,True
+inibio,i&i Biotech Fund,https://www.inibio.eu/,investment_organization,True,False,True
+inven,INVEN Capital,https://www.invencapital.cz/,investment_organization,True,False,True
+kaya,KAYA VC,https://www.kaya.vc/,investment_organization,True,False,True
+nation1,Nation 1 / N1,https://n1.rocks/,investment_organization,True,False,True
+tensor,Tensor Ventures,https://tensor.ventures/,investment_organization,True,False,True
+tilia,Tilia Impact Ventures,https://tilia.vc/,investment_organization,True,False,True
+purple,Purple Ventures,https://www.purple-ventures.com/,investment_organization,True,False,True
+jt,J&T Ventures,https://www.jtventures.cz/,investment_organization,True,False,True
+reflex,Reflex Capital,https://www.reflexcapital.com/,investment_organization,True,False,True

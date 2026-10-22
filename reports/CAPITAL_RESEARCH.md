@@ -1,0 +1,17 @@
+# Doplňující rešerše kapitálu
+
+Provedla AI webovým nástrojem 22. 10. 2026 pro všech devět přijatých organizací s chybějícím total_investment_capital. Jde o omezené dohledání veřejných zdrojů, nikoli úplný audit výročních zpráv nebo lidské ověření. Níže uvedené stránky byly otevřeny; datum návštěvy není datum ocenění. Cílené vyhledávání kombinovalo jméno/doménu s capital, fund, assets under management, million nebo českými ekvivalenty. U Tensoru a Tilia vedly výsledky převážně na sekundární zdroje; jejich částky nejsou přebírány jako nové ověřené AUM.
+
+| Investor | Otevřené podklady a zjištění | Výsledek pro současné AUM |
+|---|---|---|
+| Credo | [Oficiální web](https://www.credoventures.com/) uvádí počet fondů; částky valuací portfoliových firem nejsou kapitálem správce. Starší asociační údaj zůstává historický. | null |
+| DEPO | [Oficiální web](https://depoventures.com/) uvádí 9 mil. EUR proinvestovaných, bez referenčního data. Existující invested_to_date zachováno. | null |
+| i&i Bio | [Web](https://www.inibio.eu/) a [zpráva z 30. 11. 2022](https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb). Tělo zprávy uvádí cca 47 mil. EUR fondu, boilerplate přes 53 mil. EUR bez samostatného data. Obě tvrzení zachována, nelze jim přiřadit stejný okamžik ani z nich udělat současné souhrnné AUM správce. | null |
+| INVEN | [Web](https://www.invencapital.cz/) odkazuje titulkem o committed capital 500 mil. EUR na [historickou zprávu EIB 2023](https://www.eib.org/en/press/all/2023-047-expanding-strategic-partnership-eib-supports-investments-in-climate-friendly-startups-providing-a-further-eur50-million-to-the-czech-fund-inven-capital). EIB uvádí AUM přes 500 mil. a přes 260 mil. pro nové investice v období 2022-2027. Rozdílný význam i hranice zachovány v oddělených claims. Současná hodnota ani zůstatek nejsou prokázány; výroční zprávy odkazované z webu nebyly kompletně auditovány. | null |
+| Tensor | [Oficiální web](https://tensor.ventures/) neuvádí současné souhrnné AUM. Historický asociační údaj zachován; mediální velikost nového fondu není AUM správce. | null |
+| Tilia | [Web](https://tilia.vc/) a [SFDR](https://tilia.vc/sfdr/) vymezují Fund II a strategii, bez použitelného současného souhrnného AUM. Další přebírané mediální částky nejsou náhradou. | null |
+| Purple | [Web](https://www.purple-ventures.com/) a [mateřská skupina](https://purple.group/company-detail/purple-ventures): první fond 15 mil. EUR, současný fond cíl 40 mil. EUR. Panel uvádí 40M+, hlavní text 40 mil.; nejistota hranice je zachována v poznámce. Nepočítá se součet 55 mil. jako AUM. Starší údaj v CZK zůstává samostatně. | null |
+| J&T | [Web](https://www.jtventures.cz/) a [J&T Banka, 5. 11. 2024](https://www.jtbank.cz/clanky/-/j3imbtu9eu-adam-kocik-zajimava-prilezitost-ma-nazev-j-t-ventures-iii): plánovaná velikost fondu III 75 mil. EUR. Nejde o aktuální closing ani celkové AUM; neztotožňovat s jinými fondy skupiny J&T. | null |
+| Reflex | [Oficiální web](https://www.reflexcapital.com/) uvádí proinvestovaných 150 mil. EUR bez referenčního data; existující invested_to_date zachováno. | null |
+
+Nové částky jsou pouze capital_reference se zdrojem, rozsahem, typem a stavem. Datum platnosti zůstává null, pokud jej nelze určit; u J&T se vztahuje k oznámenému plánu. Současná úplnost total_investment_capital se tím nezvyšuje, viz generované [metriky](../exports/metrics.json). Historické fondy se nesčítají. Rešerše nedokazuje, že údaj není nikde zveřejněn.

@@ -77,14 +77,15 @@
   },
   "claims": {
     "human_reviewed": 0,
-    "total": 116,
+    "total": 110,
+    "missing_value_reviews": 0,
     "correct": 0,
     "resolved": 0,
     "accuracy": null
   },
   "source_link_coverage": {
-    "numerator": 116,
-    "denominator": 116,
+    "numerator": 121,
+    "denominator": 121,
     "meaning": "Structural reference coverage only; missing-value search scope also has sources; not claim truth"
   }
 }

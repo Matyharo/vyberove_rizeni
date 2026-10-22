@@ -1,19 +1,69 @@
 """SQLite behavior tests using a fresh export and the actual reviewed inputs."""
 import json
+import csv
 import shutil
 import sqlite3
 import tempfile
 import unittest
+import io
 from contextlib import closing
+from contextlib import redirect_stdout
+from unittest.mock import patch
 from pathlib import Path
 
-from investor_db.core import build, read_json
+from investor_db.core import build, read_json, write_csv, CLAIM_REVIEW_FIELDS
+from investor_db.__main__ import main
 from research.audit_database import audit
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
 class DatabaseTests(unittest.TestCase):
+    def test_optional_conversation_export_is_not_release_blocker(self):
+        (self.root / 'release.json').write_text(json.dumps({'public_repository_url': 'https://github.com/Matyharo/vyberove_rizeni'}), encoding='utf-8')
+        self.db.close()
+        with patch('sys.argv', ['investor_db', 'check-release', '--root', str(self.root)]), redirect_stdout(io.StringIO()):
+            self.assertEqual(main(), 0)
+
+    def test_one_attribute_review_updates_all_formats_without_verifying_all(self):
+        path = self.root / 'review/claims.csv'
+        with path.open(encoding='utf-8-sig', newline='') as file:
+            rows = list(csv.DictReader(file))
+        for r in rows:
+            if r['claim_id'] == 'credo.ticket.1':
+                r.update(label='supported', reviewer='TEST FIXTURE ONLY', reviewed_on='2026-10-22', reason='Synthetic reference for export regression only')
+        write_csv(path, rows, CLAIM_REVIEW_FIELDS)
+        before = path.read_bytes()
+        self.db.close()
+        metrics = build(self.root)
+        self.assertEqual(metrics['claims']['accuracy'], 1)
+        self.assertEqual(metrics['claims']['resolved'], 1)
+        claims = read_json(self.root / 'exports/claims.json')
+        self.assertTrue(next(c for c in claims if c['id']=='credo.ticket.1')['attribute_human_verified'])
+        self.assertFalse(next(i for i in read_json(self.root / 'exports/investors.json') if i['id']=='credo')['attributes_human_verified'])
+        with closing(sqlite3.connect(self.path)) as db:
+            self.assertEqual(db.execute("SELECT attribute_human_verified FROM claim_verification WHERE claim_id='credo.ticket.1'").fetchone()[0], 1)
+        with (self.root / 'exports/investor_summary.csv').open(encoding='utf-8-sig', newline='') as file:
+            credo = next(r for r in csv.DictReader(file) if r['id']=='credo')
+        self.assertEqual(credo['ticket_human_verified'], 'True')
+        self.assertEqual(credo['attributes_human_verified'], 'False')
+        build(self.root)
+        self.assertEqual(before, path.read_bytes())
+
+    def test_derived_flags_agree_across_exports(self):
+        investors = read_json(self.root / 'exports/investors.json')
+        self.assertTrue(all(r['classification_human_verified'] for r in investors))
+        self.assertFalse(any(r['attributes_human_verified'] for r in investors))
+        with (self.root / 'exports/investor_summary.csv').open(encoding='utf-8-sig', newline='') as file:
+            summary = list(csv.DictReader(file))
+        self.assertEqual({r['id'] for r in summary}, {r['id'] for r in investors if r['published']})
+        self.assertTrue(all(r['classification_human_verified']=='True' and r['attributes_human_verified']=='False' for r in summary))
+        self.assertEqual(self.db.execute('SELECT SUM(classification_human_verified), SUM(attributes_human_verified) FROM investors').fetchone(), (len(investors), 0))
+        self.assertEqual(self.db.execute('SELECT SUM(attribute_human_verified) FROM claim_verification').fetchone()[0], 0)
+        pilot_report = (self.root / 'reports/PILOT.md').read_text(encoding='utf-8')
+        self.assertIn('| Purple Ventures | needs_review | include | include | ano |', pilot_report)
+        self.assertIn('| Lighthouse Ventures | needs_review | needs_review | exclude | ne |', pilot_report)
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory(prefix='db-test-', dir=ROOT)
         self.addCleanup(self.temp.cleanup)
@@ -58,12 +108,14 @@ class DatabaseTests(unittest.TestCase):
     def test_rebuild_preserves_data_and_human_reviews(self):
         before = '\n'.join(self.db.iterdump())
         labels = (self.root / 'review/labels.csv').read_bytes()
+        claims = (self.root / 'review/claims.csv').read_bytes()
         predictions = (self.root / 'data/predictions.json').read_bytes()
         self.db.close()
         build(self.root)
         with closing(sqlite3.connect(self.path)) as rebuilt:
             self.assertEqual(before, '\n'.join(rebuilt.iterdump()))
         self.assertEqual(labels, (self.root / 'review/labels.csv').read_bytes())
+        self.assertEqual(claims, (self.root / 'review/claims.csv').read_bytes())
         self.assertEqual(predictions, (self.root / 'data/predictions.json').read_bytes())
 
     def test_money_semantics_survive_sql_queries(self):

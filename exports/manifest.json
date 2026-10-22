@@ -1,5 +1,8 @@
 {
   "data/candidates.json": "670d5d9773101b930ec79f7e92affe99c1d653635457cdac71862ee705d8ee44",
   "data/predictions.json": "3f0b6865a50d52ff749344508d644e5bc5a37a41f518425cbb70c9a630331c93",
-  "data/pilot.json": "b4afe85408c1a238bb702ea0c85936207a76a5a507ea4125c6b0cc96aff0a900"
+  "data/pilot.json": "8d1db8e703d418eed68a1bfb75c5f36efe83ca2334ff89d020d352be06de16d2",
+  "review/labels.csv": "70bc87917ccfd21c24110ee424e2c76d9c9de0a2d975e9518844557b789c9e2a",
+  "review/claims.csv": "a69c6a69d29f91a4b17ae94d835622b52c4b84f7de1499e9fc8f549e0e7b045c",
+  "data/claim_audit_sample.json": "7d7b5113cab596b60aa60520b9e11d776518297936574dddf1e6e602f1c82f5a"
 }

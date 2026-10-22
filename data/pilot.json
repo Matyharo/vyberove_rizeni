@@ -497,6 +497,28 @@
       "accessed_on": "2026-10-22",
       "kind": "investor",
       "access_method": "web_tool_open"
+    },
+    {
+      "id": "purple-group-capital",
+      "url": "https://purple.group/company-detail/purple-ventures",
+      "publisher": "Purple Group",
+      "title": "Purple Ventures - fund capital and target",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "primary",
+      "access_method": "web_tool_open",
+      "evidence_summary": "První fond 15 mil. EUR; současný fond cíl 40 mil. EUR. Nejde o souhrnné AUM. Hlavní text uvádí 40 mil., panel 40M+; zachována nejistota hranice."
+    },
+    {
+      "id": "jt-iii-target",
+      "url": "https://www.jtbank.cz/clanky/-/j3imbtu9eu-adam-kocik-zajimava-prilezitost-ma-nazev-j-t-ventures-iii",
+      "publisher": "J&T Banka",
+      "title": "Adam Kočík: Zajímavá příležitost má název J&T Ventures III",
+      "published_on": "2024-11-05",
+      "accessed_on": "2026-10-22",
+      "kind": "primary",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Plánovaná velikost třetího fondu 75 mil. EUR, nikoli dosažený closing či AUM organizace."
     }
   ],
   "investors": [
@@ -504,78 +526,67 @@
       "id": "credo",
       "name": "Credo Ventures",
       "website": "https://www.credoventures.com/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "depo",
       "name": "DEPO Ventures",
       "website": "https://depoventures.com/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "inibio",
       "name": "i&i Biotech Fund",
       "website": "https://www.inibio.eu/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "inven",
       "name": "INVEN Capital",
       "website": "https://www.invencapital.cz/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "kaya",
       "name": "KAYA VC",
       "website": "https://www.kaya.vc/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "nation1",
       "name": "Nation 1 / N1",
       "website": "https://n1.rocks/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "tensor",
       "name": "Tensor Ventures",
       "website": "https://tensor.ventures/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "tilia",
       "name": "Tilia Impact Ventures",
       "website": "https://tilia.vc/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "purple",
       "name": "Purple Ventures",
       "website": "https://www.purple-ventures.com/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "jt",
       "name": "J&T Ventures",
       "website": "https://www.jtventures.cz/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     },
     {
       "id": "reflex",
       "name": "Reflex Capital",
       "website": "https://www.reflexcapital.com/",
-      "entity_level": "investment_organization",
-      "human_verified": false
+      "entity_level": "investment_organization"
     }
   ],
   "claims": [
@@ -681,7 +692,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "credo.capital_reference.1",
@@ -817,7 +828,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "depo.capital_reference.1",
@@ -969,7 +980,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "inibio.capital_reference.1",
@@ -1105,7 +1116,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "inven.capital_reference.1",
@@ -1491,7 +1502,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "tensor.capital_reference.1",
@@ -1611,7 +1622,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "purple.name.1",
@@ -1715,7 +1726,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "purple.ticket.2",
@@ -1851,7 +1862,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "reflex.name.1",
@@ -1950,7 +1961,7 @@
       "scope": "organization",
       "valid_as_of": null,
       "status": "not_found",
-      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti."
     },
     {
       "id": "reflex.capital_reference.1",
@@ -1989,6 +2000,86 @@
       "valid_as_of": null,
       "status": "supported",
       "note": "Doplněno po druhém kole skutečné ruční kontroly."
+    },
+    {
+      "id": "purple.capital_reference.2",
+      "investor_id": "purple",
+      "field": "capital_reference",
+      "value": {
+        "amount": 15000000,
+        "currency": "EUR",
+        "metric": "fund_reported_size",
+        "bound": "exact"
+      },
+      "source_id": "purple-group-capital",
+      "scope": "Purple Ventures first fund",
+      "valid_as_of": null,
+      "status": "undated_reference",
+      "note": "První fond bez data ocenění; nesčítat s cílem druhého fondu. Kontrola AI, nikoli člověka."
+    },
+    {
+      "id": "purple.capital_reference.3",
+      "investor_id": "purple",
+      "field": "capital_reference",
+      "value": {
+        "amount": 40000000,
+        "currency": "EUR",
+        "metric": "fund_target_size",
+        "bound": "exact"
+      },
+      "source_id": "purple-group-capital",
+      "scope": "fund:purple-ii",
+      "valid_as_of": null,
+      "status": "undated_reference",
+      "note": "Cíl, nikoli získaný kapitál. Hlavní text 40 mil., panel 40M+; přesnost hranice nejistá, obě formulace zachovány v poznámce. Kontrola AI, nikoli člověka."
+    },
+    {
+      "id": "jt.capital_reference.1",
+      "investor_id": "jt",
+      "field": "capital_reference",
+      "value": {
+        "amount": 75000000,
+        "currency": "EUR",
+        "metric": "fund_target_size",
+        "bound": "exact"
+      },
+      "source_id": "jt-iii-target",
+      "scope": "fund:jt-iii",
+      "valid_as_of": "2024-11-05",
+      "status": "historical_unconfirmed",
+      "note": "Plánovaná velikost při oznámení, dnešní stav fundraisingu nezjištěn. Kontrola AI, nikoli člověka."
+    },
+    {
+      "id": "inven.capital_reference.2",
+      "investor_id": "inven",
+      "field": "capital_reference",
+      "value": {
+        "amount": 500000000,
+        "currency": "EUR",
+        "metric": "committed_capital",
+        "bound": "exact"
+      },
+      "source_id": "inven-home",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Nedatovaný titulek odkazuje na historickou zprávu EIB 2023. EIB uvádí AUM přes 500 mil.; web hovoří o committed capital 500 mil. Oba významy zachovány, nelze ztotožnit ani potvrdit aktuálnost. Kontrola AI, nikoli člověka."
+    },
+    {
+      "id": "inven.capital_reference.3",
+      "investor_id": "inven",
+      "field": "capital_reference",
+      "value": {
+        "amount": 260000000,
+        "currency": "EUR",
+        "metric": "available_for_new_investments",
+        "bound": "greater_than"
+      },
+      "source_id": "inven-eib",
+      "scope": "investment period 2022-2027",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Disponibilní kapitál dle historické zprávy EIB 2023 pro období 2022-2027; žádný odhad zůstatku v roce 2026. Kontrola AI, nikoli člověka."
     }
   ],
   "transactions": [
@@ -2247,13 +2338,19 @@
       "investor_id": "purple",
       "name": "Purple Ventures Fund II",
       "source_id": "purple-home"
+    },
+    {
+      "id": "jt-iii",
+      "investor_id": "jt",
+      "name": "J&T Ventures III",
+      "source_id": "jt-iii-target"
     }
   ],
   "decisions": [
     {
       "candidate_id": "lighthouse",
       "prediction": "needs_review",
-      "reason": "Discovery profil odkazuje na jinou entitu. Český fond na lhv.vc existuje, ale nelze tiše zaměnit subjekt ze zmrazeného výběru. Vyžaduje lidské vyřešení identity nebo samostatný nový kandidát mimo metriky tohoto vzorku.",
+      "reason": "AI nevyřešila identitu původního discovery kandidáta, jehož profil odkazuje na jinou entitu. Lidské exclude se vztahuje k tomuto původnímu kandidátovi a je dokončené. Český fond na lhv.vc nelze tiše dosadit za zmrazený subjekt; případné samostatné zařazení by bylo novým kandidátem mimo toto měření.",
       "source_ids": [
         "lighthouse-discovery",
         "lighthouse-home"
@@ -2354,7 +2451,7 @@
     {
       "candidate_id": "credo",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "credo-home",
         "credo-cvca",
@@ -2367,7 +2464,7 @@
     {
       "candidate_id": "depo",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "depo-home",
         "depo-tapaya",
@@ -2381,7 +2478,7 @@
     {
       "candidate_id": "inibio",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "inibio-home",
         "inibio-cvca",
@@ -2395,7 +2492,7 @@
     {
       "candidate_id": "inven",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "inven-home",
         "inven-cvca",
@@ -2409,7 +2506,7 @@
     {
       "candidate_id": "kaya",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "kaya-home",
         "e2b"
@@ -2421,7 +2518,7 @@
     {
       "candidate_id": "nation1",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "nation1-home"
       ],
@@ -2432,7 +2529,7 @@
     {
       "candidate_id": "tensor",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "tensor-home",
         "tensor-cvca",
@@ -2445,7 +2542,7 @@
     {
       "candidate_id": "tilia",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "tilia-home",
         "letsdata"
@@ -2457,7 +2554,7 @@
     {
       "candidate_id": "purple",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor.",
       "source_ids": [
         "purple-home",
         "purple-linkedin"
@@ -2469,7 +2566,7 @@
     {
       "candidate_id": "jt",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "jt-home",
         "grid"
@@ -2481,7 +2578,7 @@
     {
       "candidate_id": "reflex",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv.",
       "source_ids": [
         "reflex-home",
         "grid"

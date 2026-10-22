@@ -1,0 +1,101 @@
+[
+  {
+    "id": "credo",
+    "name": "Credo Ventures",
+    "website": "https://www.credoventures.com/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "depo",
+    "name": "DEPO Ventures",
+    "website": "https://depoventures.com/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "inibio",
+    "name": "i&i Biotech Fund",
+    "website": "https://www.inibio.eu/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "inven",
+    "name": "INVEN Capital",
+    "website": "https://www.invencapital.cz/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "kaya",
+    "name": "KAYA VC",
+    "website": "https://www.kaya.vc/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "nation1",
+    "name": "Nation 1 / N1",
+    "website": "https://n1.rocks/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "tensor",
+    "name": "Tensor Ventures",
+    "website": "https://tensor.ventures/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "tilia",
+    "name": "Tilia Impact Ventures",
+    "website": "https://tilia.vc/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "purple",
+    "name": "Purple Ventures",
+    "website": "https://www.purple-ventures.com/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "jt",
+    "name": "J&T Ventures",
+    "website": "https://www.jtventures.cz/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  },
+  {
+    "id": "reflex",
+    "name": "Reflex Capital",
+    "website": "https://www.reflexcapital.com/",
+    "entity_level": "investment_organization",
+    "classification_human_verified": true,
+    "attributes_human_verified": false,
+    "published": true
+  }
+]

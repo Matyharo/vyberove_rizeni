@@ -255,8 +255,23 @@ def first_claim(pilot, iid, field):
     return next(c for c in pilot["claims"] if c["investor_id"] == iid and c["field"] == field)
 
 
-def coverage(pilot):
-    ids = [d["candidate_id"] for d in pilot["decisions"] if d["prediction"] == "include"]
+def publication_ids(pilot, reviews):
+    """Publish only agreement between current AI and a resolved human include."""
+    human = {r["candidate_id"]: r["label"] for r in reviews}
+    return {d["candidate_id"] for d in pilot["decisions"]
+            if d["prediction"] == "include" and human.get(d["candidate_id"]) == "include"}
+
+
+def verification_flags(pilot, iid, reviews, claim_reviews):
+    factual = {c["id"] for c in pilot["claims"] if c["investor_id"] == iid and c["value"] is not None}
+    supported = {r["claim_id"] for r in claim_reviews if r["label"] == "supported"}
+    return dict(classification_human_verified=any(r["candidate_id"] == iid and r["label"] == "include" for r in reviews),
+                attributes_human_verified=bool(factual) and factual <= supported)
+
+
+def coverage(pilot, ids=None):
+    if ids is None:
+        ids = [d["candidate_id"] for d in pilot["decisions"] if d["prediction"] == "include"]
     result = {}
     for field in ("sectors", "stage", "ticket", "total_investment_capital"):
         cs = [first_claim(pilot, iid, field) for iid in ids]
@@ -314,7 +329,9 @@ def _sqlite_export(path, pilot, candidates, predictions, reviews, claim_reviews)
           title TEXT NOT NULL, published_on TEXT, accessed_on TEXT NOT NULL, kind TEXT NOT NULL,
           access_method TEXT NOT NULL, evidence_summary TEXT NOT NULL);
         CREATE TABLE investors(id TEXT PRIMARY KEY REFERENCES candidates(id), name TEXT NOT NULL,
-          website TEXT NOT NULL, entity_level TEXT NOT NULL, human_verified INTEGER NOT NULL);
+          website TEXT NOT NULL, entity_level TEXT NOT NULL,
+          classification_human_verified INTEGER NOT NULL, attributes_human_verified INTEGER NOT NULL,
+          published INTEGER NOT NULL);
         CREATE TABLE funds(id TEXT PRIMARY KEY, investor_id TEXT NOT NULL REFERENCES investors(id),
           name TEXT NOT NULL, source_id TEXT NOT NULL REFERENCES sources(id));
         CREATE TABLE claims(id TEXT PRIMARY KEY, investor_id TEXT NOT NULL REFERENCES investors(id),
@@ -341,10 +358,18 @@ def _sqlite_export(path, pilot, candidates, predictions, reviews, claim_reviews)
           label TEXT NOT NULL, reviewer TEXT NOT NULL, reviewed_on TEXT NOT NULL, reason TEXT NOT NULL);
         CREATE INDEX claims_by_investor_field ON claims(investor_id,field);
         CREATE INDEX transactions_by_investor ON transactions(investor_id);
+        CREATE VIEW published_investors AS SELECT * FROM investors WHERE published=1;
+        CREATE VIEW claim_verification AS
+          SELECT c.id AS claim_id, h.label AS human_review_label,
+          CASE WHEN c.value_json != 'null' AND h.label='supported' THEN 1 ELSE 0 END AS attribute_human_verified
+          FROM claims c LEFT JOIN human_claim_reviews h ON h.claim_id=c.id;
         """)
         db.executemany("INSERT INTO candidates VALUES (:id,:name,:discovery)", candidates["candidates"])
         for table in ("sources", "investors", "funds"):
             for row in pilot[table]:
+                if table == "investors":
+                    row = dict(row, **verification_flags(pilot, row["id"], reviews, claim_reviews),
+                               published=row["id"] in publication_ids(pilot, reviews))
                 columns = ",".join(row)
                 db.execute(f"INSERT INTO {table} ({columns}) VALUES ({','.join('?' for _ in row)})", tuple(row.values()))
         for c in pilot["claims"]:
@@ -385,25 +410,68 @@ def display(value):
         return "nezjištěno"
     if isinstance(value, dict):
         if "min" in value:
-            return f"{value['min']:,}–{value['max']:,} {value['currency']} ({value['basis']})"
+            return f"{value['min']:,}-{value['max']:,} {value['currency']} ({value['basis']})"
         bound = {"greater_than": ">", "approximate": "cca "}.get(value.get("bound"), "")
         suffix = f" ({value['metric']})" if value.get("metric") else ""
         return f"{bound}{value['amount']:,} {value['currency']}{suffix}"
     return str(value)
 
 
-def report(root, pilot, candidates, metrics):
+def claim_audit_packet(root, pilot, claim_reviews):
+    config_path = root / 'data/claim_audit_sample.json'
+    if not config_path.exists():
+        return
+    config = read_json(config_path)
+    claims = {c['id']: c for c in pilot['claims']}
+    sources = {s['id']: s for s in pilot['sources']}
+    reviews = {r['claim_id']: r for r in claim_reviews}
+    lines = ['# Malý lidský audit atributů', '', config['selection_rule'], '',
+             'Výběr byl stanoven před vyplněním lidských štítků. Jde o záměrný rizikový audit, nikoli reprezentativní odhad. Kontroly AI nejsou lidské štítky.', '',
+             'Vyplňte odpovídající řádky v review/claims.csv: label (supported / incorrect / uncertain), reviewer, reviewed_on a reason. Datum, identitu ani čas za kontrolora nedoplňujeme. Čas lze nově měřit; historický čas zůstává neznámý.', '',
+             '| ID tvrzení | Hodnota | Stav AI | Přesná URL | Kontrolní otázka | Lidský štítek |', '|---|---|---|---|---|---|']
+    rows = []
+    for cid in config['claim_ids']:
+        c = claims[cid]
+        if c['value'] is None:
+            raise ValueError('Missing values cannot be positive factual audit claims')
+        question = ('Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM?'
+                    if c['field'] in {'capital_reference', 'total_investment_capital'} else
+                    'Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora.' if c['field'] == 'ticket' else
+                    'Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia?')
+        r = reviews.get(cid, {})
+        url = sources[c['source_id']]['url']
+        lines.append(f"| {cid} | {markdown(display(c['value']))} | {c['status']} | {url} | {question} | {r.get('label', '')} |")
+        rows.append(dict(claim_id=cid, value=display(c['value']), source_url=url, question=question,
+                         **{k: r.get(k, '') for k in CLAIM_REVIEW_FIELDS if k != 'claim_id'}))
+    lines.extend(['', '## Chybějící údaje - samostatná kontrola rozsahu hledání', '',
+                  'Následující null nejsou pozitivní faktická tvrzení a nevstupují do přesnosti atributů. Nezjištěná hodnota není automaticky chyba. Rozsah nové rešerše: [CAPITAL_RESEARCH.md](CAPITAL_RESEARCH.md).', ''])
+    for c in pilot['claims']:
+        if c['value'] is None:
+            lines.append(f"- {c['id']}: {c['status']}; [{c['source_id']}]({sources[c['source_id']]['url']}).")
+    (root / 'reports/CLAIM_AUDIT.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    write_csv(root / 'exports/claim_audit_worksheet.csv', rows)
+
+
+def report(root, pilot, candidates, metrics, predictions, reviews):
     srcs = {s["id"]: s for s in pilot["sources"]}
     dest = root / "reports"
     dest.mkdir(exist_ok=True)
-    lines = ["# Pilot českých VC investorů", "", f"Stav zdrojů: {pilot['as_of']}. Sestaveno a kontrolováno AI; lidská kontrola dosud viz metriky.", "",
-             "Přijetí není ověření člověkem. Částky jsou self-reported nebo historické; prázdná hodnota není nula.", "",
-             "| Investor | Rozhodnutí | Důvod |", "|---|---|---|"]
+    lines = ["# Pilot českých VC investorů", "", f"Stav zdrojů: {pilot['as_of']}. Lidská klasifikace: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. Audit atributů: {metrics['claims']['human_reviewed']} kontrol.", "",
+             "Lidské potvrzení klasifikace neznamená ověření všech atributů. Částky jsou self-reported nebo historické; prázdná hodnota není nula.", "",
+             "Publikovaný přehled vyžaduje současně aktuální AI include a lidské include. Nevyřešené nebo rozporné případy se nepublikují. Úplné evidence zůstávají v normalizovaných exportech.", "",
+             "Lighthouse: AI dosud nerozřešila identitu discovery kandidáta; člověk původní kandidát vyloučil. Jde o odlišná rozhodnutí, nikoli automatické ztotožnění s českým fondem stejného názvu.", "",
+             "| Investor | Původní AI | Aktuální AI | Lidská reference | Publikován | Důvod AI |", "|---|---|---|---|---|---|"]
+    initial = {d['candidate_id']: d['prediction'] for d in predictions['predictions']}
+    human = {r['candidate_id']: r['label'] for r in reviews}
+    published = publication_ids(pilot, reviews)
     names = {c["id"]: c["name"] for c in candidates["candidates"]}
     for d in pilot["decisions"]:
-        lines.append(f"| {names[d['candidate_id']]} | {d['prediction']} | {markdown(d['reason'])} |")
+        iid = d['candidate_id']
+        lines.append(f"| {names[iid]} | {initial[iid]} | {d['prediction']} | {human.get(iid, 'nezkontrolováno')} | {'ano' if iid in published else 'ne'} | {markdown(d['reason'])} |")
     for inv in pilot["investors"]:
         iid = inv["id"]
+        if iid not in published:
+            continue
         txs = [t for t in pilot["transactions"] if t["investor_id"] == iid]
         lines.extend(["", f"## {inv['name']}", "", f"Aktivita: `{activity(txs, pilot['as_of'])}`. Jednotka: investiční organizace, nikoli počet jednotlivých fondů.", "",
                       "| Údaj | Hodnota | Stav | Zdroj / kontrola | Poznámka |", "|---|---|---|---|---|"])
@@ -422,13 +490,17 @@ def report(root, pilot, candidates, metrics):
         for row in pilot["out_of_scope"]:
             links = "; ".join(f"[{sid}]({srcs[sid]['url']})" for sid in row["source_ids"])
             lines.append(f"- **{names[row['candidate_id']]}** — {row['investor_type']}. {row['note']} Zdroje: {links}.")
-    (dest / "PILOT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (dest / "PILOT.md").write_text(("\n".join(lines) + "\n").replace('—', '-').replace('–', '-'), encoding="utf-8")
     p = metrics["classification"]["precision"]
     val = f"{p['value']:.1%}" if p["value"] is not None else "NEZMĚŘENO — chybí ruční referenční štítky"
     if p["value"] is not None and metrics["classification"]["pending"]:
         val = f"PRŮBĚŽNĚ {p['numerator']}/{p['denominator']} vyhodnocených pozitivních predikcí správně; kontrola vzorku není dokončena"
-    quality = ["# Výsledek měření", "", f"Ruční přesnost: **{val}**.", "",
-               f"Zkontrolováno člověkem: {metrics['classification']['human_reviewed']}/20 kandidátů. Precision TP/(TP+FP): {p['numerator']}/{p['denominator']}.", "",
+    recall = metrics['classification']['recall_in_reviewed_candidate_set']
+    quality = ["# Výsledek měření", "", f"Precision původních pozitivních klasifikací: **{p['numerator']}/{p['denominator']} na záměrně vybraném vzorku** ({val}).", "",
+               f"Zkontrolováno člověkem: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']} kandidátů. Precision TP/(TP+FP).", "",
+               f"Recall v kontrolovaném seznamu: {recall['numerator']}/{recall['denominator']} ({recall['value']:.1%}). Původní abstence u Purple s lidským include snižuje recall; opravená AI predikce nepřepisuje původní měření." if recall['value'] is not None else "Recall nebyl změřen.", "",
+               "Výsledek precision neznamená 100% správnost celé databáze ani odhad přesnosti na světovém trhu. Správnost atributů se měří odděleně; úplnost měří dostupnost údajů, nikoli jejich pravdivost.", "",
+               f"Audit pozitivních faktických tvrzení: {metrics['claims']['human_reviewed']} lidských kontrol; přesnost {metrics['claims']['accuracy'] if metrics['claims']['accuracy'] is not None else 'nezměřena'}. Podklady: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",
                "Bez lidské kontroly neuvádíme procento přesnosti. Automatická validace kontroluje strukturu, nikoli pravdivost.", "",
                "## Úplnost přijatých organizací", "", "Počítají se jen tvrzení se stavem supported; historické a částečné hodnoty jsou v datech, ale tuto úplnost nezvyšují.", "",
                "| Pole | Doloženo |", "|---|---|"]
@@ -436,8 +508,24 @@ def report(root, pilot, candidates, metrics):
         quality.append(f"| {field} | {value['numerator']}/{value['denominator']} |")
     quality.extend(["", "Úplné výsledky, abstence, nezkontrolované pozitivní predikce a matice záměn: [metrics.json](../exports/metrics.json).",
                     "", "Wilsonův interval je při malé záměrné vzorce pouze popisný. Nejde o odhad celosvětové přesnosti ani recall trhu."])
-    (dest / "ACCURACY.md").write_text("\n".join(quality) + "\n", encoding="utf-8")
-    packet = ["# Podklady pro ruční kontrolu", "", "Tento přehled záměrně neobsahuje predikce AI. Vyplňte review/labels.csv podle PLAN.md.", "",
+    (dest / "ACCURACY.md").write_text(("\n".join(quality) + "\n").replace('—', '-').replace('–', '-'), encoding="utf-8")
+    readme = root / 'README.md'
+    if readme.exists():
+        text = readme.read_text(encoding='utf-8')
+        start, end = '<!-- METRICS:START -->', '<!-- METRICS:END -->'
+        if start in text and end in text:
+            block = (f"{start}\n"
+                     f"Publikováno **{len(published)} investorů** z {metrics['classification']['candidates']} zmrazených kandidátů; lidská klasifikace {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. "
+                     f"Původní AI: {metrics['classification']['initial_decisions']}. Aktuální AI: {dict(Counter(d['prediction'] for d in pilot['decisions']))}. Lidská reference: {dict(Counter(r['label'] for r in reviews))}. "
+                     f"{len(pilot['sources'])} zdrojů, {len(pilot['claims'])} tvrzení, {len(pilot['transactions'])} investičních důkazů.\n\n"
+                     f"**Precision původních pozitivních klasifikací: {p['numerator']}/{p['denominator']} na záměrně vybraném vzorku.** "
+                     f"Recall v kontrolovaném seznamu: {recall['numerator']}/{recall['denominator']}; původní abstence Purple snižuje recall. "
+                     f"To neznamená 100% správnost celé databáze ani odhad přesnosti světového trhu. "
+                     f"Lidský audit atributů: {metrics['claims']['human_reviewed']} kontrol; správnost atributů je samostatná veličina.\n\n"
+                     "Úplnost supported atributů publikovaných investorů: " + '; '.join(f"{k} {v['numerator']}/{v['denominator']}" for k, v in metrics['coverage'].items()) + f". Úplnost není přesnost.\n{end}")
+            text = text[:text.index(start)] + block + text[text.index(end)+len(end):]
+            readme.write_text(text, encoding='utf-8')
+    packet = ["# Podklady pro ruční kontrolu", "", f"Klasifikace zkontrolována: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. Zdroje níže zůstávají podkladem pro opakovanou kontrolu. Zbývající atributový audit: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",
               "Pozitivní případ: skutečný přímý VC investor s českou kanceláří a konkrétní doloženou investicí. PE může být skutečný investor, ale mimo tento VC pilot.", "",
               "Otevřete původní zdroje, nespoléhejte na parafráze AI. Datum přístupu nenahrazuje datum transakce. K nejasné identitě patří needs_review."]
     by_decision = {d["candidate_id"]: d for d in pilot["decisions"]}
@@ -446,7 +534,7 @@ def report(root, pilot, candidates, metrics):
         for sid in by_decision[candidate["id"]]["source_ids"]:
             src = srcs[sid]
             packet.append(f"- [{src['title']}]({src['url']}) — {src['publisher']}; publikace {src['published_on'] or 'neuvedena'}; přístup {src['accessed_on']}.")
-    (dest / "REVIEW_PACKET.md").write_text("\n".join(packet) + "\n", encoding="utf-8")
+    (dest / "REVIEW_PACKET.md").write_text(("\n".join(packet) + "\n").replace('—', '-').replace('–', '-'), encoding="utf-8")
 
 
 def build(root):
@@ -464,10 +552,17 @@ def build(root):
     claim_reviews = read_review(root / "review/claims.csv", {c["id"] for c in pilot["claims"]}, claims=True)
     out = root / "exports"
     out.mkdir(exist_ok=True)
-    resolved_claims = [r for r in claim_reviews if r["label"] != "uncertain"]
+    factual_ids = {c['id'] for c in pilot['claims'] if c['value'] is not None}
+    factual_reviews = [r for r in claim_reviews if r['claim_id'] in factual_ids]
+    resolved_claims = [r for r in factual_reviews if r["label"] != "uncertain"]
+    accepted = publication_ids(pilot, reviews)
+    human_labels = {r['candidate_id']: r['label'] for r in reviews}
+    initial_labels = {r['candidate_id']: r['prediction'] for r in predictions['predictions']}
+    current_labels = {r['candidate_id']: r['prediction'] for r in pilot['decisions']}
     metrics = dict(as_of=pilot["as_of"], classification=classification_metrics(predictions["predictions"], reviews),
-                   coverage=coverage(pilot),
-                   claims={"human_reviewed": len(claim_reviews), "total": len(pilot["claims"]),
+                   coverage=coverage(pilot, accepted),
+                   claims={"human_reviewed": len(factual_reviews), "total": len(factual_ids),
+                           "missing_value_reviews": len(claim_reviews)-len(factual_reviews),
                            "correct": sum(r["label"] == "supported" for r in resolved_claims),
                            "resolved": len(resolved_claims),
                            "accuracy": sum(r["label"] == "supported" for r in resolved_claims)/len(resolved_claims) if resolved_claims else None},
@@ -475,27 +570,43 @@ def build(root):
                                          "meaning": "Structural reference coverage only; missing-value search scope also has sources; not claim truth"})
     dump_json(out / "metrics.json", metrics)
     for table in ("sources", "investors", "claims", "transactions", "funds", "decisions"):
-        fields = list(dict.fromkeys(key for row in pilot[table] for key in row))
-        write_csv(out / f"{table}.csv", pilot[table], fields)
+        rows = pilot[table]
+        if table == 'investors':
+            rows = [dict(r, **verification_flags(pilot, r['id'], reviews, claim_reviews), published=r['id'] in accepted) for r in rows]
+            dump_json(out / 'investors.json', rows)
+        if table == 'claims':
+            labels = {r['claim_id']: r['label'] for r in claim_reviews}
+            rows = [dict(r, attribute_human_verified=r['value'] is not None and labels.get(r['id']) == 'supported', human_review_label=labels.get(r['id'])) for r in rows]
+            dump_json(out / 'claims.json', rows)
+        fields = list(dict.fromkeys(key for row in rows for key in row))
+        write_csv(out / f"{table}.csv", rows, fields)
     if pilot.get("out_of_scope"):
         write_csv(out / "out_of_scope.csv", pilot["out_of_scope"])
-    accepted = {d["candidate_id"] for d in pilot["decisions"] if d["prediction"] == "include"}
     summary = []
     for inv in pilot["investors"]:
         if inv["id"] not in accepted:
             continue
         iid = inv["id"]
-        row = {"id": iid, "name": inv["name"], "human_verified": False,
+        row = {"id": iid, "name": inv["name"], **verification_flags(pilot, iid, reviews, claim_reviews),
+               "initial_ai_prediction": initial_labels[iid], "current_ai_prediction": current_labels[iid],
+               "human_reference_label": human_labels.get(iid),
                "activity": activity([t for t in pilot["transactions"] if t["investor_id"] == iid], pilot["as_of"])}
         for field in ("sectors", "stage", "ticket", "total_investment_capital"):
             c = first_claim(pilot, iid, field)
             row[field] = display(c["value"])
             row[field+"_status"] = c["status"]
             row[field+"_source_url"] = next(s["url"] for s in pilot["sources"] if s["id"] == c["source_id"])
+            row[field+"_human_verified"] = c['value'] is not None and any(r['claim_id'] == c['id'] and r['label'] == 'supported' for r in claim_reviews)
         summary.append(row)
-    write_csv(out / "investor_summary.csv", summary)
+    summary_fields = ['id', 'name', 'classification_human_verified', 'attributes_human_verified',
+                      'initial_ai_prediction', 'current_ai_prediction', 'human_reference_label', 'activity']
+    for field in ('sectors', 'stage', 'ticket', 'total_investment_capital'):
+        summary_fields.extend([field, field+'_status', field+'_source_url', field+'_human_verified'])
+    write_csv(out / "investor_summary.csv", summary, summary_fields)
     sqlite_export(out / "investors.sqlite", pilot, candidates, predictions, reviews, claim_reviews)
-    report(root, pilot, candidates, metrics)
+    report(root, pilot, candidates, metrics, predictions, reviews)
+    claim_audit_packet(root, pilot, claim_reviews)
     dump_json(out / "manifest.json", {str(p.relative_to(root)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest()
-                                    for p in (root / "data/candidates.json", root / "data/predictions.json", root / "data/pilot.json")})
+                                    for p in (root / "data/candidates.json", root / "data/predictions.json", root / "data/pilot.json",
+                                              root / "review/labels.csv", root / "review/claims.csv", root / "data/claim_audit_sample.json") if p.exists()})
     return metrics

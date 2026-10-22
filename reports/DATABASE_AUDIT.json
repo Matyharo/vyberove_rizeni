@@ -1,6 +1,4 @@
 {
-  "run_on": "2026-10-22",
-  "database": "exports/investors.sqlite",
   "checks": {
     "sqlite_integrity": true,
     "foreign_keys": true,
@@ -12,16 +10,16 @@
   },
   "counts": {
     "candidates": 20,
-    "claims": 116,
+    "claims": 121,
     "decision_sources": 40,
     "decisions": 20,
-    "funds": 3,
+    "funds": 4,
     "human_claim_reviews": 0,
     "human_reviews": 20,
     "initial_predictions": 20,
     "investors": 11,
     "out_of_scope_classifications": 2,
-    "sources": 45,
+    "sources": 47,
     "transaction_sources": 7,
     "transactions": 13,
     "human_include": 11,

@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-22",
+  "checked_base_commit": "9fe06728dafb2ec008cff790b2fa1f02d7b94b39",
+  "commands": [
+    {
+      "command": "python -m investor_db validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/audit_database.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m investor_db build",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m investor_db check-release",
+      "exit_code": 0
+    }
+  ],
+  "rebuild_identical": true,
+  "frozen_inputs_unchanged": true,
+  "existing_claim_review_rows_unchanged": true,
+  "attribute_labels_filled": 0,
+  "audit_sample_size": 18,
+  "audit_sample_investors": 11,
+  "ci_status": "not_verified",
+  "ci_evidence": {
+    "github_connector_pr_workflow_runs": [],
+    "github_connector_combined_statuses": [],
+    "shell_github_api": "DNS failure",
+    "web_actions_page": "fetch failed"
+  },
+  "local_changes_pushed": false
+}

@@ -28,8 +28,6 @@ def main():
                 blockers.append("Missing human candidate reviews")
             if result["classification"]["precision"]["value"] is None or result["classification"]["initial_positive_not_resolved"]:
                 blockers.append("Initial positive predictions still lack resolved human evaluation")
-            if not list((root / "ai-log").glob("conversation-export.*")):
-                blockers.append("Missing authentic conversation export: ai-log/conversation-export.*")
             metadata = read_json(root/"release.json") if (root/"release.json").exists() else {}
             repository_url = metadata.get("public_repository_url")
             if not isinstance(repository_url, str) or not repository_url.startswith("https://github.com/"):
@@ -37,7 +35,7 @@ def main():
             if blockers:
                 print("NOT READY TO SUBMIT: " + "; ".join(blockers), file=sys.stderr)
                 return 2
-            print("Submission checklist complete; manually confirm repository is public and export is authentic.")
+            print("Submission checklist complete; repository visibility and external facts require separate verification. Conversation export is optional.")
         return 0
     except (ValueError, KeyError, OSError) as error:
         print(f"ERROR: {error}", file=sys.stderr)

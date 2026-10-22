@@ -1,3 +1,9 @@
+# Aktuální stav kontroly
+
+Klasifikace všech kandidátů je dokončena v labels.csv. Čas nebyl měřen. Atributový audit není dokončen; připraveno je 18 předem vybraných tvrzení v [CLAIM_AUDIT.md](../reports/CLAIM_AUDIT.md) a [CSV přehledu](../exports/claim_audit_worksheet.csv). Vyplňujte odpovídající řádky claims.csv, nikoli vygenerovaný report. Label, reviewer, reviewed_on a reason musí být skutečné; nejistotu označte uncertain. Po doplnění spusťte build a kontroly. Kontrola klasifikace nenahrazuje kontrolu atributů.
+
+Následuje původní metodika kontroly, zachovaná jako postup pro opakované kontroly:
+
 # Skutečná ruční kontrola
 
 Referenční rozhodnutí pocházejí od uživatele Ferstl ze sedmi kol kontroly v chatu dne 22. 10. 2026. AI je pouze přepsala do `labels.csv`; dokončeno 20/20 kandidátů. Podrobnosti jsou v `round-01.md` až `round-07.md`. Testovací štítky žijí pouze v dočasných adresářích testů. Následující postup popisuje metodiku kontroly; samostatná atributová kontrola není dokončena.

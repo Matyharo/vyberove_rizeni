@@ -37,3 +37,16 @@ Neznámé číselné hodnoty jsou null, nikdy 0. Datum publikace stránky není 
 ## Limity reprodukovatelnosti
 
 Build je offline reprodukovatelný z uloženého přepisu, ne z živých webů. Zdroje se mohou změnit a nemusí být dostupné. Uloženy jsou pouze stručné parafráze; obsah zdrojů není archivován v plném rozsahu. Kontrola URL, hashů a cizích klíčů nedokazuje pravost výroků. Právní identity a regulatorní licence nejsou v této etapě nezávisle prověřeny v rejstřících.
+
+## Lidské ověření a publikace
+
+Pole human_verified bylo odstraněno ze zdrojových investorů a exportů, protože směšovalo dva druhy kontroly. Zdrojová data/pilot.json uchovávají fakta a rozhodnutí AI; lidské příznaky se při každém buildu odvozují ze skutečně dokončených řádků review/labels.csv a review/claims.csv, nikoli ručně udržovaných booleanů.
+
+- classification_human_verified: true pouze při platné dokončené lidské klasifikaci include daného investora. Neznamená potvrzení atributů. Lidské exclude a needs_review se uchovávají v human_reviews; tento příznak pozitivního potvrzení je u nich false.
+- attributes_human_verified: true pouze pokud existuje alespoň jedno nenulové faktické tvrzení investora a všechna jeho nenulová tvrzení mají dokončenou lidskou kontrolu supported. Jediné incorrect, uncertain nebo nekontrolované tvrzení znamená false. Týká se výhradně evidovaných claims, nikoli transakcí, právních registrací nebo záruky úplnosti světa.
+- attribute_human_verified: příznak jednoho nenulového tvrzení s lidským supported. human_review_label zachovává také incorrect a uncertain; absence je null. V CSV/JSON claims jsou pole přímo, v SQLite je ekvivalentní pohled claim_verification navázaný na human_claim_reviews.
+- published: současná AI include A ZÁROVEŇ lidské include. Původní zmrazená predikce publikaci neřídí, používá se k měření klasifikace. Bez lidské reference se nic nepublikuje. Normalizované investors CSV/JSON/SQLite zachovávají všechny evidované organizace a příznak; investor_summary a SQL pohled published_investors obsahují pouze publikované. Detailní sekce PILOT obsahují publikované, rozhodovací tabulka všechny kandidáty.
+
+Úplnost se počítá pro publikované investory a z podporovaných nenulových údajů. Přesnost atributů zahrnuje pouze nenulová tvrzení s vyřešenou lidskou referencí supported/incorrect; uncertain se počítají mezi kontroly, ale ne do jmenovatele přesnosti. Kontroly null mají vlastní missing_value_reviews a nevstupují do přesnosti pozitivních tvrzení. Prázdná hodnota není automaticky chyba. Malý předem určený audit má samostatný výběr data/claim_audit_sample.json; jeho tabulka se generuje a původní lidské řádky zůstávají zachovány.
+
+capital_reference nově rozlišuje také committed_capital, available_for_new_investments a fund_target_size. Tyto částky nejsou manager_aum a nezvyšují úplnost total_investment_capital. Datum validity u historického plánu znamená datum oznámeného plánu; null výslovně znamená neurčený referenční okamžik. Nová rešerše a nejistoty jsou v reports/CAPITAL_RESEARCH.md.

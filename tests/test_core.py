@@ -11,7 +11,8 @@ from unittest.mock import patch
 from investor_db.__main__ import main
 
 from investor_db.core import (activity, build, classification_metrics, date_bounds,
-                              read_json, read_review, validate, wilson, write_csv, REVIEW_FIELDS)
+                              read_json, read_review, validate, wilson, write_csv, REVIEW_FIELDS,
+                              publication_ids, verification_flags)
 from investor_db.costs import estimate
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -67,6 +68,28 @@ class ValidationTests(unittest.TestCase):
 
 
 class MetricTests(unittest.TestCase):
+    def test_publication_requires_current_ai_and_human_agreement(self):
+        pilot = {'decisions': [dict(candidate_id=i, prediction=p) for i, p in
+                              [('accepted', 'include'), ('pending', 'include'),
+                               ('conflict', 'include'), ('identity', 'needs_review')]]}
+        reviews = [dict(candidate_id=i, label=p) for i, p in
+                   [('accepted', 'include'), ('conflict', 'exclude'), ('identity', 'include')]]
+        self.assertEqual(publication_ids(pilot, reviews), {'accepted'})
+
+    def test_classification_does_not_verify_attributes(self):
+        pilot = {'claims': [dict(id='a', investor_id='i', value=5),
+                            dict(id='b', investor_id='i', value=8),
+                            dict(id='missing', investor_id='i', value=None)]}
+        reviews = [dict(candidate_id='i', label='include')]
+        flags = verification_flags(pilot, 'i', reviews, [])
+        self.assertTrue(flags['classification_human_verified'])
+        self.assertFalse(flags['attributes_human_verified'])
+        claim_reviews = [dict(claim_id='a', label='supported'), dict(claim_id='b', label='uncertain')]
+        self.assertFalse(verification_flags(pilot, 'i', reviews, claim_reviews)['attributes_human_verified'])
+        claim_reviews[1]['label'] = 'supported'
+        self.assertTrue(verification_flags(pilot, 'i', reviews, claim_reviews)['attributes_human_verified'])
+        self.assertFalse(verification_flags(pilot, 'i', [], claim_reviews)['classification_human_verified'])
+
     def test_cost_model_includes_all_candidate_review_and_refresh(self):
         config = read_json(ROOT / "data/cost_assumptions.json")
         result = estimate(config["scenarios"][1])

@@ -1,31 +1,35 @@
 # Pilot českých VC investorů
 
-Stav zdrojů: 2026-10-22. Sestaveno a kontrolováno AI; lidská kontrola dosud viz metriky.
+Stav zdrojů: 2026-10-22. Lidská klasifikace: 20/20. Audit atributů: 0 kontrol.
 
-Přijetí není ověření člověkem. Částky jsou self-reported nebo historické; prázdná hodnota není nula.
+Lidské potvrzení klasifikace neznamená ověření všech atributů. Částky jsou self-reported nebo historické; prázdná hodnota není nula.
 
-| Investor | Rozhodnutí | Důvod |
-|---|---|---|
-| Lighthouse Ventures | needs_review | Discovery profil odkazuje na jinou entitu. Český fond na lhv.vc existuje, ale nelze tiše zaměnit subjekt ze zmrazeného výběru. Vyžaduje lidské vyřešení identity nebo samostatný nový kandidát mimo metriky tohoto vzorku. |
-| Genesis Capital | exclude | Skutečný PE investor, ale buyout/growth mandát je mimo VC pilot. Není odmítnut pro globální PE databázi. |
-| ARX Equity Partners | exclude | Skutečný PE investor mimo VC pilot; akvizice a buyout nejsou důkazem VC mandátu. |
-| AKAT Czech Capital Market Association | exclude | Asociace, nikoli přímý investor. |
-| BDO Czech Republic | exclude | Poradenská společnost; transakce klientů nejsou její vlastní investice. |
-| Fundlift | exclude | Crowdfundingová platforma; chybí důkaz přímého VC mandátu. |
-| Startovač | exclude | Crowdfunding kreativních projektů; není přímý VC investor. |
-| Czech Private Equity and Venture Capital Association | exclude | Oborová asociace zastupující investory; není sama fondem. |
-| Startupstart.cz | exclude | Zprostředkovatelská platforma; vlastní venture investice nedoložena. |
-| Credo Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| DEPO Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| i&i Biotech Fund | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| INVEN Capital | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| KAYA VC | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| Nation 1 | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| Tensor Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| Tilia Impact Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| Purple Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor. |
-| J&T Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| Reflex Capital | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
+Publikovaný přehled vyžaduje současně aktuální AI include a lidské include. Nevyřešené nebo rozporné případy se nepublikují. Úplné evidence zůstávají v normalizovaných exportech.
+
+Lighthouse: AI dosud nerozřešila identitu discovery kandidáta; člověk původní kandidát vyloučil. Jde o odlišná rozhodnutí, nikoli automatické ztotožnění s českým fondem stejného názvu.
+
+| Investor | Původní AI | Aktuální AI | Lidská reference | Publikován | Důvod AI |
+|---|---|---|---|---|---|
+| Lighthouse Ventures | needs_review | needs_review | exclude | ne | AI nevyřešila identitu původního discovery kandidáta, jehož profil odkazuje na jinou entitu. Lidské exclude se vztahuje k tomuto původnímu kandidátovi a je dokončené. Český fond na lhv.vc nelze tiše dosadit za zmrazený subjekt; případné samostatné zařazení by bylo novým kandidátem mimo toto měření. |
+| Genesis Capital | exclude | exclude | exclude | ne | Skutečný PE investor, ale buyout/growth mandát je mimo VC pilot. Není odmítnut pro globální PE databázi. |
+| ARX Equity Partners | exclude | exclude | exclude | ne | Skutečný PE investor mimo VC pilot; akvizice a buyout nejsou důkazem VC mandátu. |
+| AKAT Czech Capital Market Association | exclude | exclude | exclude | ne | Asociace, nikoli přímý investor. |
+| BDO Czech Republic | exclude | exclude | exclude | ne | Poradenská společnost; transakce klientů nejsou její vlastní investice. |
+| Fundlift | exclude | exclude | exclude | ne | Crowdfundingová platforma; chybí důkaz přímého VC mandátu. |
+| Startovač | exclude | exclude | exclude | ne | Crowdfunding kreativních projektů; není přímý VC investor. |
+| Czech Private Equity and Venture Capital Association | exclude | exclude | exclude | ne | Oborová asociace zastupující investory; není sama fondem. |
+| Startupstart.cz | exclude | exclude | exclude | ne | Zprostředkovatelská platforma; vlastní venture investice nedoložena. |
+| Credo Ventures | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| DEPO Ventures | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| i&i Biotech Fund | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| INVEN Capital | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| KAYA VC | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| Nation 1 | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| Tensor Ventures | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| Tilia Impact Ventures | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| Purple Ventures | needs_review | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor. |
+| J&T Ventures | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
+| Reflex Capital | include | include | include | ano | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy. Aktuální klasifikace AI; lidská reference je evidována odděleně v review/labels.csv. |
 
 ## Credo Ventures
 
@@ -40,14 +44,14 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Bez pevné sektorové teze; technologičtí zakladatelé | supported | [credo-home](https://www.credoventures.com/) / 2026-10-22 |  |
 | stage | pre-seed | supported | [credo-home](https://www.credoventures.com/) / 2026-10-22 |  |
 | geography | CEE a globální diaspora | supported | [credo-home](https://www.credoventures.com/) / 2026-10-22 |  |
-| ticket | 1,000,000–5,000,000 USD (check) | supported | [credo-home](https://www.credoventures.com/) / 2026-10-22 |  |
-| total_investment_capital | nezjištěno | not_found | [credo-home](https://www.credoventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 1,000,000-5,000,000 USD (check) | supported | [credo-home](https://www.credoventures.com/) / 2026-10-22 |  |
+| total_investment_capital | nezjištěno | not_found | [credo-home](https://www.credoventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 | capital_reference | 170,000,000 EUR (manager_aum) | historical_unconfirmed | [credo-cvca](https://cvca.cz/en/credo-ventures-2/) / 2026-10-22 | Nedatovaný asociační profil; nepovažovat za aktuální AUM. |
-| ticket | 50,000–10,000,000 EUR (preferred_investment) | historical_unconfirmed | [credo-cvca](https://cvca.cz/en/credo-ventures-2/) / 2026-10-22 | Alternativní nedatovaný asociační údaj. Pro přehled má přednost vlastní web s aktuálně publikovaným mandátem. |
+| ticket | 50,000-10,000,000 EUR (preferred_investment) | historical_unconfirmed | [credo-cvca](https://cvca.cz/en/credo-ventures-2/) / 2026-10-22 | Alternativní nedatovaný asociační údaj. Pro přehled má přednost vlastní web s aktuálně publikovaným mandátem. |
 
 Důkaz skutečné investice:
 
-- **Axoflow** — 2025-01-21 (announcement, přesnost day); [$7M to improve security data quality](https://axoflow.com/blog/7m-to-improve-security-data-quality); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
+- **Axoflow** - 2025-01-21 (announcement, přesnost day); [$7M to improve security data quality](https://axoflow.com/blog/7m-to-improve-security-data-quality); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
 
 ## DEPO Ventures
 
@@ -62,15 +66,15 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Defence; space; fintech; Industry 4.0; energie | supported | [depo-home](https://depoventures.com/) / 2026-10-22 |  |
 | stage | inception; pre-seed | supported | [depo-home](https://depoventures.com/) / 2026-10-22 |  |
 | geography | Evropa, CEE a diaspora | supported | [depo-home](https://depoventures.com/) / 2026-10-22 |  |
-| ticket | 250,000–500,000 EUR (check) | supported | [depo-home](https://depoventures.com/) / 2026-10-22 |  |
-| total_investment_capital | nezjištěno | not_found | [depo-home](https://depoventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 250,000-500,000 EUR (check) | supported | [depo-home](https://depoventures.com/) / 2026-10-22 |  |
+| total_investment_capital | nezjištěno | not_found | [depo-home](https://depoventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 | capital_reference | 9,000,000 EUR (invested_to_date) | supported | [depo-home](https://depoventures.com/) / 2026-10-22 | Proinvestováno; není to AUM ani dostupný kapitál. |
 | capital_reference | 5,500,000 EUR (manager_aum) | historical_unconfirmed | [depo-cvca](https://cvca.cz/en/depo-ventures-2/) / 2026-10-22 | Nedatovaný asociační údaj. |
-| ticket | 50,000–300,000 EUR (preferred_investment) | historical_unconfirmed | [depo-cvca](https://cvca.cz/en/depo-ventures-2/) / 2026-10-22 | Asociační profil se liší od vlastního webu; referenční datum neznámé. |
+| ticket | 50,000-300,000 EUR (preferred_investment) | historical_unconfirmed | [depo-cvca](https://cvca.cz/en/depo-ventures-2/) / 2026-10-22 | Asociační profil se liší od vlastního webu; referenční datum neznámé. |
 
 Důkaz skutečné investice:
 
-- **Tapaya** — 2026-04-28 (announcement, přesnost day); [Tapaya raises EUR 1M pre-seed](https://www.tapaya.com/en/blog/tapaya-raises-1m-pre-seed-to-turn-any-device-into-a-payment-terminal); kontrola 2026-10-22. Datum a účast potvrzuje přímo Tapaya. 1 mil. EUR je celé kolo, vklad DEPO není zveřejněn v použitém zdroji.
+- **Tapaya** - 2026-04-28 (announcement, přesnost day); [Tapaya raises EUR 1M pre-seed](https://www.tapaya.com/en/blog/tapaya-raises-1m-pre-seed-to-turn-any-device-into-a-payment-terminal); kontrola 2026-10-22. Datum a účast potvrzuje přímo Tapaya. 1 mil. EUR je celé kolo, vklad DEPO není zveřejněn v použitém zdroji.
 
 ## i&i Biotech Fund
 
@@ -81,21 +85,21 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | name | i&i Biotech Fund | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | website | https://www.inibio.eu/ | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | investor_type | venture_capital | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Klasifikace AI podle mandátu a doložené investice; nikoli právní licence. |
-| czech_office | Biotech Investments, s.r.o. — investiční poradce fondu, Pobřežní 394/12, Praha 8 | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Česká kancelář poradce reprezentuje investiční organizaci v pilotu. Samotný fond je domicilován v Lucembursku. |
+| czech_office | Biotech Investments, s.r.o. - investiční poradce fondu, Pobřežní 394/12, Praha 8 | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Česká kancelář poradce reprezentuje investiční organizaci v pilotu. Samotný fond je domicilován v Lucembursku. |
 | sectors | Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | stage | early-stage | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | geography | Evropa, zejména CEE | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
-| ticket | 500,000–2,000,000 EUR (sweet_spot) | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Business creation od 150 000 EUR; není to dolní mez běžného sweet spot. |
-| total_investment_capital | nezjištěno | not_found | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 500,000-2,000,000 EUR (sweet_spot) | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Business creation od 150 000 EUR; není to dolní mez běžného sweet spot. |
+| total_investment_capital | nezjištěno | not_found | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 | capital_reference | cca 47,000,000 EUR (fund_closed_size) | historical_unconfirmed | [inibio-capital](https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb) / 2026-10-22 | Historická částka z hlavního textu; přibližná, ne současný celkový kapitál. |
 | capital_reference | >53,000,000 EUR (fund_reported_managed_capital) | undated_reference | [inibio-capital](https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb) / 2026-10-22 | Spodní hranice z nedatovaného boilerplate stejné stránky; nemá automaticky datum článku. |
-| fund_domicile | Lucembursko — i&i Biotech Fund I SCSp | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Doplněno po druhém kole skutečné ruční kontroly. |
+| fund_domicile | Lucembursko - i&i Biotech Fund I SCSp | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Doplněno po druhém kole skutečné ruční kontroly. |
 | investment_adviser | Biotech Investments, s.r.o., Praha | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Doplněno po druhém kole skutečné ruční kontroly. |
 
 Důkaz skutečné investice:
 
-- **KyDo Therapeutics** — 2025 (portfolio_investment_year, přesnost year); [Strategy and dated portfolio](https://www.inibio.eu/); kontrola 2026-10-22. Oficiální portfolio přiřazuje rok 2025; přesný den a výše příspěvku nezjištěny.
-- **Sampling Human** — 2022-04-12 (announcement, přesnost day); [i&i Bio invests $1.5M in Sampling Human](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis); kontrola 2026-10-22. 1,5 mil. USD je výslovně vlastní investice i&i Bio, nikoli výše celého kola; historický důkaz z roku 2022.
+- **KyDo Therapeutics** - 2025 (portfolio_investment_year, přesnost year); [Strategy and dated portfolio](https://www.inibio.eu/); kontrola 2026-10-22. Oficiální portfolio přiřazuje rok 2025; přesný den a výše příspěvku nezjištěny.
+- **Sampling Human** - 2022-04-12 (announcement, přesnost day); [i&i Bio invests $1.5M in Sampling Human](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis); kontrola 2026-10-22. 1,5 mil. USD je výslovně vlastní investice i&i Bio, nikoli výše celého kola; historický důkaz z roku 2022.
   Vlastní vklad investora: **1,500,000 USD**; [výslovný důkaz částky](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis).
 
 ## INVEN Capital
@@ -111,13 +115,15 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Climate tech | supported | [inven-home](https://www.invencapital.cz/) / 2026-10-22 |  |
 | stage | growth | supported | [inven-cvca](https://cvca.cz/en/inven-capital-2/) / 2026-10-22 |  |
 | geography | Evropa a Izrael | supported | [inven-home](https://www.invencapital.cz/) / 2026-10-22 |  |
-| ticket | 2,000,000–30,000,000 EUR (ticket) | supported | [inven-home](https://www.invencapital.cz/) / 2026-10-22 |  |
-| total_investment_capital | nezjištěno | not_found | [inven-home](https://www.invencapital.cz/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 2,000,000-30,000,000 EUR (ticket) | supported | [inven-home](https://www.invencapital.cz/) / 2026-10-22 |  |
+| total_investment_capital | nezjištěno | not_found | [inven-home](https://www.invencapital.cz/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 | capital_reference | >500,000,000 EUR (manager_aum) | historical_unconfirmed | [inven-eib](https://www.eib.org/en/press/all/2023-047-expanding-strategic-partnership-eib-supports-investments-in-climate-friendly-startups-providing-a-further-eur50-million-to-the-czech-fund-inven-capital) / 2026-10-22 | Historické AUM z tiskové zprávy označené 2023 v URL; dnešní AUM neověřeno. |
+| capital_reference | 500,000,000 EUR (committed_capital) | historical_unconfirmed | [inven-home](https://www.invencapital.cz/) / 2026-10-22 | Nedatovaný titulek odkazuje na historickou zprávu EIB 2023. EIB uvádí AUM přes 500 mil.; web hovoří o committed capital 500 mil. Oba významy zachovány, nelze ztotožnit ani potvrdit aktuálnost. Kontrola AI, nikoli člověka. |
+| capital_reference | >260,000,000 EUR (available_for_new_investments) | historical_unconfirmed | [inven-eib](https://www.eib.org/en/press/all/2023-047-expanding-strategic-partnership-eib-supports-investments-in-climate-friendly-startups-providing-a-further-eur50-million-to-the-czech-fund-inven-capital) / 2026-10-22 | Disponibilní kapitál dle historické zprávy EIB 2023 pro období 2022-2027; žádný odhad zůstatku v roce 2026. Kontrola AI, nikoli člověka. |
 
 Důkaz skutečné investice:
 
-- **Andercore** — 2026-02-11 (announcement, přesnost day); [Andercore secures $40m Series B](https://www.andercore.com/press/andercore-secures-40m-series-b-for-ai-driven-industrial-trade-platform); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
+- **Andercore** - 2026-02-11 (announcement, přesnost day); [Andercore secures $40m Series B](https://www.andercore.com/press/andercore-secures-40m-series-b-for-ai-driven-industrial-trade-platform); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
 
 ## KAYA VC
 
@@ -132,14 +138,14 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Digitální, fyzická a spotřebitelská ekonomika; široké technologické zaměření | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 |  |
 | stage | pre-seed; seed | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 |  |
 | geography | CEE zakladatelé | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 |  |
-| ticket | 1,000,000–3,000,000 USD (ticket) | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 |  |
+| ticket | 1,000,000-3,000,000 USD (ticket) | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 |  |
 | total_investment_capital | 500,000,000 USD (manager_aum) | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 | Self-reported AUM na webu; datum ocenění není uvedeno. |
 | capital_reference | 500,000,000 USD (manager_aum) | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 | Vlastní aktuálně dostupný web, bez referenčního data ocenění; self-reported, nikoli auditované. |
 | capital_reference | 85,000,000 USD (fund_reported_size) | supported | [kaya-home](https://www.kaya.vc/) / 2026-10-22 | Web říká Current Fund; bez důkazu typu closing neoznačovat final close. |
 
 Důkaz skutečné investice:
 
-- **E2B** — 2025-07-28 (announcement, přesnost day); [E2B Raises a $21M Series A](https://www.insightpartners.com/ideas/e2b-raises-a-21m-series-a-to-offer-cloud-for-ai-agents-to-fortune-100/?ref=newsletter.kaya.vc); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
+- **E2B** - 2025-07-28 (announcement, přesnost day); [E2B Raises a $21M Series A](https://www.insightpartners.com/ideas/e2b-raises-a-21m-series-a-to-offer-cloud-for-ai-agents-to-fortune-100/?ref=newsletter.kaya.vc); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
 
 ## Nation 1 / N1
 
@@ -154,13 +160,13 @@ Aktivita: `historical_activity_only`. Jednotka: investiční organizace, nikoli 
 | sectors | AI; healthtech; frontier tech | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 |  |
 | stage | early-stage; od založení | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 |  |
 | geography | Evropa a USA | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 |  |
-| ticket | 100,000–1,000,000 USD (typical_first_investment) | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 |  |
+| ticket | 100,000-1,000,000 USD (typical_first_investment) | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 |  |
 | total_investment_capital | 60,000,000 USD (manager_aum) | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 | Self-reported across two funds; referenční datum neuvedeno. |
 | capital_reference | 60,000,000 USD (manager_aum) | supported | [nation1-home](https://n1.rocks/) / 2026-10-22 | Self-reported spravovaný kapitál přes dva fondy; bez data ocenění. |
 
 Důkaz skutečné investice:
 
-- **Snuggs** — 2019 (portfolio_investment_year, přesnost year); [Investment approach and offices](https://n1.rocks/); kontrola 2026-10-22. Testimonial zakladatelky na webu N1 popisuje pre-seed vstup v roce 2019; nejde o ověření současné aktivity.
+- **Snuggs** - 2019 (portfolio_investment_year, přesnost year); [Investment approach and offices](https://n1.rocks/); kontrola 2026-10-22. Testimonial zakladatelky na webu N1 popisuje pre-seed vstup v roce 2019; nejde o ověření současné aktivity.
 
 ## Tensor Ventures
 
@@ -175,14 +181,14 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Deep tech; AI; quantum; computational biotech; sustainable tech | supported | [tensor-home](https://tensor.ventures/) / 2026-10-22 |  |
 | stage | seed; Series A | supported | [tensor-home](https://tensor.ventures/) / 2026-10-22 |  |
 | geography | EU a USA | supported | [tensor-cvca](https://cvca.cz/en/tensor-ventures/) / 2026-10-22 |  |
-| ticket | 250,000–1,000,000 EUR (preferred_investment) | historical_unconfirmed | [tensor-cvca](https://cvca.cz/en/tensor-ventures/) / 2026-10-22 | Nedatovaný asociační profil; současné rozpětí neověřeno. |
-| total_investment_capital | nezjištěno | not_found | [tensor-home](https://tensor.ventures/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 250,000-1,000,000 EUR (preferred_investment) | historical_unconfirmed | [tensor-cvca](https://cvca.cz/en/tensor-ventures/) / 2026-10-22 | Nedatovaný asociační profil; současné rozpětí neověřeno. |
+| total_investment_capital | nezjištěno | not_found | [tensor-home](https://tensor.ventures/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 | capital_reference | 20,000,000 EUR (manager_aum) | historical_unconfirmed | [tensor-cvca](https://cvca.cz/en/tensor-ventures/) / 2026-10-22 | Nedatovaný údaj; nevydávat za současný celkový kapitál. |
 
 Důkaz skutečné investice:
 
-- **Repsense** — 2025-12-16 (embedded_announcement, přesnost day); [Decoded December 2025](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6); kontrola 2026-10-22. 1,1 mil. EUR je velikost závěrečné tranše s více investory, nikoli osobní ticket Tensoru.
-- **Openvibe** — 2025-01-28 (embedded_announcement, přesnost day); [Decoded December 2025](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6); kontrola 2026-10-22. Ve zprávě shrnuté v newsletteru je 28. 1. 2025 uveden Tensor jako vedoucí investor seed kola. 800 tis. USD je celá částka kola; vlastní vklad Tensoru nezjištěn.
+- **Repsense** - 2025-12-16 (embedded_announcement, přesnost day); [Decoded December 2025](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6); kontrola 2026-10-22. 1,1 mil. EUR je velikost závěrečné tranše s více investory, nikoli osobní ticket Tensoru.
+- **Openvibe** - 2025-01-28 (embedded_announcement, přesnost day); [Decoded December 2025](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6); kontrola 2026-10-22. Ve zprávě shrnuté v newsletteru je 28. 1. 2025 uveden Tensor jako vedoucí investor seed kola. 800 tis. USD je celá částka kola; vlastní vklad Tensoru nezjištěn.
 
 ## Tilia Impact Ventures
 
@@ -197,12 +203,12 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Sektorově agnostický impact; environmentální a sociální dopad | supported | [tilia-home](https://tilia.vc/) / 2026-10-22 |  |
 | stage | early-stage | supported | [tilia-home](https://tilia.vc/) / 2026-10-22 |  |
 | geography | CEE+ | supported | [tilia-home](https://tilia.vc/) / 2026-10-22 |  |
-| ticket | 300,000–1,200,000 EUR (initial_ticket) | supported | [tilia-home](https://tilia.vc/) / 2026-10-22 |  |
-| total_investment_capital | nezjištěno | not_found | [tilia-home](https://tilia.vc/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 300,000-1,200,000 EUR (initial_ticket) | supported | [tilia-home](https://tilia.vc/) / 2026-10-22 |  |
+| total_investment_capital | nezjištěno | not_found | [tilia-home](https://tilia.vc/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 
 Důkaz skutečné investice:
 
-- **LetsData** — 2025-01-15 (announcement, přesnost day); [LetsData Secures $1.6M](https://letsdata.net/resources/newsroom/letsdata-1-6m-investment); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
+- **LetsData** - 2025-01-15 (announcement, přesnost day); [LetsData Secures $1.6M](https://letsdata.net/resources/newsroom/letsdata-1-6m-investment); kontrola 2026-10-22. Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání.
 
 ## Purple Ventures
 
@@ -217,14 +223,16 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Purpose-driven technologické inovace | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
 | stage | pre-seed; seed | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
 | geography | CEE+ | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
-| ticket | 250,000–400,000 EUR (initial_ticket) | partial | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Vlastní web uvádí 250–400 tis. EUR, firemní LinkedIn 250–500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí. |
-| total_investment_capital | nezjištěno | not_found | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
-| ticket | 250,000–500,000 EUR (initial_ticket) | undated_reference | [purple-linkedin](https://cz.linkedin.com/company/purple-ventures) / 2026-10-22 | Alternativní self-reported rozsah; rozpor s webem zůstává otevřený. |
+| ticket | 250,000-400,000 EUR (initial_ticket) | partial | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Vlastní web uvádí 250-400 tis. EUR, firemní LinkedIn 250-500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí. |
+| total_investment_capital | nezjištěno | not_found | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
+| ticket | 250,000-500,000 EUR (initial_ticket) | undated_reference | [purple-linkedin](https://cz.linkedin.com/company/purple-ventures) / 2026-10-22 | Alternativní self-reported rozsah; rozpor s webem zůstává otevřený. |
 | capital_reference | >700,000,000 CZK (fund_reported_raised_capital) | undated_reference | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Spodní hranice v souhrnu výsledků 2025 na vlastním webu; bez vlastního data zprávy a bez doložení final close. |
+| capital_reference | 15,000,000 EUR (fund_reported_size) | undated_reference | [purple-group-capital](https://purple.group/company-detail/purple-ventures) / 2026-10-22 | První fond bez data ocenění; nesčítat s cílem druhého fondu. Kontrola AI, nikoli člověka. |
+| capital_reference | 40,000,000 EUR (fund_target_size) | undated_reference | [purple-group-capital](https://purple.group/company-detail/purple-ventures) / 2026-10-22 | Cíl, nikoli získaný kapitál. Hlavní text 40 mil., panel 40M+; přesnost hranice nejistá, obě formulace zachovány v poznámce. Kontrola AI, nikoli člověka. |
 
 Důkaz skutečné investice:
 
-- **Fether Labs** — 2026 (portfolio_investment_year, přesnost year); [Investment strategy, portfolio and media digest](https://www.purple-ventures.com/); kontrola 2026-10-22. Portfolio výslovně uvádí PV 2 | Invested in 2026; přesný den není z tohoto zdroje znám.
+- **Fether Labs** - 2026 (portfolio_investment_year, přesnost year); [Investment strategy, portfolio and media digest](https://www.purple-ventures.com/); kontrola 2026-10-22. Portfolio výslovně uvádí PV 2 | Invested in 2026; přesný den není z tohoto zdroje znám.
 
 ## J&T Ventures
 
@@ -239,12 +247,13 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | sectors | Sektorově agnostické; B2B, B2C, marketplaces | supported | [jt-home](https://www.jtventures.cz/) / 2026-10-22 |  |
 | stage | pre-seed až Series A | supported | [jt-home](https://www.jtventures.cz/) / 2026-10-22 |  |
 | geography | CEE; SEE; Baltics | supported | [jt-home](https://www.jtventures.cz/) / 2026-10-22 |  |
-| ticket | 300,000–3,000,000 EUR (investment) | supported | [jt-home](https://www.jtventures.cz/) / 2026-10-22 |  |
-| total_investment_capital | nezjištěno | not_found | [jt-home](https://www.jtventures.cz/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 300,000-3,000,000 EUR (investment) | supported | [jt-home](https://www.jtventures.cz/) / 2026-10-22 |  |
+| total_investment_capital | nezjištěno | not_found | [jt-home](https://www.jtventures.cz/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
+| capital_reference | 75,000,000 EUR (fund_target_size) | historical_unconfirmed | [jt-iii-target](https://www.jtbank.cz/clanky/-/j3imbtu9eu-adam-kocik-zajimava-prilezitost-ma-nazev-j-t-ventures-iii) / 2026-10-22 | Plánovaná velikost při oznámení, dnešní stav fundraisingu nezjištěn. Kontrola AI, nikoli člověka. |
 
 Důkaz skutečné investice:
 
-- **grid.online** — 2025-04-20 (article_index_date, přesnost day); [Interview with grid.online founder](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky); kontrola 2026-10-22. Datum převzato z indexu J&T blogu, nikoli z transakce. Investor i příjemce popsáni v rozhovoru.
+- **grid.online** - 2025-04-20 (article_index_date, přesnost day); [Interview with grid.online founder](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky); kontrola 2026-10-22. Datum převzato z indexu J&T blogu, nikoli z transakce. Investor i příjemce popsáni v rozhovoru.
 
 ## Reflex Capital
 
@@ -260,14 +269,14 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | stage | startup / venture; přesné fáze nezjištěny | partial | [grid](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky) / 2026-10-22 | Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu. |
 | geography | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Pražská a americká kancelář samy o sobě nedokládají cílovou investiční geografii. |
 | ticket | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol. |
-| total_investment_capital | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| total_investment_capital | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. Cílená doplňující rešerše AI 2026-10-22: srovnatelné současné souhrnné AUM v omezeném rozsahu nenalezeno; rozsah a přesné URL v reports/CAPITAL_RESEARCH.md. Datum přístupu není datum platnosti. |
 | capital_reference | 150,000,000 EUR (invested_to_date) | supported | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál. |
 
 Důkaz skutečné investice:
 
-- **grid.online** — 2025-04-20 (article_index_date, přesnost day); [Interview with grid.online founder](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky); kontrola 2026-10-22. Účast potvrzena rozhovorem na webu spoluinvestora J&T. Datum je datum indexu článku, nikoli vypořádání.
+- **grid.online** - 2025-04-20 (article_index_date, přesnost day); [Interview with grid.online founder](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky); kontrola 2026-10-22. Účast potvrzena rozhovorem na webu spoluinvestora J&T. Datum je datum indexu článku, nikoli vypořádání.
 
 ## Samostatně evidovaní investoři mimo VC pilot
 
-- **Genesis Capital** — private_equity; growth_equity. Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze. Zdroje: [genesis-home](https://www.genesis.cz/); [genesis](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/).
-- **ARX Equity Partners** — private_equity. Skutečný PE investor s akvizicemi, management buyout a expanzním kapitálem. Na pokyn uživatele evidován odděleně mimo VC pilot; nejde o prohlášení za neinvestora. Zdroje: [arx](https://cvca.cz/en/arx-equity-partners-2/).
+- **Genesis Capital** - private_equity; growth_equity. Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze. Zdroje: [genesis-home](https://www.genesis.cz/); [genesis](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/).
+- **ARX Equity Partners** - private_equity. Skutečný PE investor s akvizicemi, management buyout a expanzním kapitálem. Na pokyn uživatele evidován odděleně mimo VC pilot; nejde o prohlášení za neinvestora. Zdroje: [arx](https://cvca.cz/en/arx-equity-partners-2/).
