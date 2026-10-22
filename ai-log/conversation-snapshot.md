@@ -372,3 +372,32 @@ Prosím opět **zařadit / vyřadit / nelze rozhodnout** a krátký důvod, zda 
 ## 2026-10-22T08:21:52.534Z — assistant
 
 Zapíšu poslední dva verdikty a přepočítám výsledky pro celý vzorek 20 kandidátů. Pak zkontroluji, co ještě zbývá před odevzdáním.
+
+## 2026-10-22T08:22:56.745Z — assistant
+
+Ruční klasifikace je dokončená: **20/20 kandidátů — 11 zařadit, 9 vyřadit z VC pilotu**. Výsledky jsou na [GitHubu](https://github.com/Matyharo/vyberove_rizeni).
+
+- Přesnost původních pozitivních predikcí: **10/10**.
+- Recall ve vzorku: **10/11 (90,9 %)**; u Purple se AI původně zdržela rozhodnutí.
+- Strukturální validace i všech **17 testů prošly**.
+
+Měření hodnotí zařazení subjektů v tomto vzorku, nikoli správnost všech jejich údajů.
+
+Před odevzdáním zbývá **finální nativní export konverzace do `ai-log`**. Průběžný filtrovaný záznam už repozitář obsahuje; kontrola připravenosti nyní hlásí pouze chybějící finální export.
+
+## 2026-10-22T08:23:37.772Z — user
+
+Tak pojď na to.
+
+
+## 2026-10-22T08:23:41.934Z — assistant
+
+Zkusím získat finální export této konverzace, uložit ho do `ai-log` a dokončit kontrolu připravenosti k odevzdání. Nejdřív ověřím, jaký způsob exportu tato aplikace podporuje.
+
+## 2026-10-22T08:24:09.026Z — assistant
+
+Oficiální dokumentace uvádí příkaz `/export` v Codex CLI. CLI je na počítači dostupné, takže zkusím otevřít uloženou relaci jen pro export, bez zadávání další práce modelu.
+
+## 2026-10-22T08:25:10.366Z — assistant
+
+CLI export zatím blokuje: hlásí, že je tato konverzace otevřená v jiné aplikaci, a požaduje její zavření. Připravím přesný postup a aktualizuji záznam práce; samotný nativní export bude potřeba spustit po zavření tohoto chatu v desktopové aplikaci.

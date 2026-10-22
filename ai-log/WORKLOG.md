@@ -67,3 +67,7 @@ Uživatel zařadil J&T a Reflex a vyřadil Startovač. Zapsáno 18/20 rozhodnut�
 ## Sedmá skutečná ruční kontrola — 22. 10. 2026
 
 Uživatel vyřadil CVCA jako asociaci a Startupstart jako propojovací platformu. Dokončeno 20/20 referenčních klasifikací, 11 include a 9 exclude. Původní precision 10/10 a recall 10/11 v tomto účelovém vzorku. Atributová přesnost zůstává nezměřena, čas kontroly neznámý. Finální nativní export konverzace je stále samostatný zbývající krok; průběžný filtrovaný snapshot za něj nevydáváme. Viz `review/round-07.md`.
+
+## Pokus o nativní export — 22. 10. 2026
+
+Na pokyn uživatele AI ověřila oficiální dokumentaci a dostupnost Codex CLI, poté zkusila otevřít konkrétní existující relaci pouze pro export. První pokus narazil na zápis provozního stavu mimo sandbox; druhý s potřebným oprávněním a --no-daemon načetl historii, ale CLI ohlásilo zámek kvůli otevření v desktopové aplikaci. Nebyla spuštěna inference, fork ani nový agent. CLI ukončeno q. Nativní export nevznikl. Přesný postup pro dokončení po zavření desktopové relace je v ai-log/README.md; stav vydání zůstává awaiting_final_native_conversation_export.
