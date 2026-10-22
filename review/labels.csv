@@ -1,7 +1,7 @@
 ﻿candidate_id,label,reviewer,reviewed_on,reason,source_ids
 credo,include,Ferstl,2026-10-22,"Uživatel potvrdil přímou investici do Axoflow a českou kancelář v Praze.",credo-home;axoflow
-depo,,,,,
-inibio,,,,,
+depo,include,Ferstl,2026-10-22,"Uživatel potvrdil VC mandát a pražskou kancelář; Tapaya přímo potvrzuje účast DEPO v pre-seed kole. 1 mil. EUR je celé kolo.",depo-home;tapaya-primary
+inibio,include,Ferstl,2026-10-22,"Uživatel potvrdil early-stage VC a pražskou kancelář investičního poradce; fond má lucemburský domicil. Doložena vlastní investice do Sampling Human.",inibio-home;sampling-human
 inven,,,,,
 kaya,,,,,
 nation1,,,,,
@@ -11,7 +11,7 @@ purple,,,,,
 jt,,,,,
 lighthouse,exclude,Ferstl,2026-10-22,"Uživatel ověřil dva různé subjekty se stejným názvem. Původní discovery kandidát nelze zaměnit s českým fondem.",lighthouse-discovery;lighthouse-home
 reflex,,,,,
-genesis,,,,,
+genesis,exclude,Ferstl,2026-10-22,"Mimo VC pilot; na pokyn uživatele evidován samostatně jako skutečný PE / growth equity investor.",genesis;genesis-home
 arx,,,,,
 akat,,,,,
 bdo,exclude,Ferstl,2026-10-22,"Uživatel doložil auditní a poradenské služby včetně poradenství fondům PE a VC; účast v roli poradce není přímá investice.",bdo

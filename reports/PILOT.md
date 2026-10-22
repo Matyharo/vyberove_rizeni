@@ -51,7 +51,7 @@ Důkaz skutečné investice:
 
 ## DEPO Ventures
 
-Aktivita: `activity_date_unknown`. Jednotka: investiční organizace, nikoli počet jednotlivých fondů.
+Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli počet jednotlivých fondů.
 
 | Údaj | Hodnota | Stav | Zdroj / kontrola | Poznámka |
 |---|---|---|---|---|
@@ -70,7 +70,7 @@ Aktivita: `activity_date_unknown`. Jednotka: investiční organizace, nikoli po�
 
 Důkaz skutečné investice:
 
-- **Tapaya** — datum neznámé (announcement, přesnost unknown); [Tapaya raises EUR 1 million](https://depoventures.com/latest/turning-any-smartphone-into-a-payment-terminal-czech-fintech-tapaya-has-raised-eur-1-million); kontrola 2026-10-22. Účast doložena investorem; datum oznámení nenalezeno. Nedatovat podle copyrightu ani stáří crawl indexu.
+- **Tapaya** — 2026-04-28 (announcement, přesnost day); [Tapaya raises EUR 1M pre-seed](https://www.tapaya.com/en/blog/tapaya-raises-1m-pre-seed-to-turn-any-device-into-a-payment-terminal); kontrola 2026-10-22. Datum a účast potvrzuje přímo Tapaya. 1 mil. EUR je celé kolo, vklad DEPO není zveřejněn v použitém zdroji.
 
 ## i&i Biotech Fund
 
@@ -81,7 +81,7 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | name | i&i Biotech Fund | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | website | https://www.inibio.eu/ | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | investor_type | venture_capital | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Klasifikace AI podle mandátu a doložené investice; nikoli právní licence. |
-| czech_office | Pobřežní 394/12, Praha 8 | supported | [inibio-cvca](https://cvca.cz/en/biotech-investments/) / 2026-10-22 |  |
+| czech_office | Biotech Investments, s.r.o. — investiční poradce fondu, Pobřežní 394/12, Praha 8 | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Česká kancelář poradce reprezentuje investiční organizaci v pilotu. Samotný fond je domicilován v Lucembursku. |
 | sectors | Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | stage | early-stage | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
 | geography | Evropa, zejména CEE | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 |  |
@@ -89,10 +89,14 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | total_investment_capital | nezjištěno | not_found | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
 | capital_reference | cca 47,000,000 EUR (fund_closed_size) | historical_unconfirmed | [inibio-capital](https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb) / 2026-10-22 | Historická částka z hlavního textu; přibližná, ne současný celkový kapitál. |
 | capital_reference | >53,000,000 EUR (fund_reported_managed_capital) | undated_reference | [inibio-capital](https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb) / 2026-10-22 | Spodní hranice z nedatovaného boilerplate stejné stránky; nemá automaticky datum článku. |
+| fund_domicile | Lucembursko — i&i Biotech Fund I SCSp | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Doplněno po druhém kole skutečné ruční kontroly. |
+| investment_adviser | Biotech Investments, s.r.o., Praha | supported | [inibio-home](https://www.inibio.eu/) / 2026-10-22 | Doplněno po druhém kole skutečné ruční kontroly. |
 
 Důkaz skutečné investice:
 
 - **KyDo Therapeutics** — 2025 (portfolio_investment_year, přesnost year); [Strategy and dated portfolio](https://www.inibio.eu/); kontrola 2026-10-22. Oficiální portfolio přiřazuje rok 2025; přesný den a výše příspěvku nezjištěny.
+- **Sampling Human** — 2022-04-12 (announcement, přesnost day); [i&i Bio invests $1.5M in Sampling Human](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis); kontrola 2026-10-22. 1,5 mil. USD je výslovně vlastní investice i&i Bio, nikoli výše celého kola; historický důkaz z roku 2022.
+  Vlastní vklad investora: **1,500,000 USD**; [výslovný důkaz částky](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis).
 
 ## INVEN Capital
 
@@ -261,3 +265,7 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 Důkaz skutečné investice:
 
 - **grid.online** — 2025-04-20 (article_index_date, přesnost day); [Interview with grid.online founder](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky); kontrola 2026-10-22. Účast potvrzena rozhovorem na webu spoluinvestora J&T. Datum je datum indexu článku, nikoli vypořádání.
+
+## Samostatně evidovaní investoři mimo VC pilot
+
+- **Genesis Capital** — private_equity; growth_equity. Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze. Zdroje: [genesis-home](https://www.genesis.cz/); [genesis](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/).

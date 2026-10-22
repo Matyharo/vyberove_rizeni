@@ -14,8 +14,11 @@
 | decisions | Aktuální rozhodnutí AI, důvod a vazby na zdroje |
 | initial_predictions | Původní rozhodnutí zmrazená před opravami |
 | human_reviews / human_claim_reviews | Jen skutečně vyplněné lidské referenční štítky |
+| out_of_scope_classifications | Samostatná evidence skutečných investorů mimo VC pilot; Genesis jako PE / growth equity, FK do kandidátů |
 
 CSV exporty zachovávají source_id; URL lze dohledat v sources.csv. Přehled investor_summary.csv obsahuje přímo URL u jednotlivých souhrnných atributů. Vnořené hodnoty v plných CSV jsou serializované jako JSON, kódování UTF-8 s BOM. SQLite ukládá claim value jako JSON, aby neztratil původní měnu, rozpětí a null. Čtenářský přehled se všemi výroky je `reports/PILOT.md`.
+
+Transakce s doloženým vlastním vkladem má také `contribution_source_id`, v SQLite cizí klíč do sources. Po ruční kontrole byl takto doplněn vklad i&i Bio 1,5 mil. USD do Sampling Human. Částka celého kola Tapaya zůstává oddělená a vlastní vklad DEPO je null. Samostatné klasifikace se exportují do `exports/out_of_scope.csv`.
 
 ## Stavy tvrzení
 

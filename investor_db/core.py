@@ -141,6 +141,11 @@ def validate(pilot, candidates, predictions):
                 money(tx[field])
         if tx["investor_contribution"] is not None and not tx.get("contribution_source_id"):
             raise ValueError("Contribution needs separate explicit evidence")
+        if tx.get("contribution_source_id") and tx["contribution_source_id"] not in sids:
+            raise ValueError("Unknown contribution evidence source")
+    for row in pilot.get("out_of_scope", []):
+        if row["candidate_id"] not in cids or not set(row["source_ids"]) <= sids:
+            raise ValueError("Out-of-scope classification has dangling reference")
     for fund in pilot["funds"]:
         if fund["investor_id"] not in iids or fund["source_id"] not in sids:
             raise ValueError("Fund has dangling reference")
@@ -318,7 +323,10 @@ def _sqlite_export(path, pilot, candidates, predictions, reviews, claim_reviews)
         CREATE TABLE transactions(id TEXT PRIMARY KEY, investor_id TEXT NOT NULL REFERENCES investors(id),
           company TEXT NOT NULL, source_id TEXT NOT NULL REFERENCES sources(id), date TEXT,
           date_precision TEXT NOT NULL, date_kind TEXT NOT NULL, round_amount_json TEXT NOT NULL,
-          investor_contribution_json TEXT NOT NULL, note TEXT NOT NULL);
+          investor_contribution_json TEXT NOT NULL, note TEXT NOT NULL,
+          contribution_source_id TEXT REFERENCES sources(id));
+        CREATE TABLE out_of_scope_classifications(candidate_id TEXT PRIMARY KEY REFERENCES candidates(id),
+          investor_type TEXT NOT NULL, source_ids_json TEXT NOT NULL, note TEXT NOT NULL);
         CREATE TABLE transaction_sources(transaction_id TEXT REFERENCES transactions(id),
           source_id TEXT REFERENCES sources(id), PRIMARY KEY(transaction_id, source_id));
         CREATE TABLE decisions(candidate_id TEXT PRIMARY KEY REFERENCES candidates(id),
@@ -344,15 +352,17 @@ def _sqlite_export(path, pilot, candidates, predictions, reviews, claim_reviews)
                        (c["id"], c["investor_id"], c["field"], json.dumps(c["value"], ensure_ascii=False),
                         c["source_id"], c["scope"], c["valid_as_of"], c["status"], c["note"]))
         for t in pilot["transactions"]:
-            db.execute("INSERT INTO transactions VALUES (?,?,?,?,?,?,?,?,?,?)",
+            db.execute("INSERT INTO transactions VALUES (?,?,?,?,?,?,?,?,?,?,?)",
                        (t["id"], t["investor_id"], t["company"], t["source_id"], t["date"], t["date_precision"],
-                        t["date_kind"], json.dumps(t["round_amount"]), json.dumps(t["investor_contribution"]), t["note"]))
+                        t["date_kind"], json.dumps(t["round_amount"]), json.dumps(t["investor_contribution"]), t["note"], t.get("contribution_source_id")))
             db.executemany("INSERT INTO transaction_sources VALUES (?,?)", [(t["id"], s) for s in t["corroborating_source_ids"]])
         for table, rows in (("decisions", pilot["decisions"]), ("initial_predictions", predictions["predictions"])):
             db.executemany(f"INSERT INTO {table} VALUES (?,?,?)", [(d["candidate_id"], d["prediction"], d["reason"]) for d in rows])
         db.executemany("INSERT INTO decision_sources VALUES (?,?)", [(d["candidate_id"], s) for d in pilot["decisions"] for s in d["source_ids"]])
         db.executemany("INSERT INTO human_reviews VALUES (:candidate_id,:label,:reviewer,:reviewed_on,:reason,:source_ids)", reviews)
         db.executemany("INSERT INTO human_claim_reviews VALUES (:claim_id,:label,:reviewer,:reviewed_on,:reason)", claim_reviews)
+        db.executemany("INSERT INTO out_of_scope_classifications VALUES (?,?,?,?)",
+                       [(r["candidate_id"], r["investor_type"], json.dumps(r["source_ids"]), r["note"]) for r in pilot.get("out_of_scope", [])])
         if db.execute("PRAGMA foreign_key_check").fetchall():
             raise ValueError("SQLite referential integrity failed")
     tmp.replace(path)
@@ -377,7 +387,8 @@ def display(value):
         if "min" in value:
             return f"{value['min']:,}–{value['max']:,} {value['currency']} ({value['basis']})"
         bound = {"greater_than": ">", "approximate": "cca "}.get(value.get("bound"), "")
-        return f"{bound}{value['amount']:,} {value['currency']} ({value.get('metric', '')})"
+        suffix = f" ({value['metric']})" if value.get("metric") else ""
+        return f"{bound}{value['amount']:,} {value['currency']}{suffix}"
     return str(value)
 
 
@@ -403,6 +414,14 @@ def report(root, pilot, candidates, metrics):
         for tx in txs:
             src = srcs[tx["source_id"]]
             lines.append(f"- **{tx['company']}** — {tx['date'] or 'datum neznámé'} ({tx['date_kind']}, přesnost {tx['date_precision']}); [{src['title']}]({src['url']}); kontrola {src['accessed_on']}. {tx['note']}")
+            if tx["investor_contribution"] is not None:
+                evidence = srcs[tx["contribution_source_id"]]
+                lines.append(f"  Vlastní vklad investora: **{display(tx['investor_contribution'])}**; [výslovný důkaz částky]({evidence['url']}).")
+    if pilot.get("out_of_scope"):
+        lines.extend(["", "## Samostatně evidovaní investoři mimo VC pilot", ""])
+        for row in pilot["out_of_scope"]:
+            links = "; ".join(f"[{sid}]({srcs[sid]['url']})" for sid in row["source_ids"])
+            lines.append(f"- **{names[row['candidate_id']]}** — {row['investor_type']}. {row['note']} Zdroje: {links}.")
     (dest / "PILOT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     p = metrics["classification"]["precision"]
     val = f"{p['value']:.1%}" if p["value"] is not None else "NEZMĚŘENO — chybí ruční referenční štítky"
@@ -456,7 +475,10 @@ def build(root):
                                          "meaning": "Structural reference coverage only; missing-value search scope also has sources; not claim truth"})
     dump_json(out / "metrics.json", metrics)
     for table in ("sources", "investors", "claims", "transactions", "funds", "decisions"):
-        write_csv(out / f"{table}.csv", pilot[table])
+        fields = list(dict.fromkeys(key for row in pilot[table] for key in row))
+        write_csv(out / f"{table}.csv", pilot[table], fields)
+    if pilot.get("out_of_scope"):
+        write_csv(out / "out_of_scope.csv", pilot["out_of_scope"])
     accepted = {d["candidate_id"] for d in pilot["decisions"] if d["prediction"] == "include"}
     summary = []
     for inv in pilot["investors"]:

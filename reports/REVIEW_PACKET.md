@@ -17,12 +17,14 @@ Otevřete původní zdroje, nespoléhejte na parafráze AI. Datum přístupu nen
 - [Investment strategy](https://depoventures.com/) — DEPO Ventures; publikace neuvedena; přístup 2026-10-22.
 - [Tapaya raises EUR 1 million](https://depoventures.com/latest/turning-any-smartphone-into-a-payment-terminal-czech-fintech-tapaya-has-raised-eur-1-million) — DEPO Ventures; publikace neuvedena; přístup 2026-10-22.
 - [DEPO Ventures profile](https://cvca.cz/en/depo-ventures-2/) — CVCA; publikace neuvedena; přístup 2026-10-22.
+- [Tapaya raises EUR 1M pre-seed](https://www.tapaya.com/en/blog/tapaya-raises-1m-pre-seed-to-turn-any-device-into-a-payment-terminal) — Tapaya; publikace 2026-04-28; přístup 2026-10-22.
 
 ## inibio — i&i Biotech Fund
 
 - [Strategy and dated portfolio](https://www.inibio.eu/) — i&i Bio; publikace neuvedena; přístup 2026-10-22.
 - [i&i Biotech Investments profile](https://cvca.cz/en/biotech-investments/) — CVCA; publikace neuvedena; přístup 2026-10-22.
 - [Experienced businessmen join forces with excellent science](https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb) — i&i Bio; publikace 2022-11-30; přístup 2026-10-22.
+- [i&i Bio invests $1.5M in Sampling Human](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis) — i&i Bio; publikace 2022-04-12; přístup 2026-10-22.
 
 ## inven — INVEN Capital
 
@@ -74,6 +76,7 @@ Otevřete původní zdroje, nespoléhejte na parafráze AI. Datum přístupu nen
 ## genesis — Genesis Capital
 
 - [Genesis Capital Equity](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/) — CVCA; publikace neuvedena; přístup 2026-10-22.
+- [Private equity and growth equity strategies](https://www.genesis.cz/) — Genesis Capital; publikace neuvedena; přístup 2026-10-22.
 
 ## arx — ARX Equity Partners
 

@@ -25,7 +25,7 @@ depo.ticket.2,depo,ticket,"{""min"": 50000, ""max"": 300000, ""currency"": ""EUR
 inibio.name.1,inibio,name,i&i Biotech Fund,inibio-home,organization,,supported,
 inibio.website.1,inibio,website,https://www.inibio.eu/,inibio-home,organization,,supported,
 inibio.investor_type.1,inibio,investor_type,venture_capital,inibio-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
-inibio.czech_office.1,inibio,czech_office,"Pobřežní 394/12, Praha 8",inibio-cvca,organization,,supported,
+inibio.czech_office.1,inibio,czech_office,"Biotech Investments, s.r.o. — investiční poradce fondu, Pobřežní 394/12, Praha 8",inibio-home,organization,,supported,Česká kancelář poradce reprezentuje investiční organizaci v pilotu. Samotný fond je domicilován v Lucembursku.
 inibio.sectors.1,inibio,sectors,Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví,inibio-home,organization,,supported,
 inibio.stage.1,inibio,stage,early-stage,inibio-home,organization,,supported,
 inibio.geography.1,inibio,geography,"Evropa, zejména CEE",inibio-home,organization,,supported,
@@ -113,3 +113,5 @@ reflex.geography.1,reflex,geography,,reflex-home,organization,,not_found,Pražsk
 reflex.ticket.1,reflex,ticket,,reflex-home,organization,,not_found,Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol.
 reflex.total_investment_capital.1,reflex,total_investment_capital,,reflex-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
 reflex.capital_reference.1,reflex,capital_reference,"{""metric"": ""invested_to_date"", ""amount"": 150000000, ""currency"": ""EUR"", ""bound"": ""exact""}",reflex-home,organization,,supported,Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál.
+inibio.fund_domicile.1,inibio,fund_domicile,Lucembursko — i&i Biotech Fund I SCSp,inibio-home,fund,,supported,Doplněno po druhém kole skutečné ruční kontroly.
+inibio.investment_adviser.1,inibio,investment_adviser,"Biotech Investments, s.r.o., Praha",inibio-home,organization,,supported,Doplněno po druhém kole skutečné ruční kontroly.

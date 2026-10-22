@@ -464,6 +464,39 @@
       "kind": "discovery",
       "access_method": "web_tool_open",
       "evidence_summary": "Platforma propojuje startupy s investory; přímé investování platformy nedoloženo."
+    },
+    {
+      "id": "tapaya-primary",
+      "url": "https://www.tapaya.com/en/blog/tapaya-raises-1m-pre-seed-to-turn-any-device-into-a-payment-terminal",
+      "publisher": "Tapaya",
+      "title": "Tapaya raises EUR 1M pre-seed",
+      "evidence_summary": "Příjemce potvrzuje kolo 1 mil. EUR vedené Passion Capital se spoluvedoucí účastí DEPO. Jde o celé kolo, ne vklad DEPO.",
+      "published_on": "2026-04-28",
+      "accessed_on": "2026-10-22",
+      "kind": "portfolio_company",
+      "access_method": "web_tool_open"
+    },
+    {
+      "id": "sampling-human",
+      "url": "https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis",
+      "publisher": "i&i Bio",
+      "title": "i&i Bio invests $1.5M in Sampling Human",
+      "evidence_summary": "Fond oznamuje vlastní investici 1,5 mil. USD do Sampling Human. Patička rozlišuje lucemburský fond a pražského poradce Biotech Investments.",
+      "published_on": "2022-04-12",
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open"
+    },
+    {
+      "id": "genesis-home",
+      "url": "https://www.genesis.cz/",
+      "publisher": "Genesis Capital",
+      "title": "Private equity and growth equity strategies",
+      "evidence_summary": "Vlastní web výslovně rozlišuje PE a growth equity fondy a uvádí pražskou adresu. Nejde o VC mandát.",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open"
     }
   ],
   "investors": [
@@ -871,12 +904,12 @@
       "id": "inibio.czech_office.1",
       "investor_id": "inibio",
       "field": "czech_office",
-      "value": "Pobřežní 394/12, Praha 8",
-      "source_id": "inibio-cvca",
+      "value": "Biotech Investments, s.r.o. — investiční poradce fondu, Pobřežní 394/12, Praha 8",
+      "source_id": "inibio-home",
       "scope": "organization",
       "valid_as_of": null,
       "status": "supported",
-      "note": ""
+      "note": "Česká kancelář poradce reprezentuje investiční organizaci v pilotu. Samotný fond je domicilován v Lucembursku."
     },
     {
       "id": "inibio.sectors.1",
@@ -1934,6 +1967,28 @@
       "valid_as_of": null,
       "status": "supported",
       "note": "Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál."
+    },
+    {
+      "id": "inibio.fund_domicile.1",
+      "investor_id": "inibio",
+      "field": "fund_domicile",
+      "value": "Lucembursko — i&i Biotech Fund I SCSp",
+      "source_id": "inibio-home",
+      "scope": "fund",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Doplněno po druhém kole skutečné ruční kontroly."
+    },
+    {
+      "id": "inibio.investment_adviser.1",
+      "investor_id": "inibio",
+      "field": "investment_adviser",
+      "value": "Biotech Investments, s.r.o., Praha",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Doplněno po druhém kole skutečné ruční kontroly."
     }
   ],
   "transactions": [
@@ -1959,10 +2014,12 @@
       "id": "tx-depo-2",
       "investor_id": "depo",
       "company": "Tapaya",
-      "source_id": "depo-tapaya",
-      "corroborating_source_ids": [],
-      "date": null,
-      "date_precision": "unknown",
+      "source_id": "tapaya-primary",
+      "corroborating_source_ids": [
+        "depo-tapaya"
+      ],
+      "date": "2026-04-28",
+      "date_precision": "day",
       "date_kind": "announcement",
       "round_amount": {
         "amount": 1000000,
@@ -1971,7 +2028,7 @@
       },
       "investor_contribution": null,
       "evidence_kind": "named_investment",
-      "note": "Účast doložena investorem; datum oznámení nenalezeno. Nedatovat podle copyrightu ani stáří crawl indexu."
+      "note": "Datum a účast potvrzuje přímo Tapaya. 1 mil. EUR je celé kolo, vklad DEPO není zveřejněn v použitém zdroji."
     },
     {
       "id": "tx-inibio-3",
@@ -2132,6 +2189,26 @@
       "investor_contribution": null,
       "evidence_kind": "named_investment",
       "note": "Účast potvrzena rozhovorem na webu spoluinvestora J&T. Datum je datum indexu článku, nikoli vypořádání."
+    },
+    {
+      "id": "tx-inibio-sampling-human",
+      "investor_id": "inibio",
+      "company": "Sampling Human",
+      "source_id": "sampling-human",
+      "corroborating_source_ids": [
+        "inibio-home"
+      ],
+      "date": "2022-04-12",
+      "date_precision": "day",
+      "date_kind": "announcement",
+      "round_amount": null,
+      "investor_contribution": {
+        "amount": 1500000,
+        "currency": "USD"
+      },
+      "contribution_source_id": "sampling-human",
+      "evidence_kind": "named_investment",
+      "note": "1,5 mil. USD je výslovně vlastní investice i&i Bio, nikoli výše celého kola; historický důkaz z roku 2022."
     }
   ],
   "funds": [
@@ -2172,7 +2249,8 @@
       "prediction": "exclude",
       "reason": "Skutečný PE investor, ale buyout/growth mandát je mimo VC pilot. Není odmítnut pro globální PE databázi.",
       "source_ids": [
-        "genesis"
+        "genesis",
+        "genesis-home"
       ],
       "predicted_on": "2026-10-22",
       "author": "Codex",
@@ -2275,7 +2353,8 @@
       "source_ids": [
         "depo-home",
         "depo-tapaya",
-        "depo-cvca"
+        "depo-cvca",
+        "tapaya-primary"
       ],
       "predicted_on": "2026-10-22",
       "author": "Codex",
@@ -2288,7 +2367,8 @@
       "source_ids": [
         "inibio-home",
         "inibio-cvca",
-        "inibio-capital"
+        "inibio-capital",
+        "sampling-human"
       ],
       "predicted_on": "2026-10-22",
       "author": "Codex",
@@ -2391,6 +2471,17 @@
       "predicted_on": "2026-10-22",
       "author": "Codex",
       "review_status": "pending_human"
+    }
+  ],
+  "out_of_scope": [
+    {
+      "candidate_id": "genesis",
+      "investor_type": "private_equity; growth_equity",
+      "source_ids": [
+        "genesis-home",
+        "genesis"
+      ],
+      "note": "Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze."
     }
   ]
 }

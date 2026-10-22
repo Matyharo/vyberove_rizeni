@@ -120,7 +120,12 @@ class IntegrationTests(unittest.TestCase):
             self.assertEqual(before, (root / "review/labels.csv").read_bytes())
             with closing(sqlite3.connect(root / "exports/investors.sqlite")) as db:
                 self.assertEqual(db.execute("SELECT COUNT(*) FROM candidates").fetchone()[0], 20)
-                self.assertEqual(db.execute("SELECT COUNT(*) FROM transactions").fetchone()[0], 11)
+                self.assertEqual(db.execute("SELECT COUNT(*) FROM transactions").fetchone()[0], 12)
+                contribution, source, round_amount = db.execute("SELECT investor_contribution_json, contribution_source_id, round_amount_json FROM transactions WHERE id='tx-inibio-sampling-human'").fetchone()
+                self.assertEqual(json.loads(contribution), {"amount": 1500000, "currency": "USD"})
+                self.assertEqual(source, "sampling-human")
+                self.assertIsNone(json.loads(round_amount))
+                self.assertEqual(db.execute("SELECT candidate_id FROM out_of_scope_classifications").fetchone()[0], "genesis")
                 self.assertEqual(db.execute("PRAGMA foreign_key_check").fetchall(), [])
                 self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0], "ok")
             self.assertTrue((root / "reports/REVIEW_PACKET.md").exists())
