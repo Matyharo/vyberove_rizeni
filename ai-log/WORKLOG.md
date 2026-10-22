@@ -75,3 +75,7 @@ Na pokyn uživatele AI ověřila oficiální dokumentaci a dostupnost Codex CLI,
 ## Dodání exportu uživatelem — 22. 10. 2026
 
 Uživatel předal Markdown export konverzace v příloze. AI ověřila začátek, konec, přítomnost posledního kontrolního kola a vzory přihlašovacích údajů. Pro veřejnou verzi odstranila celé technické bloky nástrojů včetně vrácených instrukcí a anonymizovala domovské cesty; veřejné zprávy nebyly rekonstruovány. Výsledek conversation-export.md, kontrolní součty a přesné počty úprav v export-manifest.json. Způsob spuštění nativního exportu nelze ze souboru nezávisle potvrdit. Soubor končí před jeho předáním zpět asistentovi.
+
+## Databázové ověření na pokyn uživatele — 22. 10. 2026
+
+Doplněno pět testů nad novým SQLite exportem se skutečnými lidskými štítky: shoda s publikovaným SQL obsahem a JSON vstupy, opakovatelnost, peněžní význam a odmítání čtyř neplatných zápisů. Doplněn samostatný read-only audit sedmi invariantů a jeho spuštění v CI. Lokálně všech 22 testů a audit prošly. Limity SQL schématu a nutnost zapnutí FK na každém spojení jsou výslovně popsané v reports/DATABASE_TESTING.md.

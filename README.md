@@ -12,6 +12,7 @@ Veřejný repozitář: https://github.com/Matyharo/vyberove_rizeni
 - [Pilot se zdroji u každého údaje](reports/PILOT.md) — hlavní čtenářský výstup.
 - [Přesnost a úplnost](reports/ACCURACY.md) — nic nepředstírá lidské ověření.
 - [Globální rozsah a náklady](reports/GLOBAL_SCOPE_AND_COST.md) — zdrojové kotvy, předpoklady a tři přepočitatelné scénáře.
+- [Ověření databáze](reports/DATABASE_TESTING.md) — integrita, vazby, chybové zápisy a opakované sestavení.
 - [Datový model](docs/DATA_MODEL.md) — význam veličin, dat a stavů tvrzení.
 - [Podklady pro lidskou kontrolu](reports/REVIEW_PACKET.md) — bez predikcí AI; postup v [review/README.md](review/README.md).
 
@@ -21,6 +22,7 @@ Python 3.11 nebo novější, pouze standardní knihovna. Není potřeba instalac
 
 ```console
 python -m investor_db validate
+python research/audit_database.py
 python -m unittest discover -s tests -v
 python -m investor_db build
 python -m investor_db check-release
@@ -75,7 +77,7 @@ Autentický průběžný výřez veřejných zpráv je v `ai-log/conversation-sn
 
 ## Ověření a zbývající práce
 
-Lokálně prochází 17 testů a strukturální validace. Integrační test skutečně vytváří databázi, kontroluje cizí klíče, opakované sestavení a zachování štítků. Syntetické testovací štítky nejsou výsledkem měření. GitHub Actions mají stejné kontroly připravené; výsledek vzdáleného běhu zatím nebyl ověřen.
+Lokálně prochází 22 testů a strukturální validace. Integrační test skutečně vytváří databázi, kontroluje cizí klíče, opakované sestavení a zachování štítků. Syntetické testovací štítky nejsou výsledkem měření. GitHub Actions mají stejné kontroly připravené; výsledek vzdáleného běhu zatím nebyl ověřen.
 
 Ruční klasifikace všech 20 kandidátů je dokončena a výstupy přepočteny. Čas kontroly nebyl měřen; zpětně jej nevymýšlíme a rozpočet zůstává scénářovým odhadem. Kontrola jednotlivých atributů nebyla systematicky změřena. Uživatelem dodaný export je doplněn, redakce technických bloků a domovských cest jsou zdokumentované. Repozitář je připraven k odevzdání s uvedenými omezeními. URL je uvedena v `release.json` v poli `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
 
