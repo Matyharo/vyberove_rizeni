@@ -172,10 +172,7 @@ transaction("tilia", "LetsData", "letsdata", "2025-01-15", "day", round_amount=d
 
 source("purple-home", "https://www.purple-ventures.com/", "Purple Ventures", "Investment strategy, portfolio and media digest",
        "Pre-seed/seed technologické firmy s prvními tržbami, CEE+; první ticket 250–400 tis. EUR. Portfolio Fether Labs: investováno 2026. Mediální souhrn uvádí přes 700 mil. Kč získaných ve fondu II.")
-source("purple-discovery", "https://czechstartups.gov.cz/investori_en/purple-ventures/", "CzechStartups / CzechInvest", "Purple Ventures profile",
-       "Profil je použit pouze pro dohledání identity; základní informace z vlastního webu.", kind="discovery")
-# Kancelář je doložena samostatným kontaktem; dokud není adresa otevřena, záznam nejde přijmout.
-investor("purple", "Purple Ventures", "https://www.purple-ventures.com/", "purple-home", None,
+investor("purple", "Purple Ventures", "https://www.purple-ventures.com/", "purple-home", "Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",
          "Purpose-driven technologické inovace", "pre-seed; seed", "CEE+",
          dict(min=250000, max=400000, currency="EUR", basis="initial_ticket"))
 transaction("purple", "Fether Labs", "purple-home", "2026", "year", "portfolio_investment_year", note="Portfolio výslovně uvádí PV 2 | Invested in 2026; přesný den není z tohoto zdroje znám.")
@@ -242,15 +239,16 @@ for iid, reason, sid in [
 ]:
     decision(iid, "exclude", reason, [sid])
 
-# Purple remains unresolved until its Czech presence is evidenced; no guessed office.
+# Initial predictions remain frozen separately. Purple's address was found during
+# the subsequent AI check in the footer of the same primary source.
 for inv in investors:
     iid = inv["id"]
+    sids = list(dict.fromkeys([c["source_id"] for c in claims if c["investor_id"] == iid] +
+                             [t["source_id"] for t in transactions if t["investor_id"] == iid]))
+    reason = "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu."
     if iid == "purple":
-        decision(iid, "needs_review", "Mandát a investice doloženy; česká kancelář dosud nemá ověřenou adresu v použitých výpiscích.", ["purple-home"])
-    else:
-        sids = list(dict.fromkeys([c["source_id"] for c in claims if c["investor_id"] == iid] +
-                                 [t["source_id"] for t in transactions if t["investor_id"] == iid]))
-        decision(iid, "include", "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.", sids)
+        reason += " Po první predikci nalezena brněnská kontaktní adresa v patičce; původní needs_review zachováno v predictions.json. Kontaktní adresa není nezávisle navštívená kancelář."
+    decision(iid, "include", reason, sids)
 
 dataset = dict(schema_version=1, as_of=AS_OF,
                provenance="Curated by Codex using opened public web pages; not human verified; no automated extraction accuracy claimed.",

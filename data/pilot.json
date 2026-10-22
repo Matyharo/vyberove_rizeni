@@ -279,17 +279,6 @@
       "evidence_summary": "Pre-seed/seed technologické firmy s prvními tržbami, CEE+; první ticket 250–400 tis. EUR. Portfolio Fether Labs: investováno 2026. Mediální souhrn uvádí přes 700 mil. Kč získaných ve fondu II."
     },
     {
-      "id": "purple-discovery",
-      "url": "https://czechstartups.gov.cz/investori_en/purple-ventures/",
-      "publisher": "CzechStartups / CzechInvest",
-      "title": "Purple Ventures profile",
-      "published_on": null,
-      "accessed_on": "2026-10-22",
-      "kind": "discovery",
-      "access_method": "web_tool_open",
-      "evidence_summary": "Profil je použit pouze pro dohledání identity; základní informace z vlastního webu."
-    },
-    {
       "id": "jt-home",
       "url": "https://www.jtventures.cz/",
       "publisher": "J&T Ventures",
@@ -1617,7 +1606,7 @@
       "id": "purple.czech_office.1",
       "investor_id": "purple",
       "field": "czech_office",
-      "value": null,
+      "value": "Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",
       "source_id": "purple-home",
       "scope": "organization",
       "valid_as_of": null,
@@ -2342,8 +2331,8 @@
     },
     {
       "candidate_id": "purple",
-      "prediction": "needs_review",
-      "reason": "Mandát a investice doloženy; česká kancelář dosud nemá ověřenou adresu v použitých výpiscích.",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena brněnská kontaktní adresa v patičce; původní needs_review zachováno v predictions.json. Kontaktní adresa není nezávisle navštívená kancelář.",
       "source_ids": [
         "purple-home"
       ],

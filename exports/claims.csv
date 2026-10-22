@@ -1,0 +1,114 @@
+﻿id,investor_id,field,value,source_id,scope,valid_as_of,status,note
+credo.name.1,credo,name,Credo Ventures,credo-home,organization,,supported,
+credo.website.1,credo,website,https://www.credoventures.com/,credo-home,organization,,supported,
+credo.investor_type.1,credo,investor_type,venture_capital,credo-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+credo.czech_office.1,credo,czech_office,"Karlovo náměstí 10, Praha",credo-home,organization,,supported,
+credo.sectors.1,credo,sectors,Bez pevné sektorové teze; technologičtí zakladatelé,credo-home,organization,,supported,
+credo.stage.1,credo,stage,pre-seed,credo-home,organization,,supported,
+credo.geography.1,credo,geography,CEE a globální diaspora,credo-home,organization,,supported,
+credo.ticket.1,credo,ticket,"{""min"": 1000000, ""max"": 5000000, ""currency"": ""USD"", ""basis"": ""check""}",credo-home,organization,,supported,
+credo.total_investment_capital.1,credo,total_investment_capital,,credo-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+credo.capital_reference.1,credo,capital_reference,"{""metric"": ""manager_aum"", ""amount"": 170000000, ""currency"": ""EUR"", ""bound"": ""exact""}",credo-cvca,manager,,historical_unconfirmed,Nedatovaný asociační profil; nepovažovat za aktuální AUM.
+credo.ticket.2,credo,ticket,"{""min"": 50000, ""max"": 10000000, ""currency"": ""EUR"", ""basis"": ""preferred_investment""}",credo-cvca,organization,,historical_unconfirmed,Alternativní nedatovaný asociační údaj. Pro přehled má přednost vlastní web s aktuálně publikovaným mandátem.
+depo.name.1,depo,name,DEPO Ventures,depo-home,organization,,supported,
+depo.website.1,depo,website,https://depoventures.com/,depo-home,organization,,supported,
+depo.investor_type.1,depo,investor_type,venture_capital,depo-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+depo.czech_office.1,depo,czech_office,"Plynární 10, Praha 7",depo-tapaya,organization,,supported,
+depo.sectors.1,depo,sectors,Defence; space; fintech; Industry 4.0; energie,depo-home,organization,,supported,
+depo.stage.1,depo,stage,inception; pre-seed,depo-home,organization,,supported,
+depo.geography.1,depo,geography,"Evropa, CEE a diaspora",depo-home,organization,,supported,
+depo.ticket.1,depo,ticket,"{""min"": 250000, ""max"": 500000, ""currency"": ""EUR"", ""basis"": ""check""}",depo-home,organization,,supported,
+depo.total_investment_capital.1,depo,total_investment_capital,,depo-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+depo.capital_reference.1,depo,capital_reference,"{""metric"": ""invested_to_date"", ""amount"": 9000000, ""currency"": ""EUR"", ""bound"": ""exact""}",depo-home,organization,,supported,Proinvestováno; není to AUM ani dostupný kapitál.
+depo.capital_reference.2,depo,capital_reference,"{""metric"": ""manager_aum"", ""amount"": 5500000, ""currency"": ""EUR"", ""bound"": ""exact""}",depo-cvca,manager,,historical_unconfirmed,Nedatovaný asociační údaj.
+depo.ticket.2,depo,ticket,"{""min"": 50000, ""max"": 300000, ""currency"": ""EUR"", ""basis"": ""preferred_investment""}",depo-cvca,organization,,historical_unconfirmed,Asociační profil se liší od vlastního webu; referenční datum neznámé.
+inibio.name.1,inibio,name,i&i Biotech Fund,inibio-home,organization,,supported,
+inibio.website.1,inibio,website,https://www.inibio.eu/,inibio-home,organization,,supported,
+inibio.investor_type.1,inibio,investor_type,venture_capital,inibio-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+inibio.czech_office.1,inibio,czech_office,"Pobřežní 394/12, Praha 8",inibio-cvca,organization,,supported,
+inibio.sectors.1,inibio,sectors,Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví,inibio-home,organization,,supported,
+inibio.stage.1,inibio,stage,early-stage,inibio-home,organization,,supported,
+inibio.geography.1,inibio,geography,"Evropa, zejména CEE",inibio-home,organization,,supported,
+inibio.ticket.1,inibio,ticket,"{""min"": 500000, ""max"": 2000000, ""currency"": ""EUR"", ""basis"": ""sweet_spot""}",inibio-home,organization,,supported,Business creation od 150 000 EUR; není to dolní mez běžného sweet spot.
+inibio.total_investment_capital.1,inibio,total_investment_capital,,inibio-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+inibio.capital_reference.1,inibio,capital_reference,"{""metric"": ""fund_closed_size"", ""amount"": 47000000, ""currency"": ""EUR"", ""bound"": ""approximate""}",inibio-capital,i&i Biotech Fund,2022-11-30,historical_unconfirmed,"Historická částka z hlavního textu; přibližná, ne současný celkový kapitál."
+inibio.capital_reference.2,inibio,capital_reference,"{""metric"": ""fund_reported_managed_capital"", ""amount"": 53000000, ""currency"": ""EUR"", ""bound"": ""greater_than""}",inibio-capital,i&i Biotech Fund,,undated_reference,Spodní hranice z nedatovaného boilerplate stejné stránky; nemá automaticky datum článku.
+inven.name.1,inven,name,INVEN Capital,inven-home,organization,,supported,
+inven.website.1,inven,website,https://www.invencapital.cz/,inven-home,organization,,supported,
+inven.investor_type.1,inven,investor_type,venture_capital,inven-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+inven.czech_office.1,inven,czech_office,"Pod Křížkem 1773/2, Praha 4",inven-home,organization,,supported,
+inven.sectors.1,inven,sectors,Climate tech,inven-home,organization,,supported,
+inven.stage.1,inven,stage,growth,inven-cvca,organization,,supported,
+inven.geography.1,inven,geography,Evropa a Izrael,inven-home,organization,,supported,
+inven.ticket.1,inven,ticket,"{""min"": 2000000, ""max"": 30000000, ""currency"": ""EUR"", ""basis"": ""ticket""}",inven-home,organization,,supported,
+inven.total_investment_capital.1,inven,total_investment_capital,,inven-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+inven.capital_reference.1,inven,capital_reference,"{""metric"": ""manager_aum"", ""amount"": 500000000, ""currency"": ""EUR"", ""bound"": ""greater_than""}",inven-eib,manager,,historical_unconfirmed,Historické AUM z tiskové zprávy označené 2023 v URL; dnešní AUM neověřeno.
+kaya.name.1,kaya,name,KAYA VC,kaya-home,organization,,supported,
+kaya.website.1,kaya,website,https://www.kaya.vc/,kaya-home,organization,,supported,
+kaya.investor_type.1,kaya,investor_type,venture_capital,kaya-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+kaya.czech_office.1,kaya,czech_office,"Thámova 183/11, Praha 8",kaya-home,organization,,supported,
+kaya.sectors.1,kaya,sectors,"Digitální, fyzická a spotřebitelská ekonomika; široké technologické zaměření",kaya-home,organization,,supported,
+kaya.stage.1,kaya,stage,pre-seed; seed,kaya-home,organization,,supported,
+kaya.geography.1,kaya,geography,CEE zakladatelé,kaya-home,organization,,supported,
+kaya.ticket.1,kaya,ticket,"{""min"": 1000000, ""max"": 3000000, ""currency"": ""USD"", ""basis"": ""ticket""}",kaya-home,organization,,supported,
+kaya.total_investment_capital.1,kaya,total_investment_capital,"{""metric"": ""manager_aum"", ""amount"": 500000000, ""currency"": ""USD"", ""bound"": ""exact""}",kaya-home,organization,,supported,Self-reported AUM na webu; datum ocenění není uvedeno.
+kaya.capital_reference.1,kaya,capital_reference,"{""metric"": ""manager_aum"", ""amount"": 500000000, ""currency"": ""USD"", ""bound"": ""exact""}",kaya-home,manager,,supported,"Vlastní aktuálně dostupný web, bez referenčního data ocenění; self-reported, nikoli auditované."
+kaya.capital_reference.2,kaya,capital_reference,"{""metric"": ""fund_reported_size"", ""amount"": 85000000, ""currency"": ""USD"", ""bound"": ""exact""}",kaya-home,fund:kaya-current,,supported,Web říká Current Fund; bez důkazu typu closing neoznačovat final close.
+nation1.name.1,nation1,name,Nation 1 / N1,nation1-home,organization,,supported,
+nation1.website.1,nation1,website,https://n1.rocks/,nation1-home,organization,,supported,
+nation1.investor_type.1,nation1,investor_type,venture_capital,nation1-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+nation1.czech_office.1,nation1,czech_office,"Národní 135/14, Praha 1",nation1-home,organization,,supported,
+nation1.sectors.1,nation1,sectors,AI; healthtech; frontier tech,nation1-home,organization,,supported,
+nation1.stage.1,nation1,stage,early-stage; od založení,nation1-home,organization,,supported,
+nation1.geography.1,nation1,geography,Evropa a USA,nation1-home,organization,,supported,
+nation1.ticket.1,nation1,ticket,"{""min"": 100000, ""max"": 1000000, ""currency"": ""USD"", ""basis"": ""typical_first_investment""}",nation1-home,organization,,supported,
+nation1.total_investment_capital.1,nation1,total_investment_capital,"{""metric"": ""manager_aum"", ""amount"": 60000000, ""currency"": ""USD"", ""bound"": ""exact""}",nation1-home,organization,,supported,Self-reported across two funds; referenční datum neuvedeno.
+nation1.capital_reference.1,nation1,capital_reference,"{""metric"": ""manager_aum"", ""amount"": 60000000, ""currency"": ""USD"", ""bound"": ""exact""}",nation1-home,manager,,supported,Self-reported spravovaný kapitál přes dva fondy; bez data ocenění.
+tensor.name.1,tensor,name,Tensor Ventures,tensor-home,organization,,supported,
+tensor.website.1,tensor,website,https://tensor.ventures/,tensor-home,organization,,supported,
+tensor.investor_type.1,tensor,investor_type,venture_capital,tensor-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+tensor.czech_office.1,tensor,czech_office,"Pernerova 697/35, Praha 8",tensor-home,organization,,supported,
+tensor.sectors.1,tensor,sectors,Deep tech; AI; quantum; computational biotech; sustainable tech,tensor-home,organization,,supported,
+tensor.stage.1,tensor,stage,seed; Series A,tensor-home,organization,,supported,
+tensor.geography.1,tensor,geography,EU a USA,tensor-cvca,organization,,supported,
+tensor.ticket.1,tensor,ticket,"{""min"": 250000, ""max"": 1000000, ""currency"": ""EUR"", ""basis"": ""preferred_investment""}",tensor-cvca,organization,,historical_unconfirmed,Nedatovaný asociační profil; současné rozpětí neověřeno.
+tensor.total_investment_capital.1,tensor,total_investment_capital,,tensor-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+tensor.capital_reference.1,tensor,capital_reference,"{""metric"": ""manager_aum"", ""amount"": 20000000, ""currency"": ""EUR"", ""bound"": ""exact""}",tensor-cvca,manager,,historical_unconfirmed,Nedatovaný údaj; nevydávat za současný celkový kapitál.
+tilia.name.1,tilia,name,Tilia Impact Ventures,tilia-home,organization,,supported,
+tilia.website.1,tilia,website,https://tilia.vc/,tilia-home,organization,,supported,
+tilia.investor_type.1,tilia,investor_type,venture_capital,tilia-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+tilia.czech_office.1,tilia,czech_office,"Drtinova 557/10, Praha 5",tilia-home,organization,,supported,
+tilia.sectors.1,tilia,sectors,Sektorově agnostický impact; environmentální a sociální dopad,tilia-home,organization,,supported,
+tilia.stage.1,tilia,stage,early-stage,tilia-home,organization,,supported,
+tilia.geography.1,tilia,geography,CEE+,tilia-home,organization,,supported,
+tilia.ticket.1,tilia,ticket,"{""min"": 300000, ""max"": 1200000, ""currency"": ""EUR"", ""basis"": ""initial_ticket""}",tilia-home,organization,,supported,
+tilia.total_investment_capital.1,tilia,total_investment_capital,,tilia-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+purple.name.1,purple,name,Purple Ventures,purple-home,organization,,supported,
+purple.website.1,purple,website,https://www.purple-ventures.com/,purple-home,organization,,supported,
+purple.investor_type.1,purple,investor_type,venture_capital,purple-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+purple.czech_office.1,purple,czech_office,"Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",purple-home,organization,,supported,
+purple.sectors.1,purple,sectors,Purpose-driven technologické inovace,purple-home,organization,,supported,
+purple.stage.1,purple,stage,pre-seed; seed,purple-home,organization,,supported,
+purple.geography.1,purple,geography,CEE+,purple-home,organization,,supported,
+purple.ticket.1,purple,ticket,"{""min"": 250000, ""max"": 400000, ""currency"": ""EUR"", ""basis"": ""initial_ticket""}",purple-home,organization,,supported,
+purple.total_investment_capital.1,purple,total_investment_capital,,purple-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+purple.capital_reference.1,purple,capital_reference,"{""metric"": ""fund_reported_raised_capital"", ""amount"": 700000000, ""currency"": ""CZK"", ""bound"": ""greater_than""}",purple-home,fund:purple-ii,,undated_reference,Spodní hranice v souhrnu výsledků 2025 na vlastním webu; bez vlastního data zprávy a bez doložení final close.
+jt.name.1,jt,name,J&T Ventures,jt-home,organization,,supported,
+jt.website.1,jt,website,https://www.jtventures.cz/,jt-home,organization,,supported,
+jt.investor_type.1,jt,investor_type,venture_capital,jt-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
+jt.czech_office.1,jt,czech_office,"Sokolovská 700/113a, Praha 8",jt-home,organization,,supported,
+jt.sectors.1,jt,sectors,"Sektorově agnostické; B2B, B2C, marketplaces",jt-home,organization,,supported,
+jt.stage.1,jt,stage,pre-seed až Series A,jt-home,organization,,supported,
+jt.geography.1,jt,geography,CEE; SEE; Baltics,jt-home,organization,,supported,
+jt.ticket.1,jt,ticket,"{""min"": 300000, ""max"": 3000000, ""currency"": ""EUR"", ""basis"": ""investment""}",jt-home,organization,,supported,
+jt.total_investment_capital.1,jt,total_investment_capital,,jt-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+reflex.name.1,reflex,name,Reflex Capital,reflex-home,organization,,supported,
+reflex.website.1,reflex,website,https://www.reflexcapital.com/,reflex-home,organization,,supported,
+reflex.investor_type.1,reflex,investor_type,venture_capital,reflex-home,organization,,inferred,"Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření."
+reflex.czech_office.1,reflex,czech_office,"Rašínovo nábřeží 2000/78, Praha 2",reflex-home,organization,,supported,
+reflex.sectors.1,reflex,sectors,Technologické firmy; mandát sektorů není na použité stránce formalizován,reflex-home,organization,,supported,
+reflex.stage.1,reflex,stage,startup / venture; přesné fáze nezjištěny,reflex-home,organization,,partial,Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu.
+reflex.geography.1,reflex,geography,Česko a USA v portfoliu; cílová geografie neověřena,reflex-home,organization,,partial,
+reflex.ticket.1,reflex,ticket,,reflex-home,organization,,not_found,Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol.
+reflex.total_investment_capital.1,reflex,total_investment_capital,,reflex-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+reflex.capital_reference.1,reflex,capital_reference,"{""metric"": ""invested_to_date"", ""amount"": 150000000, ""currency"": ""EUR"", ""bound"": ""exact""}",reflex-home,organization,,supported,Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál.

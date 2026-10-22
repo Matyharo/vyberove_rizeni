@@ -1,0 +1,87 @@
+{
+  "as_of": "2026-10-22",
+  "classification": {
+    "human_reviewed": 0,
+    "candidates": 20,
+    "pending": 20,
+    "initial_decisions": {
+      "needs_review": 2,
+      "exclude": 8,
+      "include": 10
+    },
+    "matrix": {
+      "exclude": {
+        "exclude": 0,
+        "include": 0,
+        "needs_review": 0
+      },
+      "include": {
+        "exclude": 0,
+        "include": 0,
+        "needs_review": 0
+      },
+      "needs_review": {
+        "exclude": 0,
+        "include": 0,
+        "needs_review": 0
+      }
+    },
+    "precision": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null,
+      "wilson_95": null,
+      "scope": "Only reviewed, resolved initial positive predictions; not a random population estimate"
+    },
+    "reviewed_initial_positive": 0,
+    "initial_positive_total": 10,
+    "initial_positive_not_resolved": 10,
+    "reviewed_but_unresolved_positive": 0,
+    "precision_bounds_all_initial_positives": [
+      0.0,
+      1.0
+    ],
+    "recall_in_reviewed_candidate_set": {
+      "numerator": 0,
+      "denominator": 0,
+      "value": null
+    },
+    "false_negatives_excluding_abstentions": 0,
+    "abstained_true_positives": 0,
+    "note": "No human review => precision null, never 100%. Wilson interval is descriptive for this purposive sample, not global coverage."
+  },
+  "coverage": {
+    "sectors": {
+      "numerator": 11,
+      "denominator": 11,
+      "fraction": 1.0
+    },
+    "stage": {
+      "numerator": 10,
+      "denominator": 11,
+      "fraction": 0.9090909090909091
+    },
+    "ticket": {
+      "numerator": 9,
+      "denominator": 11,
+      "fraction": 0.8181818181818182
+    },
+    "total_investment_capital": {
+      "numerator": 2,
+      "denominator": 11,
+      "fraction": 0.18181818181818182
+    }
+  },
+  "claims": {
+    "human_reviewed": 0,
+    "total": 113,
+    "correct": 0,
+    "resolved": 0,
+    "accuracy": null
+  },
+  "source_link_coverage": {
+    "numerator": 113,
+    "denominator": 113,
+    "meaning": "Structural reference coverage only; missing-value search scope also has sources; not claim truth"
+  }
+}
