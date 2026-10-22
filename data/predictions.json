@@ -1,0 +1,243 @@
+{
+  "frozen_on": "2026-10-22",
+  "method": "Predikce po první extrakci, před opravami následnou kontrolou AI. Nejde o výkon automatického klasifikátoru.",
+  "candidate_sha256": "670d5d9773101b930ec79f7e92affe99c1d653635457cdac71862ee705d8ee44",
+  "predictions": [
+    {
+      "candidate_id": "lighthouse",
+      "prediction": "needs_review",
+      "reason": "Discovery profil odkazuje na jinou entitu. Český fond na lhv.vc existuje, ale nelze tiše zaměnit subjekt ze zmrazeného výběru. Vyžaduje lidské vyřešení identity nebo samostatný nový kandidát mimo metriky tohoto vzorku.",
+      "source_ids": [
+        "lighthouse-discovery",
+        "lighthouse-home"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "genesis",
+      "prediction": "exclude",
+      "reason": "Skutečný PE investor, ale buyout/growth mandát je mimo VC pilot. Není odmítnut pro globální PE databázi.",
+      "source_ids": [
+        "genesis"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "arx",
+      "prediction": "exclude",
+      "reason": "Skutečný PE investor mimo VC pilot; akvizice a buyout nejsou důkazem VC mandátu.",
+      "source_ids": [
+        "arx"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "akat",
+      "prediction": "exclude",
+      "reason": "Asociace, nikoli přímý investor.",
+      "source_ids": [
+        "akat"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "bdo",
+      "prediction": "exclude",
+      "reason": "Poradenská společnost; transakce klientů nejsou její vlastní investice.",
+      "source_ids": [
+        "bdo"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "fundlift",
+      "prediction": "exclude",
+      "reason": "Crowdfundingová platforma; chybí důkaz přímého VC mandátu.",
+      "source_ids": [
+        "fundlift"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "startovac",
+      "prediction": "exclude",
+      "reason": "Crowdfunding kreativních projektů; není přímý VC investor.",
+      "source_ids": [
+        "startovac"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "cvca",
+      "prediction": "exclude",
+      "reason": "Oborová asociace zastupující investory; není sama fondem.",
+      "source_ids": [
+        "cvca-about"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "startupstart",
+      "prediction": "exclude",
+      "reason": "Zprostředkovatelská platforma; vlastní venture investice nedoložena.",
+      "source_ids": [
+        "startupstart"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "credo",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "credo-home",
+        "credo-cvca",
+        "axoflow"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "depo",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "depo-home",
+        "depo-tapaya",
+        "depo-cvca"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "inibio",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "inibio-home",
+        "inibio-cvca",
+        "inibio-capital"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "inven",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "inven-home",
+        "inven-cvca",
+        "inven-eib",
+        "andercore"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "kaya",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "kaya-home",
+        "e2b"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "nation1",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "nation1-home"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "tensor",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "tensor-home",
+        "tensor-cvca",
+        "tensor-news"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "tilia",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "tilia-home",
+        "letsdata"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "purple",
+      "prediction": "needs_review",
+      "reason": "Mandát a investice doloženy; česká kancelář dosud nemá ověřenou adresu v použitých výpiscích.",
+      "source_ids": [
+        "purple-home"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "jt",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "jt-home",
+        "grid"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "reflex",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "reflex-home",
+        "grid"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    }
+  ]
+}

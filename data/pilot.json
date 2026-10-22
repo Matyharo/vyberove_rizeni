@@ -1,0 +1,2379 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-22",
+  "provenance": "Curated by Codex using opened public web pages; not human verified; no automated extraction accuracy claimed.",
+  "sources": [
+    {
+      "id": "credo-home",
+      "url": "https://www.credoventures.com/",
+      "publisher": "Credo Ventures",
+      "title": "Investment approach and Prague contact",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Pre-seed zakladatelé z CEE a diaspory; ticket 1–5 mil. USD; pražská kancelář; pojmenované investice ElevenLabs a UiPath."
+    },
+    {
+      "id": "credo-cvca",
+      "url": "https://cvca.cz/en/credo-ventures-2/",
+      "publisher": "CVCA",
+      "title": "Credo Ventures member profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Asociační profil uvádí spravované fondy 170 mil. EUR, ticket 50 tis.–10 mil. EUR a IT/internet. Referenční datum částek chybí."
+    },
+    {
+      "id": "axoflow",
+      "url": "https://axoflow.com/blog/7m-to-improve-security-data-quality",
+      "publisher": "Axoflow",
+      "title": "$7M to improve security data quality",
+      "published_on": "2025-01-21",
+      "accessed_on": "2026-10-22",
+      "kind": "portfolio_company",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Příjemce investice jmenuje Credo Ventures mezi investory seed kola 7 mil. USD."
+    },
+    {
+      "id": "depo-home",
+      "url": "https://depoventures.com/",
+      "publisher": "DEPO Ventures",
+      "title": "Investment strategy",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Inception/pre-seed, defence, space, fintech, Industry 4.0 a energie; ticket 250–500 tis. EUR; 9 mil. EUR proinvestováno."
+    },
+    {
+      "id": "depo-tapaya",
+      "url": "https://depoventures.com/latest/turning-any-smartphone-into-a-payment-terminal-czech-fintech-tapaya-has-raised-eur-1-million",
+      "publisher": "DEPO Ventures",
+      "title": "Tapaya raises EUR 1 million",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "DEPO a Passion Capital vedly pre-seed kolo Tapaya ve výši 1 mil. EUR. Stránka obsahuje pražskou kontaktní adresu. Datum oznámení není v otevřeném textu."
+    },
+    {
+      "id": "depo-cvca",
+      "url": "https://cvca.cz/en/depo-ventures-2/",
+      "publisher": "CVCA",
+      "title": "DEPO Ventures profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "VC se sídlem/kontaktem v Praze, nedatovaný ticket 50–300 tis. EUR a spravované fondy 5,5 mil. EUR."
+    },
+    {
+      "id": "inibio-home",
+      "url": "https://www.inibio.eu/",
+      "publisher": "i&i Bio",
+      "title": "Strategy and dated portfolio",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Life sciences, léky, medtech, diagnostika a AI; early-stage; běžně 0,5–2 mil. EUR, business creation od 150 tis. EUR. KyDo Therapeutics v portfoliu s rokem 2025."
+    },
+    {
+      "id": "inibio-cvca",
+      "url": "https://cvca.cz/en/biotech-investments/",
+      "publisher": "CVCA",
+      "title": "i&i Biotech Investments profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Pražská adresa Pobřežní 394/12; popis i&i Biotech Fund jako investora do biotechnologických spin-offů."
+    },
+    {
+      "id": "inibio-capital",
+      "url": "https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb",
+      "publisher": "i&i Bio",
+      "title": "Experienced businessmen join forces with excellent science",
+      "published_on": "2022-11-30",
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Text datovaný 30. 11. 2022 uvádí tehdejší kapitál přibližně 47 mil. EUR. Aktualizovaný boilerplate na téže stránce uvádí přes 53 mil. EUR bez vlastního data."
+    },
+    {
+      "id": "inven-home",
+      "url": "https://www.invencapital.cz/",
+      "publisher": "INVEN Capital",
+      "title": "Investment focus and office",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Climate tech, Evropa a Izrael, ticket 2–30 mil. EUR; kontakt Praha 4; na webu propojené portfolio a zpráva o Andercore."
+    },
+    {
+      "id": "inven-eib",
+      "url": "https://www.eib.org/en/press/all/2023-047-expanding-strategic-partnership-eib-supports-investments-in-climate-friendly-startups-providing-a-further-eur50-million-to-the-czech-fund-inven-capital",
+      "publisher": "European Investment Bank",
+      "title": "Expanding strategic partnership with Inven Capital",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "institution",
+      "access_method": "web_tool_open",
+      "evidence_summary": "EIB uvádí celkové AUM přes 500 mil. EUR a přes 260 mil. EUR pro nové investice v období 2022–2027; neaktuální historický údaj."
+    },
+    {
+      "id": "inven-cvca",
+      "url": "https://cvca.cz/en/inven-capital-2/",
+      "publisher": "CVCA",
+      "title": "INVEN Capital member profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Cleantech investice v pozdějším růstu, ticket 2–30 mil. EUR, pražská adresa a pojmenované portfolio."
+    },
+    {
+      "id": "andercore",
+      "url": "https://www.andercore.com/press/andercore-secures-40m-series-b-for-ai-driven-industrial-trade-platform",
+      "publisher": "Andercore",
+      "title": "Andercore secures $40m Series B",
+      "published_on": "2026-02-11",
+      "accessed_on": "2026-10-22",
+      "kind": "portfolio_company",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Příjemce potvrzuje účast Inven Capital v kole 40 mil. USD složeném z equity a debt."
+    },
+    {
+      "id": "kaya-home",
+      "url": "https://www.kaya.vc/",
+      "publisher": "KAYA",
+      "title": "Fund, ticket and offices",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Pre-seed/seed zakladatelé z CEE; ticket 1–3 mil. USD; AUM 500 mil. USD; současný fond 85 mil. USD; kancelář Thámova, Praha."
+    },
+    {
+      "id": "kaya-news",
+      "url": "https://newsletter.kaya.vc/",
+      "publisher": "KAYA",
+      "title": "CEEfarers September 2025",
+      "published_on": "2025-09-30",
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Vlastní newsletter potvrzuje investici do E2B a další nové investice; zveřejněn 30. 9. 2025."
+    },
+    {
+      "id": "e2b",
+      "url": "https://www.insightpartners.com/ideas/e2b-raises-a-21m-series-a-to-offer-cloud-for-ai-agents-to-fortune-100/?ref=newsletter.kaya.vc",
+      "publisher": "Insight Partners",
+      "title": "E2B Raises a $21M Series A",
+      "published_on": "2025-07-28",
+      "accessed_on": "2026-10-22",
+      "kind": "coinvestor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Vedoucí investor kola jmenuje KAYA mezi účastníky Series A E2B ve výši 21 mil. USD."
+    },
+    {
+      "id": "nation1-home",
+      "url": "https://n1.rocks/",
+      "publisher": "N1 / Nation 1",
+      "title": "Investment approach and offices",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Spravuje 60 mil. USD ve dvou fondech pro AI a zdravotnictví; první investice 100 tis.–1 mil. USD; Praha Národní 135/14; testimonial Snuggs uvádí vstup N1 v pre-seed v roce 2019."
+    },
+    {
+      "id": "nation1-legal",
+      "url": "https://n1.rocks/disclosure",
+      "publisher": "Nation 1",
+      "title": "SFDR disclosure",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Právní názvy Nation 1 GP a Nation 1 GP II propojují značku N1 s původním názvem. Fondy domicilované v Lucembursku."
+    },
+    {
+      "id": "tensor-home",
+      "url": "https://tensor.ventures/",
+      "publisher": "Tensor Ventures",
+      "title": "Thesis and Czech contact",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Seed a Series A, AI, quantum, computational biotech a sustainable tech; globální síť; český kontakt v Karlíně, právní sídlo v Lucembursku."
+    },
+    {
+      "id": "tensor-cvca",
+      "url": "https://cvca.cz/en/tensor-ventures/",
+      "publisher": "CVCA",
+      "title": "Tensor Ventures profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Ticket 250 tis.–1 mil. EUR, spravovaný kapitál 20 mil. EUR, geografie EU/USA; referenční datum hodnot chybí."
+    },
+    {
+      "id": "tensor-news",
+      "url": "https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6",
+      "publisher": "Tensor Ventures",
+      "title": "Decoded December 2025",
+      "published_on": "2025-12-23",
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Tensor vedl závěrečnou tranši 1,1 mil. EUR v seed kole Repsense o celkových 2 mil. EUR. Vložená zpráva datovaná 16. 12. 2025."
+    },
+    {
+      "id": "tilia-home",
+      "url": "https://tilia.vc/",
+      "publisher": "Tilia Impact Ventures",
+      "title": "Mandate, ticket, portfolio and contact",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Early-stage impact VC z CEE; equity/convertible debt; první ticket 0,3–1,2 mil. EUR; Praha. Hodnota unlocked for impact není doložené AUM."
+    },
+    {
+      "id": "tilia-sfdr",
+      "url": "https://tilia.vc/sfdr/",
+      "publisher": "Tilia Impact Ventures",
+      "title": "Sustainability disclosures Fund II",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Fond II spravuje Tilia Impact Ventures II GP; venture kapitál pro seed/startup/Series A a environmentální a sociální dopad."
+    },
+    {
+      "id": "letsdata",
+      "url": "https://letsdata.net/resources/newsroom/letsdata-1-6m-investment",
+      "publisher": "LetsData",
+      "title": "LetsData Secures $1.6M",
+      "published_on": "2025-01-15",
+      "accessed_on": "2026-10-22",
+      "kind": "portfolio_company",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Příjemce investice jmenuje Tilia Impact Ventures mezi účastníky kola 1,6 mil. USD."
+    },
+    {
+      "id": "purple-home",
+      "url": "https://www.purple-ventures.com/",
+      "publisher": "Purple Ventures",
+      "title": "Investment strategy, portfolio and media digest",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Pre-seed/seed technologické firmy s prvními tržbami, CEE+; první ticket 250–400 tis. EUR. Portfolio Fether Labs: investováno 2026. Mediální souhrn uvádí přes 700 mil. Kč získaných ve fondu II."
+    },
+    {
+      "id": "purple-discovery",
+      "url": "https://czechstartups.gov.cz/investori_en/purple-ventures/",
+      "publisher": "CzechStartups / CzechInvest",
+      "title": "Purple Ventures profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "discovery",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Profil je použit pouze pro dohledání identity; základní informace z vlastního webu."
+    },
+    {
+      "id": "jt-home",
+      "url": "https://www.jtventures.cz/",
+      "publisher": "J&T Ventures",
+      "title": "Investment criteria and contact",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Praha Karlín; CEE, SEE, Baltics; pre-seed až Series A; 300 tis.–3 mil. EUR; sektorově agnostické."
+    },
+    {
+      "id": "jt-approach",
+      "url": "https://www.jtventures.cz/pristup",
+      "publisher": "J&T Ventures",
+      "title": "Approach and FAQ",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Equity a konvertibilní půjčky; fond se výslovně neoznačuje za corporate VC J&T banky, která je institucionálním investorem."
+    },
+    {
+      "id": "grid",
+      "url": "https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky",
+      "publisher": "J&T Ventures",
+      "title": "Interview with grid.online founder",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Investice 1,5 mil. EUR od Reflex Capital, J&T Ventures a Grid Invest. Datum přímého článku v otevřeném textu chybí."
+    },
+    {
+      "id": "jt-blog",
+      "url": "https://www.jtventures.cz/blog",
+      "publisher": "J&T Ventures",
+      "title": "Blog index",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Index uvádí u rozhovoru grid.online datum 20. 4. 2025; neověřené datum transakce samotné."
+    },
+    {
+      "id": "reflex-home",
+      "url": "https://www.reflexcapital.com/",
+      "publisher": "Reflex Capital",
+      "title": "Investments and Prague office",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Vlastní web ukazuje investice do technologických firem, pražskou adresu a 150 mil. EUR historicky investováno; nejde o AUM."
+    },
+    {
+      "id": "reflex-portfolio",
+      "url": "https://www.reflexcapital.com/portfolio/",
+      "publisher": "Reflex Capital",
+      "title": "Current investments",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Vlastní portfolio dokládá konkrétní firmy; samotný seznam nedokládá dnešní běžný ticket ani celkové AUM."
+    },
+    {
+      "id": "lighthouse-discovery",
+      "url": "https://czechstartups.gov.cz/investori_en/lighthouse-venture/",
+      "publisher": "CzechStartups / CzechInvest",
+      "title": "Lighthouse venture discovery profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "discovery",
+      "access_method": "web_tool_open",
+      "evidence_summary": "More information směřuje na lighthouseventuresllc.com, nikoli na české lhv.vc. Automatické spojení podle jména by bylo chybné."
+    },
+    {
+      "id": "lighthouse-home",
+      "url": "https://lhv.vc/about-us/",
+      "publisher": "Lighthouse Ventures GP s.r.o.",
+      "title": "About Lighthouse Ventures",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Česká GP s IČO 07500912, Praha 6; early-stage venture, B2B software, fintech, AI; ticket 200 tis.–1 mil. EUR. Není prokázáno, že jde o entitu z discovery odkazu."
+    },
+    {
+      "id": "genesis",
+      "url": "https://cvca.cz/en/genesis-capital-equity-s-r-o-2/",
+      "publisher": "CVCA",
+      "title": "Genesis Capital Equity",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Buyout, akvizice, růstový kapitál a konsolidace firem; nedokládá VC mandát pro tento úzký pilot."
+    },
+    {
+      "id": "arx",
+      "url": "https://cvca.cz/en/arx-equity-partners-2/",
+      "publisher": "CVCA",
+      "title": "ARX Equity Partners",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Akvizice, management buyout, expansion a sektorová konsolidace; částka 5–50 mil. EUR je velikost transakce, ne automaticky ticket."
+    },
+    {
+      "id": "akat",
+      "url": "https://cvca.cz/en/akat-cze/",
+      "publisher": "CVCA",
+      "title": "AKAT",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Asociace správců majetku a kolektivního investování, která zastupuje zájmy sektoru."
+    },
+    {
+      "id": "bdo",
+      "url": "https://cvca.cz/en/bdo-czech-republic-s-r-o-2/",
+      "publisher": "CVCA",
+      "title": "BDO Czech Republic",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Audit, daně, účetnictví a transakční poradenství; účast na obchodech jako poradce nedokládá investování."
+    },
+    {
+      "id": "fundlift",
+      "url": "https://czechstartups.gov.cz/investori_en/fundlift/",
+      "publisher": "CzechStartups / CzechInvest",
+      "title": "Fundlift",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "discovery",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Investiční crowdfunding propojující firmy a investory; samotná platforma není doloženým přímým VC."
+    },
+    {
+      "id": "startovac",
+      "url": "https://czechstartups.gov.cz/investori_en/startovac/",
+      "publisher": "CzechStartups / CzechInvest",
+      "title": "Startovač",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "discovery",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Platforma pro veřejné financování kreativních projektů, nikoli doklad přímého venture investora."
+    },
+    {
+      "id": "cvca-about",
+      "url": "https://cvca.cz/en/membership/",
+      "publisher": "CVCA",
+      "title": "Membership categories",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "association",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Asociace rozlišuje investující plné členy a přidružené poskytovatele služeb; členství není samo o sobě důkazem transakce."
+    },
+    {
+      "id": "startupstart",
+      "url": "https://czechstartups.gov.cz/investori_en/startupstart-cz/",
+      "publisher": "CzechStartups / CzechInvest",
+      "title": "Startupstart.cz",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "discovery",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Platforma propojuje startupy s investory; přímé investování platformy nedoloženo."
+    }
+  ],
+  "investors": [
+    {
+      "id": "credo",
+      "name": "Credo Ventures",
+      "website": "https://www.credoventures.com/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "depo",
+      "name": "DEPO Ventures",
+      "website": "https://depoventures.com/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "inibio",
+      "name": "i&i Biotech Fund",
+      "website": "https://www.inibio.eu/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "inven",
+      "name": "INVEN Capital",
+      "website": "https://www.invencapital.cz/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "kaya",
+      "name": "KAYA VC",
+      "website": "https://www.kaya.vc/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "nation1",
+      "name": "Nation 1 / N1",
+      "website": "https://n1.rocks/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "tensor",
+      "name": "Tensor Ventures",
+      "website": "https://tensor.ventures/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "tilia",
+      "name": "Tilia Impact Ventures",
+      "website": "https://tilia.vc/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "purple",
+      "name": "Purple Ventures",
+      "website": "https://www.purple-ventures.com/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "jt",
+      "name": "J&T Ventures",
+      "website": "https://www.jtventures.cz/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    },
+    {
+      "id": "reflex",
+      "name": "Reflex Capital",
+      "website": "https://www.reflexcapital.com/",
+      "entity_level": "investment_organization",
+      "human_verified": false
+    }
+  ],
+  "claims": [
+    {
+      "id": "credo.name.1",
+      "investor_id": "credo",
+      "field": "name",
+      "value": "Credo Ventures",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.website.1",
+      "investor_id": "credo",
+      "field": "website",
+      "value": "https://www.credoventures.com/",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.investor_type.1",
+      "investor_id": "credo",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "credo.czech_office.1",
+      "investor_id": "credo",
+      "field": "czech_office",
+      "value": "Karlovo náměstí 10, Praha",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.sectors.1",
+      "investor_id": "credo",
+      "field": "sectors",
+      "value": "Bez pevné sektorové teze; technologičtí zakladatelé",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.stage.1",
+      "investor_id": "credo",
+      "field": "stage",
+      "value": "pre-seed",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.geography.1",
+      "investor_id": "credo",
+      "field": "geography",
+      "value": "CEE a globální diaspora",
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.ticket.1",
+      "investor_id": "credo",
+      "field": "ticket",
+      "value": {
+        "min": 1000000,
+        "max": 5000000,
+        "currency": "USD",
+        "basis": "check"
+      },
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "credo.total_investment_capital.1",
+      "investor_id": "credo",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "credo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "credo.capital_reference.1",
+      "investor_id": "credo",
+      "field": "capital_reference",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 170000000,
+        "currency": "EUR",
+        "bound": "exact"
+      },
+      "source_id": "credo-cvca",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Nedatovaný asociační profil; nepovažovat za aktuální AUM."
+    },
+    {
+      "id": "credo.ticket.2",
+      "investor_id": "credo",
+      "field": "ticket",
+      "value": {
+        "min": 50000,
+        "max": 10000000,
+        "currency": "EUR",
+        "basis": "preferred_investment"
+      },
+      "source_id": "credo-cvca",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Alternativní nedatovaný asociační údaj. Pro přehled má přednost vlastní web s aktuálně publikovaným mandátem."
+    },
+    {
+      "id": "depo.name.1",
+      "investor_id": "depo",
+      "field": "name",
+      "value": "DEPO Ventures",
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.website.1",
+      "investor_id": "depo",
+      "field": "website",
+      "value": "https://depoventures.com/",
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.investor_type.1",
+      "investor_id": "depo",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "depo.czech_office.1",
+      "investor_id": "depo",
+      "field": "czech_office",
+      "value": "Plynární 10, Praha 7",
+      "source_id": "depo-tapaya",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.sectors.1",
+      "investor_id": "depo",
+      "field": "sectors",
+      "value": "Defence; space; fintech; Industry 4.0; energie",
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.stage.1",
+      "investor_id": "depo",
+      "field": "stage",
+      "value": "inception; pre-seed",
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.geography.1",
+      "investor_id": "depo",
+      "field": "geography",
+      "value": "Evropa, CEE a diaspora",
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.ticket.1",
+      "investor_id": "depo",
+      "field": "ticket",
+      "value": {
+        "min": 250000,
+        "max": 500000,
+        "currency": "EUR",
+        "basis": "check"
+      },
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "depo.total_investment_capital.1",
+      "investor_id": "depo",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "depo.capital_reference.1",
+      "investor_id": "depo",
+      "field": "capital_reference",
+      "value": {
+        "metric": "invested_to_date",
+        "amount": 9000000,
+        "currency": "EUR",
+        "bound": "exact"
+      },
+      "source_id": "depo-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Proinvestováno; není to AUM ani dostupný kapitál."
+    },
+    {
+      "id": "depo.capital_reference.2",
+      "investor_id": "depo",
+      "field": "capital_reference",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 5500000,
+        "currency": "EUR",
+        "bound": "exact"
+      },
+      "source_id": "depo-cvca",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Nedatovaný asociační údaj."
+    },
+    {
+      "id": "depo.ticket.2",
+      "investor_id": "depo",
+      "field": "ticket",
+      "value": {
+        "min": 50000,
+        "max": 300000,
+        "currency": "EUR",
+        "basis": "preferred_investment"
+      },
+      "source_id": "depo-cvca",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Asociační profil se liší od vlastního webu; referenční datum neznámé."
+    },
+    {
+      "id": "inibio.name.1",
+      "investor_id": "inibio",
+      "field": "name",
+      "value": "i&i Biotech Fund",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inibio.website.1",
+      "investor_id": "inibio",
+      "field": "website",
+      "value": "https://www.inibio.eu/",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inibio.investor_type.1",
+      "investor_id": "inibio",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "inibio.czech_office.1",
+      "investor_id": "inibio",
+      "field": "czech_office",
+      "value": "Pobřežní 394/12, Praha 8",
+      "source_id": "inibio-cvca",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inibio.sectors.1",
+      "investor_id": "inibio",
+      "field": "sectors",
+      "value": "Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inibio.stage.1",
+      "investor_id": "inibio",
+      "field": "stage",
+      "value": "early-stage",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inibio.geography.1",
+      "investor_id": "inibio",
+      "field": "geography",
+      "value": "Evropa, zejména CEE",
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inibio.ticket.1",
+      "investor_id": "inibio",
+      "field": "ticket",
+      "value": {
+        "min": 500000,
+        "max": 2000000,
+        "currency": "EUR",
+        "basis": "sweet_spot"
+      },
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Business creation od 150 000 EUR; není to dolní mez běžného sweet spot."
+    },
+    {
+      "id": "inibio.total_investment_capital.1",
+      "investor_id": "inibio",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "inibio-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "inibio.capital_reference.1",
+      "investor_id": "inibio",
+      "field": "capital_reference",
+      "value": {
+        "metric": "fund_closed_size",
+        "amount": 47000000,
+        "currency": "EUR",
+        "bound": "approximate"
+      },
+      "source_id": "inibio-capital",
+      "scope": "i&i Biotech Fund",
+      "valid_as_of": "2022-11-30",
+      "status": "historical_unconfirmed",
+      "note": "Historická částka z hlavního textu; přibližná, ne současný celkový kapitál."
+    },
+    {
+      "id": "inibio.capital_reference.2",
+      "investor_id": "inibio",
+      "field": "capital_reference",
+      "value": {
+        "metric": "fund_reported_managed_capital",
+        "amount": 53000000,
+        "currency": "EUR",
+        "bound": "greater_than"
+      },
+      "source_id": "inibio-capital",
+      "scope": "i&i Biotech Fund",
+      "valid_as_of": null,
+      "status": "undated_reference",
+      "note": "Spodní hranice z nedatovaného boilerplate stejné stránky; nemá automaticky datum článku."
+    },
+    {
+      "id": "inven.name.1",
+      "investor_id": "inven",
+      "field": "name",
+      "value": "INVEN Capital",
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.website.1",
+      "investor_id": "inven",
+      "field": "website",
+      "value": "https://www.invencapital.cz/",
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.investor_type.1",
+      "investor_id": "inven",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "inven.czech_office.1",
+      "investor_id": "inven",
+      "field": "czech_office",
+      "value": "Pod Křížkem 1773/2, Praha 4",
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.sectors.1",
+      "investor_id": "inven",
+      "field": "sectors",
+      "value": "Climate tech",
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.stage.1",
+      "investor_id": "inven",
+      "field": "stage",
+      "value": "growth",
+      "source_id": "inven-cvca",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.geography.1",
+      "investor_id": "inven",
+      "field": "geography",
+      "value": "Evropa a Izrael",
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.ticket.1",
+      "investor_id": "inven",
+      "field": "ticket",
+      "value": {
+        "min": 2000000,
+        "max": 30000000,
+        "currency": "EUR",
+        "basis": "ticket"
+      },
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "inven.total_investment_capital.1",
+      "investor_id": "inven",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "inven-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "inven.capital_reference.1",
+      "investor_id": "inven",
+      "field": "capital_reference",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 500000000,
+        "currency": "EUR",
+        "bound": "greater_than"
+      },
+      "source_id": "inven-eib",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Historické AUM z tiskové zprávy označené 2023 v URL; dnešní AUM neověřeno."
+    },
+    {
+      "id": "kaya.name.1",
+      "investor_id": "kaya",
+      "field": "name",
+      "value": "KAYA VC",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.website.1",
+      "investor_id": "kaya",
+      "field": "website",
+      "value": "https://www.kaya.vc/",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.investor_type.1",
+      "investor_id": "kaya",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "kaya.czech_office.1",
+      "investor_id": "kaya",
+      "field": "czech_office",
+      "value": "Thámova 183/11, Praha 8",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.sectors.1",
+      "investor_id": "kaya",
+      "field": "sectors",
+      "value": "Digitální, fyzická a spotřebitelská ekonomika; široké technologické zaměření",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.stage.1",
+      "investor_id": "kaya",
+      "field": "stage",
+      "value": "pre-seed; seed",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.geography.1",
+      "investor_id": "kaya",
+      "field": "geography",
+      "value": "CEE zakladatelé",
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.ticket.1",
+      "investor_id": "kaya",
+      "field": "ticket",
+      "value": {
+        "min": 1000000,
+        "max": 3000000,
+        "currency": "USD",
+        "basis": "ticket"
+      },
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "kaya.total_investment_capital.1",
+      "investor_id": "kaya",
+      "field": "total_investment_capital",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 500000000,
+        "currency": "USD",
+        "bound": "exact"
+      },
+      "source_id": "kaya-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Self-reported AUM na webu; datum ocenění není uvedeno."
+    },
+    {
+      "id": "kaya.capital_reference.1",
+      "investor_id": "kaya",
+      "field": "capital_reference",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 500000000,
+        "currency": "USD",
+        "bound": "exact"
+      },
+      "source_id": "kaya-home",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Vlastní aktuálně dostupný web, bez referenčního data ocenění; self-reported, nikoli auditované."
+    },
+    {
+      "id": "kaya.capital_reference.2",
+      "investor_id": "kaya",
+      "field": "capital_reference",
+      "value": {
+        "metric": "fund_reported_size",
+        "amount": 85000000,
+        "currency": "USD",
+        "bound": "exact"
+      },
+      "source_id": "kaya-home",
+      "scope": "fund:kaya-current",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Web říká Current Fund; bez důkazu typu closing neoznačovat final close."
+    },
+    {
+      "id": "nation1.name.1",
+      "investor_id": "nation1",
+      "field": "name",
+      "value": "Nation 1 / N1",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.website.1",
+      "investor_id": "nation1",
+      "field": "website",
+      "value": "https://n1.rocks/",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.investor_type.1",
+      "investor_id": "nation1",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "nation1.czech_office.1",
+      "investor_id": "nation1",
+      "field": "czech_office",
+      "value": "Národní 135/14, Praha 1",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.sectors.1",
+      "investor_id": "nation1",
+      "field": "sectors",
+      "value": "AI; healthtech; frontier tech",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.stage.1",
+      "investor_id": "nation1",
+      "field": "stage",
+      "value": "early-stage; od založení",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.geography.1",
+      "investor_id": "nation1",
+      "field": "geography",
+      "value": "Evropa a USA",
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.ticket.1",
+      "investor_id": "nation1",
+      "field": "ticket",
+      "value": {
+        "min": 100000,
+        "max": 1000000,
+        "currency": "USD",
+        "basis": "typical_first_investment"
+      },
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "nation1.total_investment_capital.1",
+      "investor_id": "nation1",
+      "field": "total_investment_capital",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 60000000,
+        "currency": "USD",
+        "bound": "exact"
+      },
+      "source_id": "nation1-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Self-reported across two funds; referenční datum neuvedeno."
+    },
+    {
+      "id": "nation1.capital_reference.1",
+      "investor_id": "nation1",
+      "field": "capital_reference",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 60000000,
+        "currency": "USD",
+        "bound": "exact"
+      },
+      "source_id": "nation1-home",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Self-reported spravovaný kapitál přes dva fondy; bez data ocenění."
+    },
+    {
+      "id": "tensor.name.1",
+      "investor_id": "tensor",
+      "field": "name",
+      "value": "Tensor Ventures",
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tensor.website.1",
+      "investor_id": "tensor",
+      "field": "website",
+      "value": "https://tensor.ventures/",
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tensor.investor_type.1",
+      "investor_id": "tensor",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "tensor.czech_office.1",
+      "investor_id": "tensor",
+      "field": "czech_office",
+      "value": "Pernerova 697/35, Praha 8",
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tensor.sectors.1",
+      "investor_id": "tensor",
+      "field": "sectors",
+      "value": "Deep tech; AI; quantum; computational biotech; sustainable tech",
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tensor.stage.1",
+      "investor_id": "tensor",
+      "field": "stage",
+      "value": "seed; Series A",
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tensor.geography.1",
+      "investor_id": "tensor",
+      "field": "geography",
+      "value": "EU a USA",
+      "source_id": "tensor-cvca",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tensor.ticket.1",
+      "investor_id": "tensor",
+      "field": "ticket",
+      "value": {
+        "min": 250000,
+        "max": 1000000,
+        "currency": "EUR",
+        "basis": "preferred_investment"
+      },
+      "source_id": "tensor-cvca",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Nedatovaný asociační profil; současné rozpětí neověřeno."
+    },
+    {
+      "id": "tensor.total_investment_capital.1",
+      "investor_id": "tensor",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "tensor-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "tensor.capital_reference.1",
+      "investor_id": "tensor",
+      "field": "capital_reference",
+      "value": {
+        "metric": "manager_aum",
+        "amount": 20000000,
+        "currency": "EUR",
+        "bound": "exact"
+      },
+      "source_id": "tensor-cvca",
+      "scope": "manager",
+      "valid_as_of": null,
+      "status": "historical_unconfirmed",
+      "note": "Nedatovaný údaj; nevydávat za současný celkový kapitál."
+    },
+    {
+      "id": "tilia.name.1",
+      "investor_id": "tilia",
+      "field": "name",
+      "value": "Tilia Impact Ventures",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.website.1",
+      "investor_id": "tilia",
+      "field": "website",
+      "value": "https://tilia.vc/",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.investor_type.1",
+      "investor_id": "tilia",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "tilia.czech_office.1",
+      "investor_id": "tilia",
+      "field": "czech_office",
+      "value": "Drtinova 557/10, Praha 5",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.sectors.1",
+      "investor_id": "tilia",
+      "field": "sectors",
+      "value": "Sektorově agnostický impact; environmentální a sociální dopad",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.stage.1",
+      "investor_id": "tilia",
+      "field": "stage",
+      "value": "early-stage",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.geography.1",
+      "investor_id": "tilia",
+      "field": "geography",
+      "value": "CEE+",
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.ticket.1",
+      "investor_id": "tilia",
+      "field": "ticket",
+      "value": {
+        "min": 300000,
+        "max": 1200000,
+        "currency": "EUR",
+        "basis": "initial_ticket"
+      },
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "tilia.total_investment_capital.1",
+      "investor_id": "tilia",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "tilia-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "purple.name.1",
+      "investor_id": "purple",
+      "field": "name",
+      "value": "Purple Ventures",
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.website.1",
+      "investor_id": "purple",
+      "field": "website",
+      "value": "https://www.purple-ventures.com/",
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.investor_type.1",
+      "investor_id": "purple",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "purple.czech_office.1",
+      "investor_id": "purple",
+      "field": "czech_office",
+      "value": null,
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.sectors.1",
+      "investor_id": "purple",
+      "field": "sectors",
+      "value": "Purpose-driven technologické inovace",
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.stage.1",
+      "investor_id": "purple",
+      "field": "stage",
+      "value": "pre-seed; seed",
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.geography.1",
+      "investor_id": "purple",
+      "field": "geography",
+      "value": "CEE+",
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.ticket.1",
+      "investor_id": "purple",
+      "field": "ticket",
+      "value": {
+        "min": 250000,
+        "max": 400000,
+        "currency": "EUR",
+        "basis": "initial_ticket"
+      },
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "purple.total_investment_capital.1",
+      "investor_id": "purple",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "purple-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "purple.capital_reference.1",
+      "investor_id": "purple",
+      "field": "capital_reference",
+      "value": {
+        "metric": "fund_reported_raised_capital",
+        "amount": 700000000,
+        "currency": "CZK",
+        "bound": "greater_than"
+      },
+      "source_id": "purple-home",
+      "scope": "fund:purple-ii",
+      "valid_as_of": null,
+      "status": "undated_reference",
+      "note": "Spodní hranice v souhrnu výsledků 2025 na vlastním webu; bez vlastního data zprávy a bez doložení final close."
+    },
+    {
+      "id": "jt.name.1",
+      "investor_id": "jt",
+      "field": "name",
+      "value": "J&T Ventures",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.website.1",
+      "investor_id": "jt",
+      "field": "website",
+      "value": "https://www.jtventures.cz/",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.investor_type.1",
+      "investor_id": "jt",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Klasifikace AI podle mandátu a doložené investice; nikoli právní licence."
+    },
+    {
+      "id": "jt.czech_office.1",
+      "investor_id": "jt",
+      "field": "czech_office",
+      "value": "Sokolovská 700/113a, Praha 8",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.sectors.1",
+      "investor_id": "jt",
+      "field": "sectors",
+      "value": "Sektorově agnostické; B2B, B2C, marketplaces",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.stage.1",
+      "investor_id": "jt",
+      "field": "stage",
+      "value": "pre-seed až Series A",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.geography.1",
+      "investor_id": "jt",
+      "field": "geography",
+      "value": "CEE; SEE; Baltics",
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.ticket.1",
+      "investor_id": "jt",
+      "field": "ticket",
+      "value": {
+        "min": 300000,
+        "max": 3000000,
+        "currency": "EUR",
+        "basis": "investment"
+      },
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "jt.total_investment_capital.1",
+      "investor_id": "jt",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "jt-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "reflex.name.1",
+      "investor_id": "reflex",
+      "field": "name",
+      "value": "Reflex Capital",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "reflex.website.1",
+      "investor_id": "reflex",
+      "field": "website",
+      "value": "https://www.reflexcapital.com/",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "reflex.investor_type.1",
+      "investor_id": "reflex",
+      "field": "investor_type",
+      "value": "venture_capital",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "inferred",
+      "note": "Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření."
+    },
+    {
+      "id": "reflex.czech_office.1",
+      "investor_id": "reflex",
+      "field": "czech_office",
+      "value": "Rašínovo nábřeží 2000/78, Praha 2",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "reflex.sectors.1",
+      "investor_id": "reflex",
+      "field": "sectors",
+      "value": "Technologické firmy; mandát sektorů není na použité stránce formalizován",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": ""
+    },
+    {
+      "id": "reflex.stage.1",
+      "investor_id": "reflex",
+      "field": "stage",
+      "value": "startup / venture; přesné fáze nezjištěny",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "partial",
+      "note": "Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu."
+    },
+    {
+      "id": "reflex.geography.1",
+      "investor_id": "reflex",
+      "field": "geography",
+      "value": "Česko a USA v portfoliu; cílová geografie neověřena",
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "partial",
+      "note": ""
+    },
+    {
+      "id": "reflex.ticket.1",
+      "investor_id": "reflex",
+      "field": "ticket",
+      "value": null,
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol."
+    },
+    {
+      "id": "reflex.total_investment_capital.1",
+      "investor_id": "reflex",
+      "field": "total_investment_capital",
+      "value": null,
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "not_found",
+      "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "reflex.capital_reference.1",
+      "investor_id": "reflex",
+      "field": "capital_reference",
+      "value": {
+        "metric": "invested_to_date",
+        "amount": 150000000,
+        "currency": "EUR",
+        "bound": "exact"
+      },
+      "source_id": "reflex-home",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "supported",
+      "note": "Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál."
+    }
+  ],
+  "transactions": [
+    {
+      "id": "tx-credo-1",
+      "investor_id": "credo",
+      "company": "Axoflow",
+      "source_id": "axoflow",
+      "corroborating_source_ids": [],
+      "date": "2025-01-21",
+      "date_precision": "day",
+      "date_kind": "announcement",
+      "round_amount": {
+        "amount": 7000000,
+        "currency": "USD",
+        "composition": "seed_round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání."
+    },
+    {
+      "id": "tx-depo-2",
+      "investor_id": "depo",
+      "company": "Tapaya",
+      "source_id": "depo-tapaya",
+      "corroborating_source_ids": [],
+      "date": null,
+      "date_precision": "unknown",
+      "date_kind": "announcement",
+      "round_amount": {
+        "amount": 1000000,
+        "currency": "EUR",
+        "composition": "pre_seed_round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Účast doložena investorem; datum oznámení nenalezeno. Nedatovat podle copyrightu ani stáří crawl indexu."
+    },
+    {
+      "id": "tx-inibio-3",
+      "investor_id": "inibio",
+      "company": "KyDo Therapeutics",
+      "source_id": "inibio-home",
+      "corroborating_source_ids": [],
+      "date": "2025",
+      "date_precision": "year",
+      "date_kind": "portfolio_investment_year",
+      "round_amount": null,
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Oficiální portfolio přiřazuje rok 2025; přesný den a výše příspěvku nezjištěny."
+    },
+    {
+      "id": "tx-inven-4",
+      "investor_id": "inven",
+      "company": "Andercore",
+      "source_id": "andercore",
+      "corroborating_source_ids": [
+        "inven-home"
+      ],
+      "date": "2026-02-11",
+      "date_precision": "day",
+      "date_kind": "announcement",
+      "round_amount": {
+        "amount": 40000000,
+        "currency": "USD",
+        "composition": "equity_and_debt"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání."
+    },
+    {
+      "id": "tx-kaya-5",
+      "investor_id": "kaya",
+      "company": "E2B",
+      "source_id": "e2b",
+      "corroborating_source_ids": [
+        "kaya-news"
+      ],
+      "date": "2025-07-28",
+      "date_precision": "day",
+      "date_kind": "announcement",
+      "round_amount": {
+        "amount": 21000000,
+        "currency": "USD",
+        "composition": "series_a"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání."
+    },
+    {
+      "id": "tx-nation1-6",
+      "investor_id": "nation1",
+      "company": "Snuggs",
+      "source_id": "nation1-home",
+      "corroborating_source_ids": [],
+      "date": "2019",
+      "date_precision": "year",
+      "date_kind": "portfolio_investment_year",
+      "round_amount": null,
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Testimonial zakladatelky na webu N1 popisuje pre-seed vstup v roce 2019; nejde o ověření současné aktivity."
+    },
+    {
+      "id": "tx-tensor-7",
+      "investor_id": "tensor",
+      "company": "Repsense",
+      "source_id": "tensor-news",
+      "corroborating_source_ids": [],
+      "date": "2025-12-16",
+      "date_precision": "day",
+      "date_kind": "embedded_announcement",
+      "round_amount": {
+        "amount": 2000000,
+        "currency": "EUR",
+        "composition": "total_seed_round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "1,1 mil. EUR je velikost závěrečné tranše s více investory, nikoli osobní ticket Tensoru."
+    },
+    {
+      "id": "tx-tilia-8",
+      "investor_id": "tilia",
+      "company": "LetsData",
+      "source_id": "letsdata",
+      "corroborating_source_ids": [
+        "tilia-home"
+      ],
+      "date": "2025-01-15",
+      "date_precision": "day",
+      "date_kind": "announcement",
+      "round_amount": {
+        "amount": 1600000,
+        "currency": "USD",
+        "composition": "funding_round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Výše kola není příspěvkem investora; oznámení není dokladem data vypořádání."
+    },
+    {
+      "id": "tx-purple-9",
+      "investor_id": "purple",
+      "company": "Fether Labs",
+      "source_id": "purple-home",
+      "corroborating_source_ids": [],
+      "date": "2026",
+      "date_precision": "year",
+      "date_kind": "portfolio_investment_year",
+      "round_amount": null,
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Portfolio výslovně uvádí PV 2 | Invested in 2026; přesný den není z tohoto zdroje znám."
+    },
+    {
+      "id": "tx-jt-10",
+      "investor_id": "jt",
+      "company": "grid.online",
+      "source_id": "grid",
+      "corroborating_source_ids": [
+        "jt-blog"
+      ],
+      "date": "2025-04-20",
+      "date_precision": "day",
+      "date_kind": "article_index_date",
+      "round_amount": {
+        "amount": 1500000,
+        "currency": "EUR",
+        "composition": "round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Datum převzato z indexu J&T blogu, nikoli z transakce. Investor i příjemce popsáni v rozhovoru."
+    },
+    {
+      "id": "tx-reflex-11",
+      "investor_id": "reflex",
+      "company": "grid.online",
+      "source_id": "grid",
+      "corroborating_source_ids": [
+        "jt-blog"
+      ],
+      "date": "2025-04-20",
+      "date_precision": "day",
+      "date_kind": "article_index_date",
+      "round_amount": {
+        "amount": 1500000,
+        "currency": "EUR",
+        "composition": "round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Účast potvrzena rozhovorem na webu spoluinvestora J&T. Datum je datum indexu článku, nikoli vypořádání."
+    }
+  ],
+  "funds": [
+    {
+      "id": "kaya-current",
+      "investor_id": "kaya",
+      "name": "Current Fund (web neuvádí právní název)",
+      "source_id": "kaya-home"
+    },
+    {
+      "id": "tilia-ii",
+      "investor_id": "tilia",
+      "name": "Tilia Impact Ventures Fund II",
+      "source_id": "tilia-sfdr"
+    },
+    {
+      "id": "purple-ii",
+      "investor_id": "purple",
+      "name": "Purple Ventures Fund II",
+      "source_id": "purple-home"
+    }
+  ],
+  "decisions": [
+    {
+      "candidate_id": "lighthouse",
+      "prediction": "needs_review",
+      "reason": "Discovery profil odkazuje na jinou entitu. Český fond na lhv.vc existuje, ale nelze tiše zaměnit subjekt ze zmrazeného výběru. Vyžaduje lidské vyřešení identity nebo samostatný nový kandidát mimo metriky tohoto vzorku.",
+      "source_ids": [
+        "lighthouse-discovery",
+        "lighthouse-home"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "genesis",
+      "prediction": "exclude",
+      "reason": "Skutečný PE investor, ale buyout/growth mandát je mimo VC pilot. Není odmítnut pro globální PE databázi.",
+      "source_ids": [
+        "genesis"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "arx",
+      "prediction": "exclude",
+      "reason": "Skutečný PE investor mimo VC pilot; akvizice a buyout nejsou důkazem VC mandátu.",
+      "source_ids": [
+        "arx"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "akat",
+      "prediction": "exclude",
+      "reason": "Asociace, nikoli přímý investor.",
+      "source_ids": [
+        "akat"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "bdo",
+      "prediction": "exclude",
+      "reason": "Poradenská společnost; transakce klientů nejsou její vlastní investice.",
+      "source_ids": [
+        "bdo"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "fundlift",
+      "prediction": "exclude",
+      "reason": "Crowdfundingová platforma; chybí důkaz přímého VC mandátu.",
+      "source_ids": [
+        "fundlift"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "startovac",
+      "prediction": "exclude",
+      "reason": "Crowdfunding kreativních projektů; není přímý VC investor.",
+      "source_ids": [
+        "startovac"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "cvca",
+      "prediction": "exclude",
+      "reason": "Oborová asociace zastupující investory; není sama fondem.",
+      "source_ids": [
+        "cvca-about"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "startupstart",
+      "prediction": "exclude",
+      "reason": "Zprostředkovatelská platforma; vlastní venture investice nedoložena.",
+      "source_ids": [
+        "startupstart"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "credo",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "credo-home",
+        "credo-cvca",
+        "axoflow"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "depo",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "depo-home",
+        "depo-tapaya",
+        "depo-cvca"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "inibio",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "inibio-home",
+        "inibio-cvca",
+        "inibio-capital"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "inven",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "inven-home",
+        "inven-cvca",
+        "inven-eib",
+        "andercore"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "kaya",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "kaya-home",
+        "e2b"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "nation1",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "nation1-home"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "tensor",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "tensor-home",
+        "tensor-cvca",
+        "tensor-news"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "tilia",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "tilia-home",
+        "letsdata"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "purple",
+      "prediction": "needs_review",
+      "reason": "Mandát a investice doloženy; česká kancelář dosud nemá ověřenou adresu v použitých výpiscích.",
+      "source_ids": [
+        "purple-home"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "jt",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "jt-home",
+        "grid"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    },
+    {
+      "candidate_id": "reflex",
+      "prediction": "include",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu.",
+      "source_ids": [
+        "reflex-home",
+        "grid"
+      ],
+      "predicted_on": "2026-10-22",
+      "author": "Codex",
+      "review_status": "pending_human"
+    }
+  ]
+}
