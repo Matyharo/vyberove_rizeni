@@ -1,5 +1,5 @@
 ﻿candidate_id,label,reviewer,reviewed_on,reason,source_ids
-credo,,,,,
+credo,include,Ferstl,2026-10-22,"Uživatel potvrdil přímou investici do Axoflow a českou kancelář v Praze.",credo-home;axoflow
 depo,,,,,
 inibio,,,,,
 inven,,,,,
@@ -9,12 +9,12 @@ tensor,,,,,
 tilia,,,,,
 purple,,,,,
 jt,,,,,
-lighthouse,,,,,
+lighthouse,exclude,Ferstl,2026-10-22,"Uživatel ověřil dva různé subjekty se stejným názvem. Původní discovery kandidát nelze zaměnit s českým fondem.",lighthouse-discovery;lighthouse-home
 reflex,,,,,
 genesis,,,,,
 arx,,,,,
 akat,,,,,
-bdo,,,,,
+bdo,exclude,Ferstl,2026-10-22,"Uživatel doložil auditní a poradenské služby včetně poradenství fondům PE a VC; účast v roli poradce není přímá investice.",bdo
 fundlift,,,,,
 startovac,,,,,
 cvca,,,,,

@@ -1,9 +1,9 @@
 {
   "as_of": "2026-10-22",
   "classification": {
-    "human_reviewed": 0,
+    "human_reviewed": 3,
     "candidates": 20,
-    "pending": 20,
+    "pending": 17,
     "initial_decisions": {
       "needs_review": 2,
       "exclude": 8,
@@ -11,40 +11,43 @@
     },
     "matrix": {
       "exclude": {
-        "exclude": 0,
+        "exclude": 1,
         "include": 0,
         "needs_review": 0
       },
       "include": {
         "exclude": 0,
-        "include": 0,
+        "include": 1,
         "needs_review": 0
       },
       "needs_review": {
-        "exclude": 0,
+        "exclude": 1,
         "include": 0,
         "needs_review": 0
       }
     },
     "precision": {
-      "numerator": 0,
-      "denominator": 0,
-      "value": null,
-      "wilson_95": null,
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0,
+      "wilson_95": [
+        0.20654931437723745,
+        1
+      ],
       "scope": "Only reviewed, resolved initial positive predictions; not a random population estimate"
     },
-    "reviewed_initial_positive": 0,
+    "reviewed_initial_positive": 1,
     "initial_positive_total": 10,
-    "initial_positive_not_resolved": 10,
+    "initial_positive_not_resolved": 9,
     "reviewed_but_unresolved_positive": 0,
     "precision_bounds_all_initial_positives": [
-      0.0,
+      0.1,
       1.0
     ],
     "recall_in_reviewed_candidate_set": {
-      "numerator": 0,
-      "denominator": 0,
-      "value": null
+      "numerator": 1,
+      "denominator": 1,
+      "value": 1.0
     },
     "false_negatives_excluding_abstentions": 0,
     "abstained_true_positives": 0,

@@ -39,3 +39,7 @@ Dva zdroje jsou jen u části případů a jejich nezávislost není garantován
 Otevřít zdroje, posoudit kandidáty a zapsat skutečná rozhodnutí. Metriky pak pracují s původními predikcemi, ne opravenou tabulkou. Uživatel si zvolil kontrolu v chatu; jeho odpovědi zapíšeme s datem, identifikací kontrolora a zdroji. Nezodpovězené případy za něj nedoplníme.
 
 Export je po posledním kole nutné obnovit. [Dokumentace Codexu](https://learn.chatgpt.com/docs/developer-commands#export-a-conversation-with-export) popisuje nativní `/export` pro CLI a doporučuje počkat na skončení tahu. Zde byl připraven filtrovací skript pro lokální záznam; netvrdíme spuštění Claude `/export`.
+
+## První skutečná ruční kontrola — 22. 10. 2026
+
+Uživatel potvrdil Credo jako přímého investora do Axoflow s pražskou kanceláří, u BDO doložil poradenskou činnost a odmítl ztotožnění původního Lighthouse s českým fondem. Zapsány štítky include/exclude/exclude; jejich interpretace a zdroje jsou v `review/round-01.md`. AI nedoplňovala další řádky. Přepočet: 3/20 zkontrolováno, 1/10 původních pozitivních predikcí vyhodnocena správně, dalších 9 čeká. Čas lidského ověřování není znám.

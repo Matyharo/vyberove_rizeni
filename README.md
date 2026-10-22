@@ -2,7 +2,7 @@
 
 Praktická úloha A pro Junior AI Developer. Plán vznikl před pilotem; historie začíná 22. 10. 2026.
 
-**Výsledek technické etapy:** 20 kandidátů, 11 předběžně přijatých VC organizací s českou přítomností, 8 vyloučených subjektů a 1 nevyřešená identita. 42 veřejných zdrojů, 114 jednotlivých tvrzení a 11 konkrétních investičních důkazů. Ruční hodnocení člověkem teprve probíhá; přesnost je zatím **nezměřena**.
+**Výsledek technické etapy:** 20 kandidátů, 11 předběžně přijatých VC organizací s českou přítomností, 8 vyloučených subjektů a 1 nevyřešená identita podle AI. 42 veřejných zdrojů, 114 jednotlivých tvrzení a 11 konkrétních investičních důkazů. Ručně zkontrolovány **3/20 kandidátů**: Credo include, BDO exclude a původní Lighthouse exclude. Z původních pozitivních predikcí je zatím vyhodnocena jen 1/10 a je správná; konečnou přesnost ještě neuvádíme.
 
 ## Co otevřít
 
@@ -45,7 +45,7 @@ Jednotkou je organizace či značka investora. Jednotlivé fondy jsou oddělené
 
 Obvyklá velikost investice má bez zjištěného rozporu primární oporu u 8/11 přijatých organizací. U Tensoru existuje pouze nedatovaný asociační údaj; Reflex běžné rozpětí v použitých zdrojích neuvádí a Purple má rozpor mezi dvěma vlastními profily. Celkový spravovaný kapitál je uveden u 2/11 organizací, obě hodnoty self-reported bez data ocenění. Další historické částky a velikosti fondů jsou zachované jako jiné veličiny.
 
-To jsou metriky **úplnosti**, nikoli přesnosti. Precision počítáme teprve proti skutečným lidským rozhodnutím; do té doby je null. Matice záměn má i needs_review, nezkontrolované pozitivní případy jsou viditelné a recall se vztahuje pouze k prověřovanému seznamu.
+To jsou metriky **úplnosti**, nikoli přesnosti. Precision počítáme proti skutečným lidským rozhodnutím; bez nich je null. Po prvním kontrolním kole je čitatel i jmenovatel 1, ale dalších 9 původních pozitivních predikcí zbývá ověřit. Není to důkaz 100% přesnosti databáze. Matice záměn má i needs_review a recall se vztahuje pouze k prověřovanému seznamu.
 
 Globálně plánujeme obálku 6–24 tisíc veřejně doložitelných záznamů po kontrole 10–40 tisíc kandidátů. Základní scénář prvního sběru je přibližně 128 tisíc USD; nejvíce stojí lidská kontrola. Odhad není kalibrovaný dosud chybějící časomírou lidské kontroly. Zdroje, definice a předpoklady jsou v globální zprávě.
 

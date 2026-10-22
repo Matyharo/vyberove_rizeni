@@ -406,6 +406,8 @@ def report(root, pilot, candidates, metrics):
     (dest / "PILOT.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     p = metrics["classification"]["precision"]
     val = f"{p['value']:.1%}" if p["value"] is not None else "NEZMĚŘENO — chybí ruční referenční štítky"
+    if p["value"] is not None and metrics["classification"]["pending"]:
+        val = f"PRŮBĚŽNĚ {p['numerator']}/{p['denominator']} vyhodnocených pozitivních predikcí správně; kontrola vzorku není dokončena"
     quality = ["# Výsledek měření", "", f"Ruční přesnost: **{val}**.", "",
                f"Zkontrolováno člověkem: {metrics['classification']['human_reviewed']}/20 kandidátů. Precision TP/(TP+FP): {p['numerator']}/{p['denominator']}.", "",
                "Bez lidské kontroly neuvádíme procento přesnosti. Automatická validace kontroluje strukturu, nikoli pravdivost.", "",
