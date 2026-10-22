@@ -1,0 +1,30 @@
+{
+  "frozen_on": "2026-10-22",
+  "selection_method": "Záměrný kontrastní výběr před extrakcí: 12 značek označovaných discovery zdroji jako VC či early-stage investoři a 8 kontrolních/hraničních subjektů (PE, poradenství, asociace, platformy). Pořadí je níže zmrazené. Nejde o náhodný vzorek ani soupis českého trhu. Credo a Tensor byly předběžně vyhledány již při tvorbě plánu; vzorek tedy není slepý holdout. Přesnost měří pouze tento pilot.",
+  "discovery_sources": {
+    "cvca": "https://cvca.cz/en/membership/",
+    "czechstartups": "https://czechstartups.gov.cz/en/startup-ecosystem/investors/"
+  },
+  "candidates": [
+    {"id":"credo","name":"Credo Ventures","discovery":"cvca"},
+    {"id":"depo","name":"DEPO Ventures","discovery":"cvca"},
+    {"id":"inibio","name":"i&i Biotech Fund","discovery":"cvca"},
+    {"id":"inven","name":"INVEN Capital","discovery":"cvca"},
+    {"id":"kaya","name":"KAYA VC","discovery":"cvca"},
+    {"id":"nation1","name":"Nation 1","discovery":"cvca"},
+    {"id":"tensor","name":"Tensor Ventures","discovery":"cvca"},
+    {"id":"tilia","name":"Tilia Impact Ventures","discovery":"cvca"},
+    {"id":"purple","name":"Purple Ventures","discovery":"czechstartups"},
+    {"id":"jt","name":"J&T Ventures","discovery":"czechstartups"},
+    {"id":"lighthouse","name":"Lighthouse Ventures","discovery":"czechstartups"},
+    {"id":"reflex","name":"Reflex Capital","discovery":"czechstartups"},
+    {"id":"genesis","name":"Genesis Capital","discovery":"cvca"},
+    {"id":"arx","name":"ARX Equity Partners","discovery":"cvca"},
+    {"id":"akat","name":"AKAT Czech Capital Market Association","discovery":"cvca"},
+    {"id":"bdo","name":"BDO Czech Republic","discovery":"cvca"},
+    {"id":"fundlift","name":"Fundlift","discovery":"czechstartups"},
+    {"id":"startovac","name":"Startovač","discovery":"czechstartups"},
+    {"id":"cvca","name":"Czech Private Equity and Venture Capital Association","discovery":"czechstartups"},
+    {"id":"startupstart","name":"Startupstart.cz","discovery":"czechstartups"}
+  ]
+}
