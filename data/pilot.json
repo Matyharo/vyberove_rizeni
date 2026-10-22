@@ -279,6 +279,17 @@
       "evidence_summary": "Pre-seed/seed technologické firmy s prvními tržbami, CEE+; první ticket 250–400 tis. EUR. Portfolio Fether Labs: investováno 2026. Mediální souhrn uvádí přes 700 mil. Kč získaných ve fondu II."
     },
     {
+      "id": "purple-linkedin",
+      "url": "https://cz.linkedin.com/company/purple-ventures",
+      "publisher": "Purple Ventures (company profile)",
+      "title": "Purple Ventures LinkedIn company profile",
+      "published_on": null,
+      "accessed_on": "2026-10-22",
+      "kind": "investor_social_profile",
+      "access_method": "web_tool_open",
+      "evidence_summary": "Firemní profil propojuje vlastní doménu, ústředí Brno a primární lokalitu Masarykova 26. Uvádí první ticket 250–500 tis. EUR, což se liší od 250–400 tis. EUR na vlastním webu. Oba mandáty jsou bez referenčního data."
+    },
+    {
       "id": "jt-home",
       "url": "https://www.jtventures.cz/",
       "publisher": "J&T Ventures",
@@ -1607,11 +1618,11 @@
       "investor_id": "purple",
       "field": "czech_office",
       "value": "Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",
-      "source_id": "purple-home",
+      "source_id": "purple-linkedin",
       "scope": "organization",
       "valid_as_of": null,
       "status": "supported",
-      "note": ""
+      "note": "Primární lokalita a ústředí na firemním profilu odpovídají adrese na webu; není nezávislou návštěvou kanceláře."
     },
     {
       "id": "purple.sectors.1",
@@ -1659,8 +1670,8 @@
       "source_id": "purple-home",
       "scope": "organization",
       "valid_as_of": null,
-      "status": "supported",
-      "note": ""
+      "status": "partial",
+      "note": "Vlastní web uvádí 250–400 tis. EUR, firemní LinkedIn 250–500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí."
     },
     {
       "id": "purple.total_investment_capital.1",
@@ -1672,6 +1683,22 @@
       "valid_as_of": null,
       "status": "not_found",
       "note": "Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference."
+    },
+    {
+      "id": "purple.ticket.2",
+      "investor_id": "purple",
+      "field": "ticket",
+      "value": {
+        "min": 250000,
+        "max": 500000,
+        "currency": "EUR",
+        "basis": "initial_ticket"
+      },
+      "source_id": "purple-linkedin",
+      "scope": "organization",
+      "valid_as_of": null,
+      "status": "undated_reference",
+      "note": "Alternativní self-reported rozsah; rozpor s webem zůstává otevřený."
     },
     {
       "id": "purple.capital_reference.1",
@@ -1820,7 +1847,7 @@
       "investor_id": "reflex",
       "field": "investor_type",
       "value": "venture_capital",
-      "source_id": "reflex-home",
+      "source_id": "grid",
       "scope": "organization",
       "valid_as_of": null,
       "status": "inferred",
@@ -1845,15 +1872,15 @@
       "source_id": "reflex-home",
       "scope": "organization",
       "valid_as_of": null,
-      "status": "supported",
-      "note": ""
+      "status": "partial",
+      "note": "Portfolio ukazuje technologické firmy, ale explicitní sektorový mandát na použité stránce nenalezen."
     },
     {
       "id": "reflex.stage.1",
       "investor_id": "reflex",
       "field": "stage",
       "value": "startup / venture; přesné fáze nezjištěny",
-      "source_id": "reflex-home",
+      "source_id": "grid",
       "scope": "organization",
       "valid_as_of": null,
       "status": "partial",
@@ -1863,12 +1890,12 @@
       "id": "reflex.geography.1",
       "investor_id": "reflex",
       "field": "geography",
-      "value": "Česko a USA v portfoliu; cílová geografie neověřena",
+      "value": null,
       "source_id": "reflex-home",
       "scope": "organization",
       "valid_as_of": null,
-      "status": "partial",
-      "note": ""
+      "status": "not_found",
+      "note": "Pražská a americká kancelář samy o sobě nedokládají cílovou investiční geografii."
     },
     {
       "id": "reflex.ticket.1",
@@ -2332,9 +2359,10 @@
     {
       "candidate_id": "purple",
       "prediction": "include",
-      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena brněnská kontaktní adresa v patičce; původní needs_review zachováno v predictions.json. Kontaktní adresa není nezávisle navštívená kancelář.",
+      "reason": "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor.",
       "source_ids": [
-        "purple-home"
+        "purple-home",
+        "purple-linkedin"
       ],
       "predicted_on": "2026-10-22",
       "author": "Codex",

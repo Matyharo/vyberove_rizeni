@@ -12,9 +12,9 @@ Počítají se jen tvrzení se stavem supported; historické a částečné hodn
 
 | Pole | Doloženo |
 |---|---|
-| sectors | 11/11 |
+| sectors | 10/11 |
 | stage | 10/11 |
-| ticket | 9/11 |
+| ticket | 8/11 |
 | total_investment_capital | 2/11 |
 
 Úplné výsledky, abstence, nezkontrolované pozitivní predikce a matice záměn: [metrics.json](../exports/metrics.json).

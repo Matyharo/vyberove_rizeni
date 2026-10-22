@@ -95,3 +95,11 @@ Kontrola dostupnosti ve vyhledávání: 22. 10. 2026. Tyto odkazy zatím nejsou 
 6. README, autentický export konverzací, kontrola reprodukovatelnosti a veřejný GitHub repozitář.
 
 Termín odevzdání: 30. 10. 2026. Poslední den ponechat na kontrolu a odevzdání. V tomto commitu je hotový pouze plán; dataset, naměřená přesnost a globální odhad dosud neexistují.
+
+## 10. Stav po technické etapě — 22. 10. 2026
+
+Předchozí věta popisuje historický stav prvního commitu; aktuální stav je v README. Pilot má 20 kandidátů a zmrazené původní predikce. Následný přepis má 11 předběžně přijatých organizací, 8 vyloučených a 1 nevyřešenou identitu. CSV, SQLite, metriky, validační kód a rozpočtové scénáře jsou připravené; 17 testů lokálně prochází.
+
+Upřesnění české přítomnosti: zdroj musí uvádět office/kontaktní adresu nebo deklarované ústředí a primární lokalitu. Samotná česká investiční geografie, registrace fondu či bydliště partnera nestačí. Provoz kanceláře nebyl fyzicky ověřen.
+
+Globální rozsah je zatím zdrojově ukotvený plánovací interval, nikoli změřený světový soupis. Lidský čas a API spotřeba nejsou měřeny; rozpočet používá transparentní předpoklady. Přesnost proti člověku zůstává nezměřená. Uživatel si vybral společnou ruční kontrolu zdrojů v chatu. Nezodpovězené štítky AI nevyplňuje.

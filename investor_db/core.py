@@ -282,6 +282,19 @@ def review_templates(root, candidates, pilot):
         path = folder / name
         if not path.exists():
             write_csv(path, [{field: iid if field == key else "" for field in fields} for iid in ids], list(fields))
+        else:
+            with path.open(encoding="utf-8-sig", newline="") as file:
+                reader = csv.DictReader(file)
+                if reader.fieldnames != list(fields):
+                    raise ValueError("Unexpected review template columns")
+                present = {row[key] for row in reader}
+            missing = [iid for iid in ids if iid not in present]
+            if missing:
+                # Append only; never replace an existing human annotation.
+                with path.open("a", encoding="utf-8", newline="") as file:
+                    writer = csv.DictWriter(file, fieldnames=fields)
+                    for iid in missing:
+                        writer.writerow({field: iid if field == key else "" for field in fields})
 
 
 def _sqlite_export(path, pilot, candidates, predictions, reviews, claim_reviews):
@@ -419,7 +432,7 @@ def build(root):
     pilot = read_json(root / "data/pilot.json")
     candidates = read_json(root / "data/candidates.json")
     predictions = read_json(root / "data/predictions.json")
-    if hashlib.sha256((root / "data/candidates.json").read_bytes()).hexdigest() != predictions["candidate_sha256"]:
+    if hashlib.sha256((root / "data/candidates.json").read_bytes().replace(b"\r\n", b"\n")).hexdigest() != predictions["candidate_sha256"]:
         raise ValueError("Frozen candidate file changed")
     validate(pilot, candidates, predictions)
     review_templates(root, candidates, pilot)

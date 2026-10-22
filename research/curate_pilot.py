@@ -172,9 +172,14 @@ transaction("tilia", "LetsData", "letsdata", "2025-01-15", "day", round_amount=d
 
 source("purple-home", "https://www.purple-ventures.com/", "Purple Ventures", "Investment strategy, portfolio and media digest",
        "Pre-seed/seed technologické firmy s prvními tržbami, CEE+; první ticket 250–400 tis. EUR. Portfolio Fether Labs: investováno 2026. Mediální souhrn uvádí přes 700 mil. Kč získaných ve fondu II.")
+source("purple-linkedin", "https://cz.linkedin.com/company/purple-ventures", "Purple Ventures (company profile)", "Purple Ventures LinkedIn company profile",
+       "Firemní profil propojuje vlastní doménu, ústředí Brno a primární lokalitu Masarykova 26. Uvádí první ticket 250–500 tis. EUR, což se liší od 250–400 tis. EUR na vlastním webu. Oba mandáty jsou bez referenčního data.", kind="investor_social_profile")
 investor("purple", "Purple Ventures", "https://www.purple-ventures.com/", "purple-home", "Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",
          "Purpose-driven technologické inovace", "pre-seed; seed", "CEE+",
          dict(min=250000, max=400000, currency="EUR", basis="initial_ticket"))
+next(c for c in claims if c['id'] == 'purple.czech_office.1').update(source_id="purple-linkedin", note="Primární lokalita a ústředí na firemním profilu odpovídají adrese na webu; není nezávislou návštěvou kanceláře.")
+next(c for c in claims if c['id'] == 'purple.ticket.1').update(status="partial", note="Vlastní web uvádí 250–400 tis. EUR, firemní LinkedIn 250–500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí.")
+claim("purple", "ticket", dict(min=250000, max=500000, currency="EUR", basis="initial_ticket"), "purple-linkedin", "Alternativní self-reported rozsah; rozpor s webem zůstává otevřený.", "undated_reference")
 transaction("purple", "Fether Labs", "purple-home", "2026", "year", "portfolio_investment_year", note="Portfolio výslovně uvádí PV 2 | Invested in 2026; přesný den není z tohoto zdroje znám.")
 funds.append(dict(id="purple-ii", investor_id="purple", name="Purple Ventures Fund II", source_id="purple-home"))
 capital("purple", "fund_reported_raised_capital", 700000000, "CZK", "purple-home", "fund:purple-ii", "Spodní hranice v souhrnu výsledků 2025 na vlastním webu; bez vlastního data zprávy a bez doložení final close.", "undated_reference", bound="greater_than")
@@ -199,9 +204,10 @@ source("reflex-portfolio", "https://www.reflexcapital.com/portfolio/", "Reflex C
 investor("reflex", "Reflex Capital", "https://www.reflexcapital.com/", "reflex-home", "Rašínovo nábřeží 2000/78, Praha 2",
          "Technologické firmy; mandát sektorů není na použité stránce formalizován", None, None, None,
          "Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol.")
-next(c for c in claims if c['id'] == 'reflex.stage.1').update(value="startup / venture; přesné fáze nezjištěny", status="partial", note="Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu.")
-next(c for c in claims if c['id'] == 'reflex.geography.1').update(value="Česko a USA v portfoliu; cílová geografie neověřena", status="partial")
-next(c for c in claims if c['id'] == 'reflex.investor_type.1').update(status="inferred", note="Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření.")
+next(c for c in claims if c['id'] == 'reflex.sectors.1').update(status="partial", note="Portfolio ukazuje technologické firmy, ale explicitní sektorový mandát na použité stránce nenalezen.")
+next(c for c in claims if c['id'] == 'reflex.stage.1').update(value="startup / venture; přesné fáze nezjištěny", source_id="grid", status="partial", note="Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu.")
+next(c for c in claims if c['id'] == 'reflex.geography.1').update(value=None, status="not_found", note="Pražská a americká kancelář samy o sobě nedokládají cílovou investiční geografii.")
+next(c for c in claims if c['id'] == 'reflex.investor_type.1').update(source_id="grid", status="inferred", note="Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření.")
 capital("reflex", "invested_to_date", 150000000, "EUR", "reflex-home", "organization", "Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál.")
 transaction("reflex", "grid.online", "grid", "2025-04-20", "day", "article_index_date", round_amount=dict(amount=1500000, currency="EUR", composition="round"), corroborating=["jt-blog"], note="Účast potvrzena rozhovorem na webu spoluinvestora J&T. Datum je datum indexu článku, nikoli vypořádání.")
 
@@ -247,7 +253,7 @@ for inv in investors:
                              [t["source_id"] for t in transactions if t["investor_id"] == iid]))
     reason = "Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu."
     if iid == "purple":
-        reason += " Po první predikci nalezena brněnská kontaktní adresa v patičce; původní needs_review zachováno v predictions.json. Kontaktní adresa není nezávisle navštívená kancelář."
+        reason += " Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor."
     decision(iid, "include", reason, sids)
 
 dataset = dict(schema_version=1, as_of=AS_OF,

@@ -1,0 +1,11 @@
+{
+  "as_of": "2026-10-22",
+  "currency": "USD",
+  "status": "planning_scenarios_not_measured_vendor_prices",
+  "notes": "Scénáře nezávisí na konkrétním API. Machine cost je předpokládaná obálka za veřejné hledání, extrakci a opakování, nikoli nabídka poskytovatele. Čas člověka zatím nebyl na pilotu změřen; musí se kalibrovat po review. Každý kandidát projde lidskou kontrolou, i když nebude přijat.",
+  "scenarios": [
+    {"name":"low","candidates":10000,"accepted_fraction":0.6,"review_minutes_per_candidate":4,"review_usd_per_hour":25,"machine_usd_per_candidate":0.05,"setup_hours":80,"setup_usd_per_hour":50,"infrastructure_usd":100,"contingency_fraction":0.15,"quarterly_review_fraction":0.1,"quarterly_review_minutes":3,"quarterly_fixed_usd":100},
+    {"name":"base","candidates":20000,"accepted_fraction":0.6,"review_minutes_per_candidate":8,"review_usd_per_hour":35,"machine_usd_per_candidate":0.25,"setup_hours":160,"setup_usd_per_hour":50,"infrastructure_usd":300,"contingency_fraction":0.2,"quarterly_review_fraction":0.2,"quarterly_review_minutes":5,"quarterly_fixed_usd":300},
+    {"name":"high","candidates":40000,"accepted_fraction":0.6,"review_minutes_per_candidate":15,"review_usd_per_hour":50,"machine_usd_per_candidate":1,"setup_hours":320,"setup_usd_per_hour":75,"infrastructure_usd":1000,"contingency_fraction":0.3,"quarterly_review_fraction":0.35,"quarterly_review_minutes":10,"quarterly_fixed_usd":1000}
+  ]
+}

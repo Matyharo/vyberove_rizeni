@@ -86,12 +86,13 @@ tilia.total_investment_capital.1,tilia,total_investment_capital,,tilia-home,orga
 purple.name.1,purple,name,Purple Ventures,purple-home,organization,,supported,
 purple.website.1,purple,website,https://www.purple-ventures.com/,purple-home,organization,,supported,
 purple.investor_type.1,purple,investor_type,venture_capital,purple-home,organization,,supported,Klasifikace AI podle mandátu a doložené investice; nikoli právní licence.
-purple.czech_office.1,purple,czech_office,"Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",purple-home,organization,,supported,
+purple.czech_office.1,purple,czech_office,"Masarykova 26, Brno; firemní kontaktní adresa v patičce webu",purple-linkedin,organization,,supported,Primární lokalita a ústředí na firemním profilu odpovídají adrese na webu; není nezávislou návštěvou kanceláře.
 purple.sectors.1,purple,sectors,Purpose-driven technologické inovace,purple-home,organization,,supported,
 purple.stage.1,purple,stage,pre-seed; seed,purple-home,organization,,supported,
 purple.geography.1,purple,geography,CEE+,purple-home,organization,,supported,
-purple.ticket.1,purple,ticket,"{""min"": 250000, ""max"": 400000, ""currency"": ""EUR"", ""basis"": ""initial_ticket""}",purple-home,organization,,supported,
+purple.ticket.1,purple,ticket,"{""min"": 250000, ""max"": 400000, ""currency"": ""EUR"", ""basis"": ""initial_ticket""}",purple-home,organization,,partial,"Vlastní web uvádí 250–400 tis. EUR, firemní LinkedIn 250–500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí."
 purple.total_investment_capital.1,purple,total_investment_capital,,purple-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
+purple.ticket.2,purple,ticket,"{""min"": 250000, ""max"": 500000, ""currency"": ""EUR"", ""basis"": ""initial_ticket""}",purple-linkedin,organization,,undated_reference,Alternativní self-reported rozsah; rozpor s webem zůstává otevřený.
 purple.capital_reference.1,purple,capital_reference,"{""metric"": ""fund_reported_raised_capital"", ""amount"": 700000000, ""currency"": ""CZK"", ""bound"": ""greater_than""}",purple-home,fund:purple-ii,,undated_reference,Spodní hranice v souhrnu výsledků 2025 na vlastním webu; bez vlastního data zprávy a bez doložení final close.
 jt.name.1,jt,name,J&T Ventures,jt-home,organization,,supported,
 jt.website.1,jt,website,https://www.jtventures.cz/,jt-home,organization,,supported,
@@ -104,11 +105,11 @@ jt.ticket.1,jt,ticket,"{""min"": 300000, ""max"": 3000000, ""currency"": ""EUR""
 jt.total_investment_capital.1,jt,total_investment_capital,,jt-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
 reflex.name.1,reflex,name,Reflex Capital,reflex-home,organization,,supported,
 reflex.website.1,reflex,website,https://www.reflexcapital.com/,reflex-home,organization,,supported,
-reflex.investor_type.1,reflex,investor_type,venture_capital,reflex-home,organization,,inferred,"Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření."
+reflex.investor_type.1,reflex,investor_type,venture_capital,grid,organization,,inferred,"Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření."
 reflex.czech_office.1,reflex,czech_office,"Rašínovo nábřeží 2000/78, Praha 2",reflex-home,organization,,supported,
-reflex.sectors.1,reflex,sectors,Technologické firmy; mandát sektorů není na použité stránce formalizován,reflex-home,organization,,supported,
-reflex.stage.1,reflex,stage,startup / venture; přesné fáze nezjištěny,reflex-home,organization,,partial,Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu.
-reflex.geography.1,reflex,geography,Česko a USA v portfoliu; cílová geografie neověřena,reflex-home,organization,,partial,
+reflex.sectors.1,reflex,sectors,Technologické firmy; mandát sektorů není na použité stránce formalizován,reflex-home,organization,,partial,"Portfolio ukazuje technologické firmy, ale explicitní sektorový mandát na použité stránce nenalezen."
+reflex.stage.1,reflex,stage,startup / venture; přesné fáze nezjištěny,grid,organization,,partial,Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu.
+reflex.geography.1,reflex,geography,,reflex-home,organization,,not_found,Pražská a americká kancelář samy o sobě nedokládají cílovou investiční geografii.
 reflex.ticket.1,reflex,ticket,,reflex-home,organization,,not_found,Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol.
 reflex.total_investment_capital.1,reflex,total_investment_capital,,reflex-home,organization,,not_found,Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference.
 reflex.capital_reference.1,reflex,capital_reference,"{""metric"": ""invested_to_date"", ""amount"": 150000000, ""currency"": ""EUR"", ""bound"": ""exact""}",reflex-home,organization,,supported,Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál.

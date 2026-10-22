@@ -52,9 +52,9 @@
   },
   "coverage": {
     "sectors": {
-      "numerator": 11,
+      "numerator": 10,
       "denominator": 11,
-      "fraction": 1.0
+      "fraction": 0.9090909090909091
     },
     "stage": {
       "numerator": 10,
@@ -62,9 +62,9 @@
       "fraction": 0.9090909090909091
     },
     "ticket": {
-      "numerator": 9,
+      "numerator": 8,
       "denominator": 11,
-      "fraction": 0.8181818181818182
+      "fraction": 0.7272727272727273
     },
     "total_investment_capital": {
       "numerator": 2,
@@ -74,14 +74,14 @@
   },
   "claims": {
     "human_reviewed": 0,
-    "total": 113,
+    "total": 114,
     "correct": 0,
     "resolved": 0,
     "accuracy": null
   },
   "source_link_coverage": {
-    "numerator": 113,
-    "denominator": 113,
+    "numerator": 114,
+    "denominator": 114,
     "meaning": "Structural reference coverage only; missing-value search scope also has sources; not claim truth"
   }
 }

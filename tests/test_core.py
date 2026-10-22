@@ -1,14 +1,18 @@
 import copy
 import csv
+import io
 import json
 import sqlite3
 import tempfile
 import unittest
 from pathlib import Path
-from contextlib import closing
+from contextlib import closing, redirect_stdout, redirect_stderr
+from unittest.mock import patch
+from investor_db.__main__ import main
 
 from investor_db.core import (activity, build, classification_metrics, date_bounds,
                               read_json, read_review, validate, wilson, write_csv, REVIEW_FIELDS)
+from investor_db.costs import estimate
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -63,6 +67,13 @@ class ValidationTests(unittest.TestCase):
 
 
 class MetricTests(unittest.TestCase):
+    def test_cost_model_includes_all_candidate_review_and_refresh(self):
+        config = read_json(ROOT / "data/cost_assumptions.json")
+        result = estimate(config["scenarios"][1])
+        self.assertAlmostEqual(result["initial_total_usd"], 127960)
+        self.assertAlmostEqual(result["quarterly_refresh_usd"], 12360)
+        self.assertAlmostEqual(result["review_hours"], 20000 * 8 / 60)
+
     def test_empty_review_is_not_perfect_precision(self):
         result = classification_metrics([dict(candidate_id="a", prediction="include")], [])
         self.assertIsNone(result["precision"]["value"])
@@ -113,6 +124,21 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual(db.execute("PRAGMA foreign_key_check").fetchall(), [])
                 self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0], "ok")
             self.assertTrue((root / "reports/REVIEW_PACKET.md").exists())
+            (root / "release.json").write_text('{"public_repository_url":null}', encoding="utf-8")
+            with patch("sys.argv", ["investor_db", "check-release", "--root", str(root)]), redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()) as errors:
+                self.assertEqual(main(), 2)
+                self.assertIn("Missing public GitHub", errors.getvalue())
+            pilot_path = root / "data/pilot.json"
+            pilot = read_json(pilot_path)
+            added = copy.deepcopy(pilot["claims"][0])
+            added["id"] = "credo.additional_review_claim"
+            pilot["claims"].append(added)
+            pilot_path.write_text(json.dumps(pilot, ensure_ascii=False), encoding="utf-8")
+            review_before = (root / "review/claims.csv").read_bytes()
+            build(root)
+            review_after = (root / "review/claims.csv").read_bytes()
+            self.assertTrue(review_after.startswith(review_before))
+            self.assertIn(b"credo.additional_review_claim", review_after)
 
     def test_ai_cannot_fill_human_gold(self):
         with tempfile.TemporaryDirectory(prefix="investor-test-", dir=ROOT) as folder:

@@ -1,0 +1,14 @@
+# Skutečná ruční kontrola
+
+Referenční štítky nesmí vyplnit AI jménem člověka. Všechny řádky jsou zatím prázdné; testovací štítky žijí pouze v dočasných adresářích testů.
+
+1. Otevřete `reports/REVIEW_PACKET.md`, který neobsahuje predikce AI. Nejprve nečtěte tabulku rozhodnutí v `reports/PILOT.md`.
+2. U každého z 20 kandidátů otevřete zdroje. Posuďte identitu, VC mandát, českou přítomnost a konkrétní investici podle `PLAN.md`.
+3. Do `labels.csv` doplňte `label` (`include`, `exclude`, `needs_review`), vlastní jméno/iniciály, datum ve formátu YYYY-MM-DD, stručné zdůvodnění a ID použitých zdrojů oddělená středníkem. CSV je oddělené čárkou; text s čárkou dejte do uvozovek. Neměňte záhlaví a ID.
+4. Nejasný subjekt označte `needs_review`; nejde o automatické vyloučení. U Genesis a ARX hodnotíte VC pilot, nikoli otázku, zda vůbec investují.
+5. U tvrzení v `claims.csv` lze samostatně doplnit `supported`, `incorrect` nebo `uncertain`. `not_found` hodnotí jen rozsah provedeného hledání, nikoli důkaz, že údaj nikde neexistuje. Při opravě přidejte poznámku a zachovejte původní predikce.
+6. Spusťte `python -m investor_db build`. Přepočítá se precision, matice záměn, interval a úplnost. Vstupy review se nepřepisují.
+
+Precision pracuje s původními predikcemi v `data/predictions.json`, nikoli s opravenými rozhodnutími v `data/pilot.json`. První predikce: 10 include, 8 exclude, 2 needs_review. Po následné kontrole AI bylo Purple změněno na include. Tento rozdíl není nezávislé lidské měření.
+
+Pro měření času si zapište začátek a konec kontroly a počet zkontrolovaných kandidátů. Budou sloužit ke kalibraci globálního rozpočtu; zatím žádný naměřený lidský čas netvrdíme.

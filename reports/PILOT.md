@@ -23,7 +23,7 @@ Přijetí není ověření člověkem. Částky jsou self-reported nebo historic
 | Nation 1 | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
 | Tensor Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
 | Tilia Impact Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
-| Purple Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena brněnská kontaktní adresa v patičce; původní needs_review zachováno v predictions.json. Kontaktní adresa není nezávisle navštívená kancelář. |
+| Purple Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. Po první predikci nalezena adresa na webu a potvrzena firemním profilem s ústředím a primární lokalitou Brno; původní needs_review zachováno. Ticket má nevyřešený rozpor. |
 | J&T Ventures | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
 | Reflex Capital | include | Investiční mandát, česká kancelář a pojmenovaná přímá investice doloženy; rozhodnutí AI čeká na lidskou kontrolu. |
 
@@ -208,12 +208,13 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 | name | Purple Ventures | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
 | website | https://www.purple-ventures.com/ | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
 | investor_type | venture_capital | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Klasifikace AI podle mandátu a doložené investice; nikoli právní licence. |
-| czech_office | Masarykova 26, Brno; firemní kontaktní adresa v patičce webu | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
+| czech_office | Masarykova 26, Brno; firemní kontaktní adresa v patičce webu | supported | [purple-linkedin](https://cz.linkedin.com/company/purple-ventures) / 2026-10-22 | Primární lokalita a ústředí na firemním profilu odpovídají adrese na webu; není nezávislou návštěvou kanceláře. |
 | sectors | Purpose-driven technologické inovace | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
 | stage | pre-seed; seed | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
 | geography | CEE+ | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
-| ticket | 250,000–400,000 EUR (initial_ticket) | supported | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 |  |
+| ticket | 250,000–400,000 EUR (initial_ticket) | partial | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Vlastní web uvádí 250–400 tis. EUR, firemní LinkedIn 250–500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí. |
 | total_investment_capital | nezjištěno | not_found | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
+| ticket | 250,000–500,000 EUR (initial_ticket) | undated_reference | [purple-linkedin](https://cz.linkedin.com/company/purple-ventures) / 2026-10-22 | Alternativní self-reported rozsah; rozpor s webem zůstává otevřený. |
 | capital_reference | >700,000,000 CZK (fund_reported_raised_capital) | undated_reference | [purple-home](https://www.purple-ventures.com/) / 2026-10-22 | Spodní hranice v souhrnu výsledků 2025 na vlastním webu; bez vlastního data zprávy a bez doložení final close. |
 
 Důkaz skutečné investice:
@@ -248,11 +249,11 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 |---|---|---|---|---|
 | name | Reflex Capital | supported | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 |  |
 | website | https://www.reflexcapital.com/ | supported | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 |  |
-| investor_type | venture_capital | inferred | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření. |
+| investor_type | venture_capital | inferred | [grid](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky) / 2026-10-22 | Klasifikace podle startupového portfolia a doložené investice grid.online, bez právního ověření. |
 | czech_office | Rašínovo nábřeží 2000/78, Praha 2 | supported | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 |  |
-| sectors | Technologické firmy; mandát sektorů není na použité stránce formalizován | supported | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 |  |
-| stage | startup / venture; přesné fáze nezjištěny | partial | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu. |
-| geography | Česko a USA v portfoliu; cílová geografie neověřena | partial | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 |  |
+| sectors | Technologické firmy; mandát sektorů není na použité stránce formalizován | partial | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Portfolio ukazuje technologické firmy, ale explicitní sektorový mandát na použité stránce nenalezen. |
+| stage | startup / venture; přesné fáze nezjištěny | partial | [grid](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky) / 2026-10-22 | Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu. |
+| geography | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Pražská a americká kancelář samy o sobě nedokládají cílovou investiční geografii. |
 | ticket | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Běžný ticket v použitých primárních zdrojích nenalezen; neodvozovat z velikosti kol. |
 | total_investment_capital | nezjištěno | not_found | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Srovnatelný aktuální celkový kapitál organizace není v použitých zdrojích doložen. Viz oddělené capital_reference. |
 | capital_reference | 150,000,000 EUR (invested_to_date) | supported | [reflex-home](https://www.reflexcapital.com/) / 2026-10-22 | Web uvádí invested; nesmí být prezentováno jako celkový investiční kapitál. |

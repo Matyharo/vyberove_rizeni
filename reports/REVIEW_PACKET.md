@@ -54,6 +54,7 @@ Otevřete původní zdroje, nespoléhejte na parafráze AI. Datum přístupu nen
 ## purple — Purple Ventures
 
 - [Investment strategy, portfolio and media digest](https://www.purple-ventures.com/) — Purple Ventures; publikace neuvedena; přístup 2026-10-22.
+- [Purple Ventures LinkedIn company profile](https://cz.linkedin.com/company/purple-ventures) — Purple Ventures (company profile); publikace neuvedena; přístup 2026-10-22.
 
 ## jt — J&T Ventures
 
