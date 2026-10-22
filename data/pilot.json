@@ -2209,6 +2209,24 @@
       "contribution_source_id": "sampling-human",
       "evidence_kind": "named_investment",
       "note": "1,5 mil. USD je výslovně vlastní investice i&i Bio, nikoli výše celého kola; historický důkaz z roku 2022."
+    },
+    {
+      "id": "tx-tensor-openvibe",
+      "investor_id": "tensor",
+      "company": "Openvibe",
+      "source_id": "tensor-news",
+      "corroborating_source_ids": [],
+      "date": "2025-01-28",
+      "date_precision": "day",
+      "date_kind": "embedded_announcement",
+      "round_amount": {
+        "amount": 800000,
+        "currency": "USD",
+        "composition": "seed_round"
+      },
+      "investor_contribution": null,
+      "evidence_kind": "named_investment",
+      "note": "Ve zprávě shrnuté v newsletteru je 28. 1. 2025 uveden Tensor jako vedoucí investor seed kola. 800 tis. USD je celá částka kola; vlastní vklad Tensoru nezjištěn."
     }
   ],
   "funds": [

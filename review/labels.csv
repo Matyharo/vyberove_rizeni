@@ -4,8 +4,8 @@ depo,include,Ferstl,2026-10-22,"Uživatel potvrdil VC mandát a pražskou kancel
 inibio,include,Ferstl,2026-10-22,"Uživatel potvrdil early-stage VC a pražskou kancelář investičního poradce; fond má lucemburský domicil. Doložena vlastní investice do Sampling Human.",inibio-home;sampling-human
 inven,include,Ferstl,2026-10-22,"Uživatel potvrdil climate-tech VC a pražskou kancelář; Andercore potvrzuje vstup do financování Series B. 40 mil. USD představuje celé equity/debt financování.",inven-home;andercore
 kaya,include,Ferstl,2026-10-22,"Uživatel potvrdil přímé startupové investování a pražskou kancelář; Insight Partners potvrzuje účast KAYA v Series A E2B za celkových 21 mil. USD.",kaya-home;e2b
-nation1,,,,,
-tensor,,,,,
+nation1,include,Ferstl,2026-10-22,"Uživatel potvrdil early-stage VC a pražskou kancelář; testimonial zakladatelky Snuggs dokládá pre-seed vstup v roce 2019. Historický důkaz nepředstavuje ověření současné aktivity.",nation1-home;nation1-legal
+tensor,include,Ferstl,2026-10-22,"Uživatel potvrdil deep-tech VC a kancelář v Karlíně; Tensor vedl seed kolo Openvibe za celkových 800 tis. USD v lednu 2025. Vlastní vklad není doložen.",tensor-home;tensor-news
 tilia,,,,,
 purple,,,,,
 jt,,,,,
@@ -13,7 +13,7 @@ lighthouse,exclude,Ferstl,2026-10-22,"Uživatel ověřil dva různé subjekty se
 reflex,,,,,
 genesis,exclude,Ferstl,2026-10-22,"Mimo VC pilot; na pokyn uživatele evidován samostatně jako skutečný PE / growth equity investor.",genesis;genesis-home
 arx,exclude,Ferstl,2026-10-22,"Na pokyn uživatele evidovat jako skutečného PE investora mimo VC pilot; mandát akvizic a manažerských odkupů.",arx
-akat,,,,,
+akat,exclude,Ferstl,2026-10-22,"Uživatel ověřil asociační činnost pro společnosti kolektivního investování a správy aktiv; zdroj nedokládá vlastní přímou VC investici.",akat
 bdo,exclude,Ferstl,2026-10-22,"Uživatel doložil auditní a poradenské služby včetně poradenství fondům PE a VC; účast v roli poradce není přímá investice.",bdo
 fundlift,,,,,
 startovac,,,,,

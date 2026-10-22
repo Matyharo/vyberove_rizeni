@@ -182,6 +182,7 @@ Aktivita: `recent_activity_evidenced`. Jednotka: investiční organizace, nikoli
 Důkaz skutečné investice:
 
 - **Repsense** — 2025-12-16 (embedded_announcement, přesnost day); [Decoded December 2025](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6); kontrola 2026-10-22. 1,1 mil. EUR je velikost závěrečné tranše s více investory, nikoli osobní ticket Tensoru.
+- **Openvibe** — 2025-01-28 (embedded_announcement, přesnost day); [Decoded December 2025](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6); kontrola 2026-10-22. Ve zprávě shrnuté v newsletteru je 28. 1. 2025 uveden Tensor jako vedoucí investor seed kola. 800 tis. USD je celá částka kola; vlastní vklad Tensoru nezjištěn.
 
 ## Tilia Impact Ventures
 

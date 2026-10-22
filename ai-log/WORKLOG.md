@@ -51,3 +51,7 @@ Uživatel zařadil DEPO a i&i Bio a uložil Genesis evidovat samostatně jako PE
 ## Třetí skutečná ruční kontrola — 22. 10. 2026
 
 Uživatel zařadil INVEN a KAYA a uložil ARX evidovat samostatně jako PE. Zapsáno 9/20 rozhodnutí, 5/10 původních pozitivních predikcí je vyhodnoceno správně; dalších pět čeká. Podrobnosti: `review/round-03.md`. Uživatel také založil repozitář Matyharo/vyberove_rizeni pro zveřejnění projektu; předchozí technické etapy byly vedeny lokálně.
+
+## Čtvrtá skutečná ruční kontrola — 22. 10. 2026
+
+Uživatel zařadil N1 a Tensor a vyřadil AKAT jako asociaci. Historický důkaz N1/Snuggs zůstává odlišen od současné aktivity. U Tensoru doplněn Openvibe s datem vloženého oznámení 28. 1. 2025 a celkovým seed kolem 800 tis. USD; vlastní vklad není odhadován. Podrobnosti `review/round-04.md`. Ručně ověřeno 12/20 kandidátů; sedm původních pozitivních predikcí správně, další tři nevyhodnoceny. Čas kontroly neznámý.

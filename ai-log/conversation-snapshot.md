@@ -246,3 +246,39 @@ Vytvořil jsem repozitář: [https://github.com/Matyharo/vyberove_rizeni](https:
 ## 2026-10-22T08:10:21.333Z — assistant
 
 Použiji repozitář `Matyharo/vyberove_rizeni`. Nejdřív dokončím zápis poslední kontroly, pak do něj nahraju projekt včetně dosavadní historie commitů a ověřím, že je obsah dostupný na GitHubu.
+
+## 2026-10-22T08:12:25.130Z — assistant
+
+Projekt je nahraný na GitHubu včetně celé historie commitů. Třetí kontrola je také uložená: máme hotovo 9/20 kandidátů, INVEN a KAYA jsou zařazeny a ARX je veden odděleně jako PE. Ještě ověřím vzdálenou větev a stav automatických kontrol.
+
+## 2026-10-22T08:12:59.433Z — assistant
+
+Projekt je nahraný: **[GitHub — vyberove_rizeni](https://github.com/Matyharo/vyberove_rizeni)**, včetně dosavadních 8 commitů. Ověřil jsem vzdálenou větev i README.
+
+INVEN a KAYA jsou zapsány jako zařazené, ARX samostatně jako PE. Máme **9/20 ručních kontrol**; lokálně prochází 17 testů.
+
+Další trojice:
+
+| Kandidát | Podklady |
+|---|---|
+| **Nation 1 / N1** | [Mandát, kanceláře a portfolio](https://n1.rocks/), [právní propojení názvů](https://n1.rocks/disclosure) |
+| **Tensor Ventures** | [Mandát a česká kancelář](https://tensor.ventures/), [konkrétní investice](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6) |
+| **AKAT** | [Popis činnosti](https://cvca.cz/en/akat-cze/) |
+
+Opět prosím **zařadit / vyřadit / nelze rozhodnout** a krátký důvod.
+
+## 2026-10-22T08:14:16.017Z — user
+
+
+
+| Kandidát            | Přímé VC investování                                                                                                               | Česká kancelář                                                                                                                 | Konkrétní doložená investice                                                                                                                                                                                                                                                                                                                                   | Verdikt                |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| **Nation 1 / N1**   | Ano. Early-stage VC zaměřený na AI, healthtech a frontier tech v Evropě a USA.                                                     | **Národní 135/14, Praha 1**.                                                                                                   | **Snuggs, 2019** - zakladatelka Linda Šejdová na webu N1 výslovně potvrzuje vstup N1 v pre-seed kole. ([n1.rocks](https://n1.rocks/?utm_source=chatgpt.com "N1 \| Early-Stage VC Backing AI & Healthtech Founders Across Europe & the US"))                                                                                                                    | **Zařadit**            |
+| **Tensor Ventures** | Ano. Přímé investice do deep-tech startupů, zejména v kolech seed a Series A.                                                      | **Pernerova 697/35, Praha 8 - Karlín**. ([tensor.ventures](https://tensor.ventures/?utm_source=chatgpt.com "Tensor Ventures")) | **Openvibe, leden 2025** - Tensor oznámil, že vedl seed kolo v celkové výši **800 tis. USD** za účasti dalších investorů. ([blog.tensor.ventures](https://blog.tensor.ventures/p/tensor-ventures-decoded-newsletter-fb6?utm_source=chatgpt.com "📮 Tensor Ventures — Decoded Newsletter December 2025 Edition: A Year of Deep Tech Breakthroughs and Growth")) | **Zařadit**            |
+| **AKAT**            | **Ne.** Sdružuje společnosti kolektivního investování a správy aktiv, zastupuje jejich zájmy a podporuje rozvoj kapitálového trhu. | **Štěpánská 16/612, Praha 1**.                                                                                                 | Uvedený profil nedokládá vlastní přímou VC investici; popisuje asociační činnost. ([CVCA](https://cvca.cz/en/akat-cze/?utm_source=chatgpt.com "AKAT Czech Capital Market Association"))                                                                                                                                                                        | **Vyřadit - asociace** |
+
+
+
+## 2026-10-22T08:14:22.155Z — assistant
+
+Zapíšu N1 a Tensor jako zařazené a AKAT jako vyřazenou asociaci. U N1 zachovám Snuggs jako historický důkaz z roku 2019; u Tensoru doplním Openvibe s částkou celého kola, nikoli vlastního vkladu. Pak přepočítám metriky a nahraju změny na GitHub.

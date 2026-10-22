@@ -120,7 +120,7 @@ class IntegrationTests(unittest.TestCase):
             self.assertEqual(before, (root / "review/labels.csv").read_bytes())
             with closing(sqlite3.connect(root / "exports/investors.sqlite")) as db:
                 self.assertEqual(db.execute("SELECT COUNT(*) FROM candidates").fetchone()[0], 20)
-                self.assertEqual(db.execute("SELECT COUNT(*) FROM transactions").fetchone()[0], 12)
+                self.assertEqual(db.execute("SELECT COUNT(*) FROM transactions").fetchone()[0], 13)
                 contribution, source, round_amount = db.execute("SELECT investor_contribution_json, contribution_source_id, round_amount_json FROM transactions WHERE id='tx-inibio-sampling-human'").fetchone()
                 self.assertEqual(json.loads(contribution), {"amount": 1500000, "currency": "USD"})
                 self.assertEqual(source, "sampling-human")
