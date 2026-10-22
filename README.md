@@ -2,7 +2,7 @@
 
 Praktická úloha A pro Junior AI Developer. Plán vznikl před pilotem; historie začíná 22. 10. 2026.
 
-**Výsledek technické etapy:** 20 kandidátů, 11 předběžně přijatých VC organizací, 8 vyloučených a 1 nevyřešená identita podle AI. 45 veřejných zdrojů, 116 tvrzení a 13 investičních důkazů. Ručně zkontrolováno **12/20 kandidátů**: Credo, DEPO, i&i Bio, INVEN, KAYA, N1 a Tensor include; BDO, původní Lighthouse, Genesis, ARX a AKAT exclude z VC pilotu. Genesis a ARX jsou samostatně evidováni jako PE / growth equity, respektive PE investoři. Z původních pozitivních predikcí je vyhodnoceno 7/10, všechny správně; konečná přesnost ještě není známá.
+**Výsledek technické etapy:** 20 kandidátů, 11 předběžně přijatých VC organizací, 8 vyloučených a 1 nevyřešená identita podle AI. 45 veřejných zdrojů, 116 tvrzení a 13 investičních důkazů. Ručně zkontrolováno **15/20 kandidátů**: Credo, DEPO, i&i Bio, INVEN, KAYA, N1, Tensor, Tilia a Purple include; BDO, původní Lighthouse, Genesis, ARX, AKAT a Fundlift exclude z VC pilotu. Genesis a ARX jsou samostatně evidováni jako PE / growth equity, respektive PE investoři. Z původních pozitivních predikcí je vyhodnoceno 8/10, všechny správně; konečná přesnost ještě není známá.
 
 Veřejný repozitář: https://github.com/Matyharo/vyberove_rizeni
 
@@ -47,7 +47,7 @@ Jednotkou je organizace či značka investora. Jednotlivé fondy jsou oddělené
 
 Obvyklá velikost investice má bez zjištěného rozporu primární oporu u 8/11 přijatých organizací. U Tensoru existuje pouze nedatovaný asociační údaj; Reflex běžné rozpětí v použitých zdrojích neuvádí a Purple má rozpor mezi dvěma vlastními profily. Celkový spravovaný kapitál je uveden u 2/11 organizací, obě hodnoty self-reported bez data ocenění. Další historické částky a velikosti fondů jsou zachované jako jiné veličiny.
 
-To jsou metriky **úplnosti**, nikoli přesnosti. Precision počítáme proti skutečným lidským rozhodnutím; bez nich je null. Po čtvrtém kontrolním kole je čitatel i jmenovatel 7, ale další 3 původních pozitivních predikcí zbývá ověřit. Není to důkaz 100% přesnosti databáze. Matice záměn má i needs_review a recall se vztahuje pouze k prověřovanému seznamu.
+To jsou metriky **úplnosti**, nikoli přesnosti. Precision počítáme proti skutečným lidským rozhodnutím; bez nich je null. Po pátém kontrolním kole je čitatel i jmenovatel 8, ale další 2 původních pozitivních predikcí zbývá ověřit. Není to důkaz 100% přesnosti databáze. Matice záměn má i needs_review a recall se vztahuje pouze k prověřovanému seznamu.
 
 Globálně plánujeme obálku 6–24 tisíc veřejně doložitelných záznamů po kontrole 10–40 tisíc kandidátů. Základní scénář prvního sběru je přibližně 128 tisíc USD; nejvíce stojí lidská kontrola. Odhad není kalibrovaný dosud chybějící časomírou lidské kontroly. Zdroje, definice a předpoklady jsou v globální zprávě.
 
@@ -75,8 +75,8 @@ Autentický průběžný výřez veřejných zpráv je v `ai-log/conversation-sn
 
 ## Ověření a zbývající práce
 
-Lokálně prochází 17 testů a strukturální validace. Integrační test skutečně vytváří databázi, kontroluje cizí klíče, opakované sestavení a zachování štítků. Syntetické testovací štítky nejsou výsledkem měření. GitHub Actions mají stejné kontroly připravené; vzdálený běh zatím neproběhl.
+Lokálně prochází 17 testů a strukturální validace. Integrační test skutečně vytváří databázi, kontroluje cizí klíče, opakované sestavení a zachování štítků. Syntetické testovací štítky nejsou výsledkem měření. GitHub Actions mají stejné kontroly připravené; výsledek vzdáleného běhu zatím nebyl ověřen.
 
-Před odevzdáním dokončit lidskou kontrolu, zapsat její skutečný čas, opravit nalezené chyby, přepočítat výstupy, doplnit finální export a publikovat repozitář. URL se vloží do `release.json` jako `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
+Před odevzdáním dokončit lidskou kontrolu, zapsat její skutečný čas, opravit nalezené chyby, přepočítat výstupy, doplnit finální export a aktualizovat veřejný repozitář. URL je uvedena v `release.json` v poli `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
 
 Termín: **30. 10. 2026**.

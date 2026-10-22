@@ -282,3 +282,33 @@ Opět prosím **zařadit / vyřadit / nelze rozhodnout** a krátký důvod.
 ## 2026-10-22T08:14:22.155Z — assistant
 
 Zapíšu N1 a Tensor jako zařazené a AKAT jako vyřazenou asociaci. U N1 zachovám Snuggs jako historický důkaz z roku 2019; u Tensoru doplním Openvibe s částkou celého kola, nikoli vlastního vkladu. Pak přepočítám metriky a nahraju změny na GitHub.
+
+## 2026-10-22T08:16:52.240Z — assistant
+
+Zapsal jsem N1 a Tensor jako **zařadit**, AKAT jako **vyřadit – asociace**. Máme ručně posouzeno **12 z 20 kandidátů**. Změny jsou na [GitHubu](https://github.com/Matyharo/vyberove_rizeni); všech 17 testů prošlo.
+
+Pokračujme další trojicí:
+
+| Kandidát | Zdroje k posouzení |
+|---|---|
+| **Tilia Impact Ventures** | [Web investora](https://tilia.vc/) · [LetsData – oznámení investičního kola](https://letsdata.net/resources/newsroom/letsdata-1-6m-investment) |
+| **Purple Ventures** | [Web](https://www.purple-ventures.com/) · [Firemní profil s kanceláří a investičním zaměřením](https://cz.linkedin.com/company/purple-ventures) |
+| **Fundlift** | [Profil na CzechStartups](https://czechstartups.gov.cz/investori_en/fundlift/) |
+
+U každého prosím stejný verdikt: **zařadit / vyřadit / nelze rozhodnout**, s krátkým důvodem podle přímého VC investování, české kanceláře a doložené investice.
+
+## 2026-10-22T08:17:47.609Z — user
+
+
+
+| Kandidát                  | Přímé VC investování                                                                                                                                                                                       | Česká kancelář                                                                                                                                                  | Konkrétní doložená investice                                                                                                                                                                                                                                                                                      | Verdikt                                 |
+| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **Tilia Impact Ventures** | Ano. Early-stage impact investor využívající majetkové vstupy a konvertibilní financování. ([tilia.vc](https://tilia.vc/?utm_source=chatgpt.com "Tilia Impact Ventures"))                                  | **Drtinova 557/10, Praha 5**. ([tilia.vc](https://tilia.vc/?utm_source=chatgpt.com "Tilia Impact Ventures"))                                                    | **LetsData, 15. 1. 2025** - startup přímo potvrzuje Tilii mezi investory kola v celkové výši **1,6 mil. USD**. ([VANTAGE](https://letsdata.net/resources/newsroom/letsdata-1-6m-investment?utm_source=chatgpt.com "LetsData Secures $1.6M to Combat Information Operations and Synthetic Identities - LETSDATA")) | **Zařadit**                             |
+| **Purple Ventures**       | Ano. VC fond investující do technologických startupů ve fázích pre-seed a seed prostřednictvím menšinových podílů. ([purple-ventures.com](https://www.purple-ventures.com/?utm_source=chatgpt.com "Úvod")) | **Masarykova 26, Brno** - potvrzeno vlastním webem i firemním profilem. ([purple-ventures.com](https://www.purple-ventures.com/?utm_source=chatgpt.com "Úvod")) | **Hedepy** - Purple na vlastním webu výslovně uvádí investici; potvrzuje ji také reference spoluzakladatele a CEO Lukáše Krčila. ([purple-ventures.com](https://www.purple-ventures.com/?utm_source=chatgpt.com "Úvod"))                                                                                          | **Zařadit**                             |
+| **Fundlift**              | Uvedený profil jej popisuje jako **platformu propojující investory a firmy**, nikoli jako přímý VC fond.                                                                                                   | Pro rozhodnutí není nutné dále ověřovat.                                                                                                                        | Financování projektů přes platformu samo nedokládá vlastní VC investici Fundliftu. Nabízenými nástroji jsou konvertibilní investiční certifikáty a min dluhopisy. ([CzechStartups.gov.cz](https://czechstartups.gov.cz/investori_en/fundlift/?utm_source=chatgpt.com "Fundlift"))                                 | **Vyřadit - crowdfundingová platforma** |
+
+
+
+## 2026-10-22T08:17:54.005Z — assistant
+
+Zapíšu tyto tři verdikty do ručního hodnocení a přepočítám výsledky. U Purple rozliším doloženou investici do Hedepy od jejího zatím neuvedeného data.

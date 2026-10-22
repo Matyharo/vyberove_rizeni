@@ -55,3 +55,7 @@ Uživatel zařadil INVEN a KAYA a uložil ARX evidovat samostatně jako PE. Zaps
 ## Čtvrtá skutečná ruční kontrola — 22. 10. 2026
 
 Uživatel zařadil N1 a Tensor a vyřadil AKAT jako asociaci. Historický důkaz N1/Snuggs zůstává odlišen od současné aktivity. U Tensoru doplněn Openvibe s datem vloženého oznámení 28. 1. 2025 a celkovým seed kolem 800 tis. USD; vlastní vklad není odhadován. Podrobnosti `review/round-04.md`. Ručně ověřeno 12/20 kandidátů; sedm původních pozitivních predikcí správně, další tři nevyhodnoceny. Čas kontroly neznámý.
+
+## Pátá skutečná ruční kontrola — 22. 10. 2026
+
+Uživatel zařadil Tilia a Purple a vyřadil Fundlift jako crowdfundingovou platformu. Rozhodnutí zapsána odděleně od atributové kontroly. Hedepy ponecháno jako nedatovaný důkaz v poznámce kontroly; žádné datum či vlastní vklad nedoplňujeme odhadem. Celkem 15/20 rozhodnutí, osm původních pozitivních predikcí správně, dvě čekají. Purple zůstává v původní matici abstencí. Podrobnosti `review/round-05.md`.

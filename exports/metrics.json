@@ -1,9 +1,9 @@
 {
   "as_of": "2026-10-22",
   "classification": {
-    "human_reviewed": 12,
+    "human_reviewed": 15,
     "candidates": 20,
-    "pending": 8,
+    "pending": 5,
     "initial_decisions": {
       "needs_review": 2,
       "exclude": 8,
@@ -11,46 +11,46 @@
     },
     "matrix": {
       "exclude": {
-        "exclude": 4,
+        "exclude": 5,
         "include": 0,
         "needs_review": 0
       },
       "include": {
         "exclude": 0,
-        "include": 7,
+        "include": 8,
         "needs_review": 0
       },
       "needs_review": {
         "exclude": 1,
-        "include": 0,
+        "include": 1,
         "needs_review": 0
       }
     },
     "precision": {
-      "numerator": 7,
-      "denominator": 7,
+      "numerator": 8,
+      "denominator": 8,
       "value": 1.0,
       "wilson_95": [
-        0.6456695649333126,
+        0.6755924351161198,
         1
       ],
       "scope": "Only reviewed, resolved initial positive predictions; not a random population estimate"
     },
-    "reviewed_initial_positive": 7,
+    "reviewed_initial_positive": 8,
     "initial_positive_total": 10,
-    "initial_positive_not_resolved": 3,
+    "initial_positive_not_resolved": 2,
     "reviewed_but_unresolved_positive": 0,
     "precision_bounds_all_initial_positives": [
-      0.7,
+      0.8,
       1.0
     ],
     "recall_in_reviewed_candidate_set": {
-      "numerator": 7,
-      "denominator": 7,
-      "value": 1.0
+      "numerator": 8,
+      "denominator": 9,
+      "value": 0.8888888888888888
     },
     "false_negatives_excluding_abstentions": 0,
-    "abstained_true_positives": 0,
+    "abstained_true_positives": 1,
     "note": "No human review => precision null, never 100%. Wilson interval is descriptive for this purposive sample, not global coverage."
   },
   "coverage": {
