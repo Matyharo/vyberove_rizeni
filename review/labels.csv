@@ -17,5 +17,5 @@ akat,exclude,Ferstl,2026-10-22,Uživatel ověřil asociační činnost pro spole
 bdo,exclude,Ferstl,2026-10-22,Uživatel doložil auditní a poradenské služby včetně poradenství fondům PE a VC; účast v roli poradce není přímá investice.,bdo
 fundlift,exclude,Ferstl,2026-10-22,Uživatel ověřil crowdfundingovou platformu propojující investory a firmy; financování přes platformu nedokládá vlastní přímou VC investici Fundlift.,fundlift
 startovac,exclude,Ferstl,2026-10-22,Uživatel ověřil crowdfundingovou platformu pro podporu kreativních projektů veřejností; profil nedokládá vlastní přímou VC investici.,startovac
-cvca,,,,,
-startupstart,,,,,
+cvca,exclude,Ferstl,2026-10-22,Oborová asociace sdružující PE/VC investory a poskytovatele služeb. Investory jsou členové; jejich transakce nedokládají vlastní investování asociace.,cvca-about
+startupstart,exclude,Ferstl,2026-10-22,Nezávislá platforma propojující startupy s investory; profil nedokládá vlastní investiční mandát ani konkrétní vlastní investici.,startupstart

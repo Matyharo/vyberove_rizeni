@@ -2,7 +2,7 @@
 
 Praktická úloha A pro Junior AI Developer. Plán vznikl před pilotem; historie začíná 22. 10. 2026.
 
-**Výsledek technické etapy:** 20 kandidátů, 11 předběžně přijatých VC organizací, 8 vyloučených a 1 nevyřešená identita podle AI. 45 veřejných zdrojů, 116 tvrzení a 13 investičních důkazů. Ručně zkontrolováno **18/20 kandidátů**: Credo, DEPO, i&i Bio, INVEN, KAYA, N1, Tensor, Tilia, Purple, J&T a Reflex include; BDO, původní Lighthouse, Genesis, ARX, AKAT, Fundlift a Startovač exclude z VC pilotu. Genesis a ARX jsou samostatně evidováni jako PE / growth equity, respektive PE investoři. Všech 10 původních pozitivních predikcí bylo posouzeno jako správných. Zbývají dva kandidáti původně predikovaní jako exclude.
+**Výsledek technické etapy:** 20 kandidátů, 11 předběžně přijatých VC organizací, 8 vyloučených a 1 nevyřešená identita podle AI. 45 veřejných zdrojů, 116 tvrzení a 13 investičních důkazů. Ručně zkontrolováno **20/20 kandidátů**: Credo, DEPO, i&i Bio, INVEN, KAYA, N1, Tensor, Tilia, Purple, J&T a Reflex include; BDO, původní Lighthouse, Genesis, ARX, AKAT, Fundlift, Startovač, CVCA a Startupstart exclude z VC pilotu. Genesis a ARX jsou samostatně evidováni jako PE / growth equity, respektive PE investoři. Všech 10 původních pozitivních predikcí bylo posouzeno jako správných. Lidský výsledek: 11 include a 9 exclude z VC pilotu; původní abstence Purple je include a původní abstence Lighthouse exclude.
 
 Veřejný repozitář: https://github.com/Matyharo/vyberove_rizeni
 
@@ -26,7 +26,7 @@ python -m investor_db build
 python -m investor_db check-release
 ```
 
-`build` obnoví CSV, SQLite, metriky a přehledy. Existující lidské štítky nepřepisuje. `check-release` má zatím vrátit kód 2: chybí dokončené ruční hodnocení, finální nativní export konverzace. Je to kontrolní seznam, ne doklad pravosti lidských štítků nebo dostupnosti vzdáleného repozitáře.
+`build` obnoví CSV, SQLite, metriky a přehledy. Existující lidské štítky nepřepisuje. `check-release` má zatím vrátit kód 2: chybí finální nativní export konverzace. Je to kontrolní seznam, ne doklad pravosti lidských štítků nebo dostupnosti vzdáleného repozitáře.
 
 Výstupy lze prohlédnout bez spuštění:
 
@@ -47,7 +47,7 @@ Jednotkou je organizace či značka investora. Jednotlivé fondy jsou oddělené
 
 Obvyklá velikost investice má bez zjištěného rozporu primární oporu u 8/11 přijatých organizací. U Tensoru existuje pouze nedatovaný asociační údaj; Reflex běžné rozpětí v použitých zdrojích neuvádí a Purple má rozpor mezi dvěma vlastními profily. Celkový spravovaný kapitál je uveden u 2/11 organizací, obě hodnoty self-reported bez data ocenění. Další historické částky a velikosti fondů jsou zachované jako jiné veličiny.
 
-To jsou metriky **úplnosti**, nikoli přesnosti. Precision počítáme proti skutečným lidským rozhodnutím; bez nich je null. Po šestém kontrolním kole je precision původních pozitivních predikcí 10/10 na tomto záměrně vybraném vzorku; dva původně negativní kandidáti ještě čekají na kontrolu. Není to důkaz 100% přesnosti databáze. Matice záměn má i needs_review a recall se vztahuje pouze k prověřovanému seznamu.
+To jsou metriky **úplnosti**, nikoli přesnosti. Precision počítáme proti skutečným lidským rozhodnutím; bez nich je null. Po dokončení kontroly 20/20 kandidátů je precision původních pozitivních predikcí 10/10 na tomto záměrně vybraném vzorku. Recall v rámci vzorku je 10/11 (90,9 %), protože původní AI se u Purple zdržela rozhodnutí. Není to důkaz 100% přesnosti databáze. Matice záměn má i needs_review a recall se vztahuje pouze k prověřovanému seznamu.
 
 Globálně plánujeme obálku 6–24 tisíc veřejně doložitelných záznamů po kontrole 10–40 tisíc kandidátů. Základní scénář prvního sběru je přibližně 128 tisíc USD; nejvíce stojí lidská kontrola. Odhad není kalibrovaný dosud chybějící časomírou lidské kontroly. Zdroje, definice a předpoklady jsou v globální zprávě.
 
@@ -61,7 +61,7 @@ Kontrola měla tři různé vrstvy:
 
 1. AI znovu četla zdroje a opravovala vlastní přepis. Není to nezávislé ověření člověkem.
 2. Validátor a testy kontrolují vazby, peněžní veličiny, data, nejistotu, metriky a skutečný export do SQLite.
-3. Uživatel ověří zdroje v chatu a skutečná rozhodnutí budou zapsána do `review/labels.csv`. Z nich vznikne ruční měření.
+3. Uživatel posoudil zdroje v sedmi kolech v chatu. Jeho skutečná rozhodnutí jsou zapsána do `review/labels.csv` a poznámek `review/round-*.md`; z nich vzniká ruční měření klasifikace, nikoli přesnosti všech atributů.
 
 Konkrétní omyly a problémy:
 
@@ -77,6 +77,6 @@ Autentický průběžný výřez veřejných zpráv je v `ai-log/conversation-sn
 
 Lokálně prochází 17 testů a strukturální validace. Integrační test skutečně vytváří databázi, kontroluje cizí klíče, opakované sestavení a zachování štítků. Syntetické testovací štítky nejsou výsledkem měření. GitHub Actions mají stejné kontroly připravené; výsledek vzdáleného běhu zatím nebyl ověřen.
 
-Před odevzdáním dokončit lidskou kontrolu, zapsat její skutečný čas, opravit nalezené chyby, přepočítat výstupy, doplnit finální export a aktualizovat veřejný repozitář. URL je uvedena v `release.json` v poli `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
+Ruční klasifikace všech 20 kandidátů je dokončena a výstupy přepočteny. Čas kontroly nebyl měřen; zpětně jej nevymýšlíme a rozpočet zůstává scénářovým odhadem. Kontrola jednotlivých atributů nebyla systematicky změřena. Před odevzdáním doplnit finální nativní export konverzace a aktualizovat veřejný repozitář. URL je uvedena v `release.json` v poli `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
 
 Termín: **30. 10. 2026**.

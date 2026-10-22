@@ -1,6 +1,6 @@
 # Skutečná ruční kontrola
 
-Referenční štítky nesmí vyplnit AI jménem člověka. Všechny řádky jsou zatím prázdné; testovací štítky žijí pouze v dočasných adresářích testů.
+Referenční rozhodnutí pocházejí od uživatele Ferstl ze sedmi kol kontroly v chatu dne 22. 10. 2026. AI je pouze přepsala do `labels.csv`; dokončeno 20/20 kandidátů. Podrobnosti jsou v `round-01.md` až `round-07.md`. Testovací štítky žijí pouze v dočasných adresářích testů. Následující postup popisuje metodiku kontroly; samostatná atributová kontrola není dokončena.
 
 1. Otevřete `reports/REVIEW_PACKET.md`, který neobsahuje predikce AI. Nejprve nečtěte tabulku rozhodnutí v `reports/PILOT.md`.
 2. U každého z 20 kandidátů otevřete zdroje. Posuďte identitu, VC mandát, českou přítomnost a konkrétní investici podle `PLAN.md`.

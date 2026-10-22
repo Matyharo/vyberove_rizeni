@@ -63,3 +63,7 @@ Uživatel zařadil Tilia a Purple a vyřadil Fundlift jako crowdfundingovou plat
 ## Šestá skutečná ruční kontrola — 22. 10. 2026
 
 Uživatel zařadil J&T a Reflex a vyřadil Startovač. Zapsáno 18/20 rozhodnutí; všech deset původních pozitivních predikcí je potvrzeno. Výsledek platí pro záměrně vybraný vzorek. Zachováno rozlišení celkové velikosti kola grid.online od neznámých vlastních vkladů. Nový odkaz na kontaktní stránku Reflex je zachycen jako podklad uživatele v `review/round-06.md`. Čas kontroly nezměřen.
+
+## Sedmá skutečná ruční kontrola — 22. 10. 2026
+
+Uživatel vyřadil CVCA jako asociaci a Startupstart jako propojovací platformu. Dokončeno 20/20 referenčních klasifikací, 11 include a 9 exclude. Původní precision 10/10 a recall 10/11 v tomto účelovém vzorku. Atributová přesnost zůstává nezměřena, čas kontroly neznámý. Finální nativní export konverzace je stále samostatný zbývající krok; průběžný filtrovaný snapshot za něj nevydáváme. Viz `review/round-07.md`.

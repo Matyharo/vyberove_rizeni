@@ -342,3 +342,33 @@ Prosím opět **zařadit / vyřadit / nelze rozhodnout** a krátké zdůvodněn�
 ## 2026-10-22T08:20:11.717Z — assistant
 
 Zapíšu J&T Ventures a Reflex jako zařazené a Startovač jako vyřazený. Tím bude ověřeno všech deset původních pozitivních predikcí; do dokončení vzorku zbývají CVCA a Startupstart.
+
+## 2026-10-22T08:21:07.800Z — assistant
+
+Zapsáno a zveřejněno na [GitHubu](https://github.com/Matyharo/vyberove_rizeni). Máme **18/20 rozhodnutí**, všech 17 testů prošlo.
+
+Všech deset původních pozitivních predikcí bylo potvrzeno. Přesnost **10/10 platí pro tento vybraný vzorek**, nikoli pro celou databázi nebo jednotlivé údaje.
+
+Zbývají poslední dva kandidáti:
+
+| Kandidát | Zdroj k posouzení |
+|---|---|
+| **CVCA** | [Členství a charakter organizace](https://cvca.cz/en/membership/) |
+| **Startupstart.cz** | [Profil na CzechStartups](https://czechstartups.gov.cz/investori_en/startupstart-cz/) |
+
+Prosím opět **zařadit / vyřadit / nelze rozhodnout** a krátký důvod, zda zdroj dokládá vlastní přímé VC investování.
+
+## 2026-10-22T08:21:48.159Z — user
+
+
+
+| Kandidát            | Zjištění                                                                                                                                                                                                                                                                                                | Verdikt                             |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| **CVCA**            | Oborová asociace sdružující PE/VC investory a poskytovatele souvisejících služeb. Investory jsou její členové; členství ani jejich transakce nedokládají vlastní investování asociace. ([CVCA](https://cvca.cz/en/membership/?utm_source=chatgpt.com "Membership"))                                     | **Vyřadit - asociace**              |
+| **Startupstart.cz** | CzechStartups jej výslovně popisuje jako nezávislou platformu propojující startupy s investory. Profil neuvádí vlastní investiční mandát ani konkrétní vlastní investici. ([CzechStartups.gov.cz](https://czechstartups.gov.cz/investori_en/startupstart-cz/?utm_source=chatgpt.com "Startupstart.cz")) | **Vyřadit - propojovací platforma** |
+
+
+
+## 2026-10-22T08:21:52.534Z — assistant
+
+Zapíšu poslední dva verdikty a přepočítám výsledky pro celý vzorek 20 kandidátů. Pak zkontroluji, co ještě zbývá před odevzdáním.
