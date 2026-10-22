@@ -1,2 +1,3 @@
 ﻿candidate_id,investor_type,source_ids,note
 genesis,private_equity; growth_equity,"[""genesis-home"", ""genesis""]",Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze.
+arx,private_equity,"[""arx""]","Skutečný PE investor s akvizicemi, management buyout a expanzním kapitálem. Na pokyn uživatele evidován odděleně mimo VC pilot; nejde o prohlášení za neinvestora."

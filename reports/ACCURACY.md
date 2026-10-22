@@ -1,8 +1,8 @@
 # Výsledek měření
 
-Ruční přesnost: **PRŮBĚŽNĚ 3/3 vyhodnocených pozitivních predikcí správně; kontrola vzorku není dokončena**.
+Ruční přesnost: **PRŮBĚŽNĚ 5/5 vyhodnocených pozitivních predikcí správně; kontrola vzorku není dokončena**.
 
-Zkontrolováno člověkem: 6/20 kandidátů. Precision TP/(TP+FP): 3/3.
+Zkontrolováno člověkem: 9/20 kandidátů. Precision TP/(TP+FP): 5/5.
 
 Bez lidské kontroly neuvádíme procento přesnosti. Automatická validace kontroluje strukturu, nikoli pravdivost.
 

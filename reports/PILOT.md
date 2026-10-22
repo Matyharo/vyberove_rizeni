@@ -269,3 +269,4 @@ Důkaz skutečné investice:
 ## Samostatně evidovaní investoři mimo VC pilot
 
 - **Genesis Capital** — private_equity; growth_equity. Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze. Zdroje: [genesis-home](https://www.genesis.cz/); [genesis](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/).
+- **ARX Equity Partners** — private_equity. Skutečný PE investor s akvizicemi, management buyout a expanzním kapitálem. Na pokyn uživatele evidován odděleně mimo VC pilot; nejde o prohlášení za neinvestora. Zdroje: [arx](https://cvca.cz/en/arx-equity-partners-2/).

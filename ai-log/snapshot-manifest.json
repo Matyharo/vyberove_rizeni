@@ -1,19 +1,19 @@
 {
   "session_id": "01a1627f-38f8-7cd0-b6e6-7e61e2a3d1a7",
-  "created_utc": "2026-10-22T07:52:44.391585+00:00",
-  "source_prefix_sha256": "a9643d4a31594558064f02078621efe2d6721771c368a56b694b76287c5de9a2",
-  "source_bytes_at_snapshot": 2153763,
-  "source_last_record_timestamp": "2026-10-22T07:52:43.716Z",
-  "exported_messages": 14,
+  "created_utc": "2026-10-22T08:12:03.521492+00:00",
+  "source_prefix_sha256": "4792c7545e1065a1a584dd5c62991bba23c96b942822131ed2d4355a3f886ad9",
+  "source_bytes_at_snapshot": 2891553,
+  "source_last_record_timestamp": "2026-10-22T08:12:02.947Z",
+  "exported_messages": 27,
   "excluded_item_counts": {
     "additional_tools": 1,
-    "message": 7,
-    "environment_or_page_metadata": 2,
-    "reasoning": 48,
-    "custom_tool_call": 48,
-    "custom_tool_call_output": 47,
-    "function_call": 1,
-    "function_call_output": 1
+    "message": 10,
+    "environment_or_page_metadata": 3,
+    "reasoning": 68,
+    "custom_tool_call": 67,
+    "custom_tool_call_output": 66,
+    "function_call": 5,
+    "function_call_output": 5
   },
   "format": "filtered user-visible messages, not native complete export"
 }

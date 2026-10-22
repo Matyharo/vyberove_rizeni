@@ -125,7 +125,7 @@ class IntegrationTests(unittest.TestCase):
                 self.assertEqual(json.loads(contribution), {"amount": 1500000, "currency": "USD"})
                 self.assertEqual(source, "sampling-human")
                 self.assertIsNone(json.loads(round_amount))
-                self.assertEqual(db.execute("SELECT candidate_id FROM out_of_scope_classifications").fetchone()[0], "genesis")
+                self.assertEqual({r[0] for r in db.execute("SELECT candidate_id FROM out_of_scope_classifications").fetchall()}, {"genesis", "arx"})
                 self.assertEqual(db.execute("PRAGMA foreign_key_check").fetchall(), [])
                 self.assertEqual(db.execute("PRAGMA integrity_check").fetchone()[0], "ok")
             self.assertTrue((root / "reports/REVIEW_PACKET.md").exists())

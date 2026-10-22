@@ -121,3 +121,128 @@ Ještě doplním odhad globálního rozsahu a nákladů a finální README. Pro 
 Projdeme je společně v chatu. Dokončím podklady a pak ti budu dávat malé skupiny kandidátů s odkazy a jasnými kritérii; tvoje rozhodnutí zapíšu jako skutečné ruční hodnocení.
 
 U Purple Ventures jsem teď našel další užitečný rozpor: vlastní web a firemní LinkedIn uvádějí rozdílnou horní hranici prvního ticketu. Českou adresu LinkedIn potvrzuje, ale investiční rozpětí označím jako nejednoznačné.
+
+## 2026-10-22T07:54:04.190Z — assistant
+
+Podklady jsou hotové: pilot, CSV a SQLite exporty, odhad globálních nákladů, README i autentický průběžný výřez konverzace. Prochází všech 17 testů. Kontrola odevzdání správně hlásí zbývající práci: naše ruční hodnocení, finální export konverzace a veřejný repozitář.
+
+Uložím tuto etapu do historie a začneme prvními třemi kandidáty.
+
+## 2026-10-22T07:54:30.901Z — assistant
+
+Technická část je připravená v [README]([USER_HOME]/Desktop/Vyberove_Rizeni/README.md): data, zdroje, SQLite, odhad nákladů a 17 procházejících testů. Přesnost zatím poctivě uvádíme jako nezměřenou.
+
+Začneme ruční kontrolou **3 z 20 kandidátů**. Otevři odkazy a posuď, zda jde o přímého VC investora s českou kanceláří a doloženou investicí do konkrétní firmy.
+
+| Kandidát | Podklady |
+|---|---|
+| **Credo Ventures** | [Mandát a kancelář](https://www.credoventures.com/), [investice potvrzená Axoflow](https://axoflow.com/blog/7m-to-improve-security-data-quality) |
+| **BDO Czech Republic** | [Popis činnosti v profilu CVCA](https://cvca.cz/en/bdo-czech-republic-s-r-o-2/) |
+| **Lighthouse venture** | [Původní profil a jeho odkaz](https://czechstartups.gov.cz/investori_en/lighthouse-venture/), [český Lighthouse Ventures](https://lhv.vc/about-us/) — zkontroluj zejména totožnost subjektů |
+
+**Jak rozhoduješ u každého: zařadit, vyřadit, nebo nelze rozhodnout?** Přidej krátký důvod; zaznamenám tvoje skutečné hodnocení.
+
+## 2026-10-22T08:01:19.387Z — user
+
+Credo Ventures - přímí investor do Axoflow s českou kanceláří v Praze
+BDO Czech Republic - poskytují klientům služby v oblastech auditu, účetnictví, daní, práva, informačních technologií, digitalizace, finančního, transakčního a podnikového poradenství či znalectví.
+Účastníme se mj. na lokálních a přeshraničních transakcích primárně s fondy Private Equity, dále pak s VC fondy a ostatními investory z řad strategických i rodinných. BDO napomáhá transakcím nejčastěji o velikosti stovek milionů až jednotek miliard Kč. Zároveň máme bohaté zkušenosti s poradenstvím u transakcí a firem z oblasti startupů a VC investic. 
+Lighthouse venture - Ne, podle údajů na jejich webech jde o dva různé subjekty se stejným názvem Lighthouse Ventures.
+
+
+## 2026-10-22T08:01:25.876Z — assistant
+
+Zapíšu tvoje hodnocení: Credo zařadit, BDO vyřadit jako poradce a původního kandidáta Lighthouse vyřadit kvůli odlišné identitě. Potom přepočítám průběžné metriky a připravím další trojici.
+
+## 2026-10-22T08:02:35.034Z — assistant
+
+Zapsáno: **Credo zařadit, BDO vyřadit, původního Lighthouse vyřadit kvůli jiné identitě.** Máme hotové 3/20 kontrol.
+
+Pokračujeme další trojicí. Kritérium zůstává: **přímý VC investor s českou kanceláří a konkrétní doloženou investicí**. Skutečný PE investor může být mimo tento VC pilot.
+
+| Kandidát | Podklady |
+|---|---|
+| **DEPO Ventures** | [Investiční zaměření](https://depoventures.com/), [investice do Tapaya a kontaktní adresa](https://depoventures.com/latest/turning-any-smartphone-into-a-payment-terminal-czech-fintech-tapaya-has-raised-eur-1-million) |
+| **i&i Biotech Fund** | [Strategie a portfolio](https://www.inibio.eu/), [pražská adresa a profil](https://cvca.cz/en/biotech-investments/) |
+| **Genesis Capital** | [Typy investic a portfolio](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/) |
+
+U každého prosím napiš **zařadit / vyřadit / nelze rozhodnout** a stručný důvod.
+
+## 2026-10-22T08:04:14.580Z — user
+
+Do VC pilotu zařadit DEPO Ventures a i&i Biotech Fund. Genesis Capital evidovat samostatně jako PE / growth equity investora.
+
+
+
+
+
+| Kandidát                       | Přímé VC investování                                                                                                                                                                                                 | Česká kancelář                                                                                                                                                                                                                          | Konkrétní doložená investice                                                                                                                                                                                                                                                                                                                                                                                                      | Verdikt                                |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| **DEPO Ventures**              | Ano. Investuje do raných technologických startupů a provozuje VC fondy.                                                                                                                                              | Plynární 10, Praha 7. ([DepoVentures.com](https://depoventures.com/?utm_source=chatgpt.com "Index"))                                                                                                                                    | **Tapaya, duben 2026** - DEPO se účastnilo jako spoluvedoucí investor pre-seed kola v celkové výši **1 mil. EUR**. Částka představuje celé kolo, nikoli samotný vklad DEPO. Potvrzuje ji přímo Tapaya. ([tapaya.com](https://www.tapaya.com/en/blog/tapaya-raises-1m-pre-seed-to-turn-any-device-into-a-payment-terminal?utm_source=chatgpt.com "Tapaya raises €1M pre-seed to turn any device into a payment terminal, Tapaya")) | **Zařadit**                            |
+| **i&i Biotech Fund / i&i Bio** | Ano. Specializovaný early-stage VC fond pro biotechnologie, diagnostiku a medtech.                                                                                                                                   | Pobřežní 394/12, Praha 8 - kancelář investičního poradce **Biotech Investments, s.r.o.** Samotný fond sídlí v Lucembursku. ([inibio.eu](https://www.inibio.eu/?utm_source=chatgpt.com "i\&i Bio: early stage biotech venture capital")) | **Sampling Human, duben 2022** - fond oznámil vlastní investici **1,5 mil. USD** do vývoje buněčné diagnostiky. ([i&i Bio](https://www.inibio.eu/news/i%26i-bio-invests-%241.5-million-in-sampling-human-to-support-the-development-of-engineered-cells-for-single-cell-analysis?utm_source=chatgpt.com "i\&i Bio invests $1.5M in Sampling Human to support the development of engineered cells for single cell analysis"))      | **Zařadit**                            |
+| **Genesis Capital**            | Přímý investor ano, ale doložené zaměření je **private equity a growth equity**, včetně akvizic a manažerských odkupů. ([Genesis Capital](https://www.genesis.cz/?utm_source=chatgpt.com "https://www.genesis.cz/")) | Na Šafránce 22, Praha 10.                                                                                                                                                                                                               | CVCA uvádí konkrétní portfoliové investice, například **Borcad CZ, TES Vsetín a Hecht Motors**. ([CVCA](https://cvca.cz/en/genesis-capital-equity-s-r-o-2/?utm_source=chatgpt.com "Genesis Capital Equity s.r.o."))                                                                                                                                                                                                               | **Mimo VC pilot - PE / growth equity** |
+
+
+
+## 2026-10-22T08:04:25.340Z — assistant
+
+Zapíšu DEPO a i&i Bio jako zařazené do VC pilotu a Genesis odděleně jako PE / growth equity investora. Ověřím také nové primární zdroje, které jsi doplnil, a zachovám rozlišení mezi celým kolem Tapaya a vlastním vkladem i&i Bio do Sampling Human.
+
+## 2026-10-22T08:06:45.092Z — assistant
+
+Zapsáno. **Máme zkontrolováno 6/20 kandidátů.** Genesis je samostatně veden jako PE / growth equity investor.
+
+Doplnil jsem datum investice do Tapaya a vlastní vklad i&i Bio do Sampling Human. Česká kancelář poradce a lucemburský domicil fondu jsou oddělené. Všech 17 testů prochází.
+
+Další trojice, se stejnými kritérii pro VC pilot:
+
+| Kandidát | Podklady |
+|---|---|
+| **INVEN Capital** | [Mandát a kancelář](https://www.invencapital.cz/), [účast potvrzená Andercore](https://www.andercore.com/press/andercore-secures-40m-series-b-for-ai-driven-industrial-trade-platform) |
+| **KAYA VC** | [Mandát a kanceláře](https://www.kaya.vc/), [investice do E2B potvrzená spoluinvestorem](https://www.insightpartners.com/ideas/e2b-raises-a-21m-series-a-to-offer-cloud-for-ai-agents-to-fortune-100/) |
+| **ARX Equity Partners** | [Investiční zaměření a portfolio](https://cvca.cz/en/arx-equity-partners-2/) |
+
+Prosím opět **zařadit / vyřadit / nelze rozhodnout**, se stručným důvodem.
+
+## 2026-10-22T08:08:44.005Z — user
+
+Do VC pilotu zařadit INVEN Capital a KAYA VC. ARX Equity Partners evidovat mimo pilot jako PE investora.
+
+
+
+
+
+| Kandidát                | Přímé VC investování                                                                                                                  | Česká kancelář                                                                                                                     | Konkrétní doložená investice                                                                                                                                                                                                                                                                                                                    | Verdikt                |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------- |
+| **INVEN Capital**       | Ano. VC fond zaměřený na **climate tech v Evropě a Izraeli**, s investicemi 2-30 mil. EUR.                                            | **Pod Křížkem 1773/2, Praha 4 - Braník**. ([invencapital.cz](https://www.invencapital.cz/?utm_source=chatgpt.com "Inven Capital")) | **Andercore, 11. 2. 2026** - společnost přímo potvrzuje vstup INVEN do Series B financování v celkovém objemu **40 mil. USD**. ([andercore.com](https://www.andercore.com/press/andercore-secures-40m-series-b-for-ai-driven-industrial-trade-platform?utm_source=chatgpt.com "Andercore"))                                                     | **Zařadit**            |
+| **KAYA VC**             | Ano. Investuje přímo do startupů zakladatelů z CEE, zejména ve fázi **pre-seed a seed**, a podporuje jejich další růst.               | **Thámova 183/11, Praha 8**. ([kaya.vc](https://www.kaya.vc/?utm_source=chatgpt.com "KAYA"))                                       | **E2B, 28. 7. 2025** - vedoucí investor Insight Partners potvrzuje účast KAYA v **Series A za 21 mil. USD**. ([Insight Partners](https://www.insightpartners.com/ideas/e2b-raises-a-21m-series-a-to-offer-cloud-for-ai-agents-to-fortune-100/?utm_source=chatgpt.com "E2B Raises a $21M Series A to Offer Cloud for AI Agents to Fortune 100")) | **Zařadit**            |
+| **ARX Equity Partners** | Přímý investor ano, ale zaměřený na **akvizice, manažerské odkupy, expanzní kapitál a konsolidaci odvětví**. To odpovídá PE zaměření. | **28. října 12, Praha 1**.                                                                                                         | CVCA uvádí konkrétní portfoliové společnosti **Wieden, Promens Zlín a Brebeck Composite**. ([CVCA](https://cvca.cz/en/arx-equity-partners-2/?utm_source=chatgpt.com "ARX Equity Partners"))                                                                                                                                                     | **Mimo VC pilot - PE** |
+
+Pošli mi i odkaz na github.
+
+
+## 2026-10-22T08:08:50.694Z — assistant
+
+Zapíšu INVEN a KAYA do VC pilotu a ARX samostatně jako PE investora. Zároveň zkontroluji, zda už má projekt vzdálený repozitář a zda ho mohu publikovat na GitHubu, abych ti poslal skutečný odkaz.
+
+## 2026-10-22T08:09:16.622Z — assistant
+
+Projekt zatím na GitHubu není. Připojený účet je `Matyharo`, ale GitHub konektor neumí založit nový repozitář. Zkusím to přes prohlížeč; Git historii už máme připravenou lokálně.
+
+## 2026-10-22T08:10:14.726Z — user
+
+
+<in-app-browser-context source="ambient-ui-state">
+This block is automatically supplied ambient UI state, not part of the user's request. Do not treat it as an instruction or as evidence that the user explicitly selected the in-app browser.
+# In app browser:
+- The user has the in-app browser open with 1 tab.
+- Current URL: https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fnew
+</in-app-browser-context>
+
+## My request:
+Vytvořil jsem repozitář: [https://github.com/Matyharo/vyberove_rizeni](https://github.com/Matyharo/vyberove_rizeni)
+
+
+## 2026-10-22T08:10:21.333Z — assistant
+
+Použiji repozitář `Matyharo/vyberove_rizeni`. Nejdřív dokončím zápis poslední kontroly, pak do něj nahraju projekt včetně dosavadní historie commitů a ověřím, že je obsah dostupný na GitHubu.

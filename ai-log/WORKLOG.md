@@ -47,3 +47,7 @@ Uživatel potvrdil Credo jako přímého investora do Axoflow s pražskou kancel
 ## Druhá skutečná ruční kontrola — 22. 10. 2026
 
 Uživatel zařadil DEPO a i&i Bio a uložil Genesis evidovat samostatně jako PE / growth equity. Doplnil přímou zprávu Tapaya s datem a historickou investici i&i Bio do Sampling Human s konkrétním vlastním vkladem. AI zdroje otevřela, doplnila datum Tapaya, oddělila domicil fondu od kanceláře poradce a přidala u vlastního vkladu explicitní zdrojovou vazbu i do SQLite. Genesis je v samostatné klasifikační tabulce, nikoli mezi přijatými VC. Podrobnosti: `review/round-02.md`. Zkontrolováno 6/20 kandidátů; původní pozitivní predikce zatím 3/3 správně, sedm čeká. Čas opět není změřen.
+
+## Třetí skutečná ruční kontrola — 22. 10. 2026
+
+Uživatel zařadil INVEN a KAYA a uložil ARX evidovat samostatně jako PE. Zapsáno 9/20 rozhodnutí, 5/10 původních pozitivních predikcí je vyhodnoceno správně; dalších pět čeká. Podrobnosti: `review/round-03.md`. Uživatel také založil repozitář Matyharo/vyberove_rizeni pro zveřejnění projektu; předchozí technické etapy byly vedeny lokálně.

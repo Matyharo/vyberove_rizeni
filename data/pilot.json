@@ -2482,6 +2482,14 @@
         "genesis"
       ],
       "note": "Skutečný investor uchovaný samostatně mimo VC pilot na výslovný pokyn uživatele. Nejde o zařazení do ověřené globální databáze."
+    },
+    {
+      "candidate_id": "arx",
+      "investor_type": "private_equity",
+      "source_ids": [
+        "arx"
+      ],
+      "note": "Skutečný PE investor s akvizicemi, management buyout a expanzním kapitálem. Na pokyn uživatele evidován odděleně mimo VC pilot; nejde o prohlášení za neinvestora."
     }
   ]
 }

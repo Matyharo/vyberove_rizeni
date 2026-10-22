@@ -2,8 +2,8 @@
 credo,include,Ferstl,2026-10-22,"Uživatel potvrdil přímou investici do Axoflow a českou kancelář v Praze.",credo-home;axoflow
 depo,include,Ferstl,2026-10-22,"Uživatel potvrdil VC mandát a pražskou kancelář; Tapaya přímo potvrzuje účast DEPO v pre-seed kole. 1 mil. EUR je celé kolo.",depo-home;tapaya-primary
 inibio,include,Ferstl,2026-10-22,"Uživatel potvrdil early-stage VC a pražskou kancelář investičního poradce; fond má lucemburský domicil. Doložena vlastní investice do Sampling Human.",inibio-home;sampling-human
-inven,,,,,
-kaya,,,,,
+inven,include,Ferstl,2026-10-22,"Uživatel potvrdil climate-tech VC a pražskou kancelář; Andercore potvrzuje vstup do financování Series B. 40 mil. USD představuje celé equity/debt financování.",inven-home;andercore
+kaya,include,Ferstl,2026-10-22,"Uživatel potvrdil přímé startupové investování a pražskou kancelář; Insight Partners potvrzuje účast KAYA v Series A E2B za celkových 21 mil. USD.",kaya-home;e2b
 nation1,,,,,
 tensor,,,,,
 tilia,,,,,
@@ -12,7 +12,7 @@ jt,,,,,
 lighthouse,exclude,Ferstl,2026-10-22,"Uživatel ověřil dva různé subjekty se stejným názvem. Původní discovery kandidát nelze zaměnit s českým fondem.",lighthouse-discovery;lighthouse-home
 reflex,,,,,
 genesis,exclude,Ferstl,2026-10-22,"Mimo VC pilot; na pokyn uživatele evidován samostatně jako skutečný PE / growth equity investor.",genesis;genesis-home
-arx,,,,,
+arx,exclude,Ferstl,2026-10-22,"Na pokyn uživatele evidovat jako skutečného PE investora mimo VC pilot; mandát akvizic a manažerských odkupů.",arx
 akat,,,,,
 bdo,exclude,Ferstl,2026-10-22,"Uživatel doložil auditní a poradenské služby včetně poradenství fondům PE a VC; účast v roli poradce není přímá investice.",bdo
 fundlift,,,,,
