@@ -1,13 +1,15 @@
 {
   "public_repository_url": "https://github.com/Matyharo/vyberove_rizeni",
-  "status": "ready_with_documented_pending_attribute_audit",
+  "status": "ready_with_documented_uncertain_attribute_claims",
   "conversation_export": "user_supplied_markdown_redacted",
   "classification_review": "completed_time_not_measured",
-  "attribute_review": "pending_18_claim_packet",
+  "attribute_review": "first_round_completed_18_claims_6_uncertain",
   "conversation_export_required": false,
   "ci": {
     "checked_commit": "9fe06728dafb2ec008cff790b2fa1f02d7b94b39",
     "status": "not_verified",
-    "reason": "Connector returned no PR workflow runs and no combined statuses; shell DNS and web Actions access failed. Neither endpoint proves Actions success. Local changes have not been pushed."
-  }
+    "reason": "Connector returned no PR workflow runs and no combined statuses; shell DNS and web Actions access failed. Neither endpoint proves Actions success. This evidence concerns the historical checked_commit; it does not verify CI for later commits."
+  },
+  "attribute_reviewer": "Ferstl",
+  "attribute_reviewed_on": "2026-10-22"
 }

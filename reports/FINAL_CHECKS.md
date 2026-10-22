@@ -1,3 +1,23 @@
+# Aktuální ověření po zápisu atributového auditu
+
+Provedeno 22. 10. 2026 nad lokálním stromem vycházejícím z commitu fdae4afd30b5c29f24c0c84ce7a1f9e1c683f318. Předchozí finální opravy již byly pushnuty v tomto výchozím commitu. Nové změny obsahující atributové štítky zatím nebyly commitnuty ani pushnuty.
+
+Všech pět požadovaných příkazů prošlo (exit 0): validate, research/audit_database.py, unittest discover -s tests -v, build a check-release. Prošlo všech 28 testů a všech sedm databázových invariantů. Nový regresní test ověřuje, že uncertain ani kontroly null nezvyšují přesnost pozitivních tvrzení.
+
+Další build vytvořil byte-identické exporty včetně SQLite, generované reporty i metrikový blok README. Zachoval oba review soubory. Zmrazené kandidáty, původní predikce, lidskou klasifikaci, samotná tvrzení v pilot.json i výběr auditovaných ID porovnání s výchozím commitem potvrdilo jako nezměněné.
+
+Nově je zapsáno 18 skutečně dodaných atributových rozhodnutí: 12 supported, 6 uncertain, 0 incorrect. Kontrolor Ferstl, datum 2026-10-22, podle potvrzení uživatele v chatu. Shoda vyřešených tvrzení je 12/12; šest uncertain je mimo jmenovatel a ostatní databázová tvrzení nebyla tímto auditem potvrzena. Čas nebyl dodán ani odhadován. Rozpor Purple a historická/neurčená data kapitálu zůstávají zachovány.
+
+Aktuální strojové výsledky: [FINAL_CHECKS.json](FINAL_CHECKS.json), [DATABASE_AUDIT.json](DATABASE_AUDIT.json). Šest otevřených případů a dodané důvody: [CLAIM_AUDIT.md](CLAIM_AUDIT.md), [claims.csv](../review/claims.csv).
+
+Vzdálený CI běh pro tento výchozí commit nebyl v této etapě ověřován. Starší pokusy níže se vztahují pouze ke staršímu uvedenému commitu a nejsou důkazem výsledku CI nových změn.
+
+---
+
+# Historický protokol před dodáním atributových štítků
+
+Následující část zachovává tehdejší stav; údaje o prázdném auditu a nepushnutých finálních opravách již nepopisují současnost.
+
 # Finální lokální ověření
 
 Provedeno 22. 10. 2026 nad lokálně upraveným stromem, výchozí commit 9fe06728dafb2ec008cff790b2fa1f02d7b94b39. Změny nebyly pushnuty.

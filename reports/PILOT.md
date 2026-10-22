@@ -1,6 +1,6 @@
 # Pilot českých VC investorů
 
-Stav zdrojů: 2026-10-22. Lidská klasifikace: 20/20. Audit atributů: 0 kontrol.
+Stav zdrojů: 2026-10-22. Lidská klasifikace: 20/20. Audit atributů: 18 kontrol.
 
 Lidské potvrzení klasifikace neznamená ověření všech atributů. Částky jsou self-reported nebo historické; prázdná hodnota není nula.
 

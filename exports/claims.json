@@ -61,8 +61,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "credo.stage.1",
@@ -137,7 +137,7 @@
     "status": "historical_unconfirmed",
     "note": "Nedatovaný asociační profil; nepovažovat za aktuální AUM.",
     "attribute_human_verified": false,
-    "human_review_label": null
+    "human_review_label": "uncertain"
   },
   {
     "id": "credo.ticket.2",
@@ -219,8 +219,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "depo.stage.1",
@@ -395,8 +395,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "inibio.stage.1",
@@ -471,7 +471,7 @@
     "status": "historical_unconfirmed",
     "note": "Historická částka z hlavního textu; přibližná, ne současný celkový kapitál.",
     "attribute_human_verified": false,
-    "human_review_label": null
+    "human_review_label": "uncertain"
   },
   {
     "id": "inibio.capital_reference.2",
@@ -488,8 +488,8 @@
     "valid_as_of": null,
     "status": "undated_reference",
     "note": "Spodní hranice z nedatovaného boilerplate stejné stránky; nemá automaticky datum článku.",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "inven.name.1",
@@ -567,7 +567,7 @@
     "status": "supported",
     "note": "",
     "attribute_human_verified": false,
-    "human_review_label": null
+    "human_review_label": "uncertain"
   },
   {
     "id": "inven.geography.1",
@@ -737,8 +737,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "kaya.total_investment_capital.1",
@@ -755,8 +755,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "Self-reported AUM na webu; datum ocenění není uvedeno.",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "kaya.capital_reference.1",
@@ -900,8 +900,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "nation1.total_investment_capital.1",
@@ -918,8 +918,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "Self-reported across two funds; referenční datum neuvedeno.",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "nation1.capital_reference.1",
@@ -1046,7 +1046,7 @@
     "status": "historical_unconfirmed",
     "note": "Nedatovaný asociační profil; současné rozpětí neověřeno.",
     "attribute_human_verified": false,
-    "human_review_label": null
+    "human_review_label": "uncertain"
   },
   {
     "id": "tensor.total_investment_capital.1",
@@ -1154,8 +1154,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "tilia.geography.1",
@@ -1307,8 +1307,8 @@
     "valid_as_of": null,
     "status": "partial",
     "note": "Vlastní web uvádí 250–400 tis. EUR, firemní LinkedIn 250–500 tis. EUR. Data mandátů neznámá; spor neřešíme odhadem. Přehled ukazuje web, nikoli sjednocené současné rozpětí.",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "purple.total_investment_capital.1",
@@ -1338,8 +1338,8 @@
     "valid_as_of": null,
     "status": "undated_reference",
     "note": "Alternativní self-reported rozsah; rozpor s webem zůstává otevřený.",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "purple.capital_reference.1",
@@ -1434,8 +1434,8 @@
     "valid_as_of": null,
     "status": "supported",
     "note": "",
-    "attribute_human_verified": false,
-    "human_review_label": null
+    "attribute_human_verified": true,
+    "human_review_label": "supported"
   },
   {
     "id": "jt.geography.1",
@@ -1544,7 +1544,7 @@
     "status": "partial",
     "note": "Portfolio ukazuje technologické firmy, ale explicitní sektorový mandát na použité stránce nenalezen.",
     "attribute_human_verified": false,
-    "human_review_label": null
+    "human_review_label": "uncertain"
   },
   {
     "id": "reflex.stage.1",
@@ -1557,7 +1557,7 @@
     "status": "partial",
     "note": "Venture klasifikace z charakteru portfolia a investice do startupu grid.online; nejde o explicitní mandát fondu.",
     "attribute_human_verified": false,
-    "human_review_label": null
+    "human_review_label": "uncertain"
   },
   {
     "id": "reflex.geography.1",

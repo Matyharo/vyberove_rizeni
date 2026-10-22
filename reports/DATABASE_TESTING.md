@@ -36,4 +36,4 @@ Konečný seznam zařazených používá published_investors se shodou aktuáln�
 
 Při vlastním zápisu je potřeba na každém SQLite spojení provést `PRAGMA foreign_keys=ON`; jde o vlastnost SQLite, nikoli trvalé nastavení souboru. DB je primárně reprodukovatelný export, nikoli samostatná služba pro příjem libovolných zápisů. Obchodní pravidla (například správný význam peněžních veličin) kontroluje Python validátor před exportem; SQL schéma samo všechna nevynucuje.
 
-Technické testy nedokládají pravdivost webových údajů, dnešní dostupnost URL ani globální úplnost. Přesnost klasifikace subjektů vychází ze samostatné ruční kontroly; přesnost všech atributů nebyla změřena. Zátěžový test nebyl pro tento malý offline pilot proveden.
+Technické testy nedokládají pravdivost webových údajů, dnešní dostupnost URL ani globální úplnost. Přesnost klasifikace subjektů vychází ze samostatné ruční kontroly; malý atributový audit je evidovaný odděleně a neprokazuje přesnost všech atributů. Zátěžový test nebyl pro tento malý offline pilot proveden.

@@ -8,7 +8,7 @@ Recall v kontrolovaném seznamu: 10/11 (90.9%). Původní abstence u Purple s li
 
 Výsledek precision neznamená 100% správnost celé databáze ani odhad přesnosti na světovém trhu. Správnost atributů se měří odděleně; úplnost měří dostupnost údajů, nikoli jejich pravdivost.
 
-Audit pozitivních faktických tvrzení: 0 lidských kontrol; přesnost nezměřena. Podklady: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).
+Lidský audit atributů: 18 kontrol, 12 supported, 0 incorrect, 6 uncertain. Shoda vyřešených tvrzení s lidskou referencí: 12/12. Uncertain jsou mimo jmenovatel; nejde o potvrzení všech kontrolovaných ani všech databázových atributů. Supported u historického nebo rozporného údaje potvrzuje oporu v příslušném zdroji, nikoli současnou platnost či vyřešení rozporu. Podklady: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).
 
 Bez lidské kontroly neuvádíme procento přesnosti. Automatická validace kontroluje strukturu, nikoli pravdivost.
 

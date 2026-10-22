@@ -1,6 +1,6 @@
 # Aktuální stav protokolu
 
-Klasifikace dokončena v sedmi kolech; atributový audit dosud nezměřen. Čas klasifikace nebyl měřen. Markdown export je volitelný doplněk, bez nového požadavku na nativní export. Následující průběžné záznamy včetně tehdejších čekajících kroků jsou historie, nikoli současný seznam úkolů.
+Klasifikace dokončena v sedmi kolech; následně uživatel dodal malý atributový audit 18 tvrzení (12 supported, 6 uncertain), kontrolor Ferstl, datum 22. 10. 2026. Čas klasifikace nebyl měřen. Markdown export je volitelný doplněk, bez nového požadavku na nativní export. Následující průběžné záznamy včetně tehdejších čekajících kroků jsou historie, nikoli současný seznam úkolů.
 
 # Protokol práce s AI
 
@@ -87,3 +87,7 @@ Doplněno pět testů nad novým SQLite exportem se skutečnými lidskými ští
 ## Finální opravy - 22. 10. 2026
 
 Uživatel poskytl podrobné nové zadání finálních oprav. Pracoval jeden asistent bez subagentů. Odděleny původní a aktuální predikce AI od lidské reference, definována publikace shodou AI a člověka, odstraněn nejednoznačný příznak human_verified a doplněna odvozená klasifikační a atributová ověření. Připraven předem pevný audit 18 tvrzení bez vyplnění lidských rozhodnutí. AI otevřela oficiální a institucionální zdroje pro devět chybějících kapitálových údajů; nové pomocné částky nejsou současným AUM. Rozsah hledání je v reports/CAPITAL_RESEARCH.md. Odstraněna povinná kontrola exportu konverzace. Výsledky skutečných lokálních kontrol a omezení CI jsou v reports/FINAL_CHECKS.md. Nebyl proveden push ani změna vzdáleného repozitáře.
+
+## Zápis lidského atributového auditu - 22. 10. 2026
+
+Uživatel dodal tabulku 18 tvrzení se štítky a důvody. Na dotaz na původ, kontrolora a skutečné datum odpověděl „Ferstl 22.10.2026“. AI zapsala dodané výsledky s tímto označením a datem do review/claims.csv; nedoplňovala žádné vlastní lidské rozhodnutí. Dvanáct supported potvrzuje oporu ve zdroji u vyřešených tvrzení, šest uncertain zůstává mimo jmenovatel přesnosti. Neurčité mandáty Reflex, nedostupné úplné stránky CVCA a sporný význam fund_closed_size nejsou prohlášeny za chyby ani za ověřená fakta. Oba tickety Purple mají potvrzený přepis zdrojů, ale jejich rozpor a současnost nebyly vyřešeny. Čas kontroly nebyl dodán ani odhadován. Výsledky byly regenerovány; změny této etapy jsou lokální.

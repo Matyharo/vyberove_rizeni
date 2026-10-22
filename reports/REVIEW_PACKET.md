@@ -1,6 +1,6 @@
 # Podklady pro ruční kontrolu
 
-Klasifikace zkontrolována: 20/20. Zdroje níže zůstávají podkladem pro opakovanou kontrolu. Zbývající atributový audit: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).
+Klasifikace zkontrolována: 20/20. Zdroje níže zůstávají podkladem pro opakovanou kontrolu. Výsledky atributového auditu a nejisté případy: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).
 
 Pozitivní případ: skutečný přímý VC investor s českou kanceláří a konkrétní doloženou investicí. PE může být skutečný investor, ale mimo tento VC pilot.
 

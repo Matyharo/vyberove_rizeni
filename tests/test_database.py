@@ -19,6 +19,26 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class DatabaseTests(unittest.TestCase):
+    def test_uncertain_and_missing_reviews_do_not_inflate_attribute_accuracy(self):
+        path = self.root / 'review/claims.csv'
+        with path.open(encoding='utf-8-sig', newline='') as file:
+            rows = list(csv.DictReader(file))
+        labels = {'credo.sectors.1': 'supported', 'credo.stage.1': 'incorrect',
+                  'credo.ticket.1': 'uncertain', 'credo.total_investment_capital.1': 'supported'}
+        for r in rows:
+            for field in CLAIM_REVIEW_FIELDS[1:]:
+                r[field] = ''
+            if r['claim_id'] in labels:
+                r.update(label=labels[r['claim_id']], reviewer='TEST FIXTURE ONLY',
+                         reviewed_on='2026-10-22', reason='Synthetic denominator regression only')
+        write_csv(path, rows, CLAIM_REVIEW_FIELDS)
+        self.db.close()
+        cm = build(self.root)['claims']
+        self.assertEqual((cm['human_reviewed'], cm['resolved'], cm['correct'], cm['uncertain'], cm['incorrect'], cm['missing_value_reviews']), (3, 2, 1, 1, 1, 1))
+        self.assertEqual(cm['accuracy'], 0.5)
+        with closing(sqlite3.connect(self.path)) as db:
+            self.assertEqual(db.execute("SELECT attribute_human_verified FROM claim_verification WHERE claim_id='credo.total_investment_capital.1'").fetchone()[0], 0)
+
     def test_optional_conversation_export_is_not_release_blocker(self):
         (self.root / 'release.json').write_text(json.dumps({'public_repository_url': 'https://github.com/Matyharo/vyberove_rizeni'}), encoding='utf-8')
         self.db.close()
@@ -29,6 +49,10 @@ class DatabaseTests(unittest.TestCase):
         path = self.root / 'review/claims.csv'
         with path.open(encoding='utf-8-sig', newline='') as file:
             rows = list(csv.DictReader(file))
+        # Isolate this mutation test from the growing real reference set.
+        for r in rows:
+            for field in CLAIM_REVIEW_FIELDS[1:]:
+                r[field] = ''
         for r in rows:
             if r['claim_id'] == 'credo.ticket.1':
                 r.update(label='supported', reviewer='TEST FIXTURE ONLY', reviewed_on='2026-10-22', reason='Synthetic reference for export regression only')
@@ -59,7 +83,12 @@ class DatabaseTests(unittest.TestCase):
         self.assertEqual({r['id'] for r in summary}, {r['id'] for r in investors if r['published']})
         self.assertTrue(all(r['classification_human_verified']=='True' and r['attributes_human_verified']=='False' for r in summary))
         self.assertEqual(self.db.execute('SELECT SUM(classification_human_verified), SUM(attributes_human_verified) FROM investors').fetchone(), (len(investors), 0))
-        self.assertEqual(self.db.execute('SELECT SUM(attribute_human_verified) FROM claim_verification').fetchone()[0], 0)
+        with (self.root / 'review/claims.csv').open(encoding='utf-8-sig', newline='') as file:
+            supported = {r['claim_id'] for r in csv.DictReader(file) if r['label']=='supported'}
+        factual = {c['id'] for c in read_json(self.root / 'data/pilot.json')['claims'] if c['value'] is not None}
+        self.assertEqual(self.db.execute('SELECT SUM(attribute_human_verified) FROM claim_verification').fetchone()[0], len(supported & factual))
+        for c in read_json(self.root / 'exports/claims.json'):
+            self.assertEqual(c['attribute_human_verified'], c['id'] in supported & factual)
         pilot_report = (self.root / 'reports/PILOT.md').read_text(encoding='utf-8')
         self.assertIn('| Purple Ventures | needs_review | include | include | ano |', pilot_report)
         self.assertIn('| Lighthouse Ventures | needs_review | needs_review | exclude | ne |', pilot_report)

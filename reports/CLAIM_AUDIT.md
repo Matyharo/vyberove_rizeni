@@ -4,28 +4,30 @@ Předem pevný záměrný stratifikovaný výběr 18 pozitivních tvrzení např
 
 Výběr byl stanoven před vyplněním lidských štítků. Jde o záměrný rizikový audit, nikoli reprezentativní odhad. Kontroly AI nejsou lidské štítky.
 
+Vyplněno 18/18: supported 12, incorrect 0, uncertain 6. Uncertain neznamená chybu ani potvrzení; nepatří do jmenovatele přesnosti vyřešených tvrzení.
+
 Vyplňte odpovídající řádky v review/claims.csv: label (supported / incorrect / uncertain), reviewer, reviewed_on a reason. Datum, identitu ani čas za kontrolora nedoplňujeme. Čas lze nově měřit; historický čas zůstává neznámý.
 
 | ID tvrzení | Hodnota | Stav AI | Přesná URL | Kontrolní otázka | Lidský štítek |
 |---|---|---|---|---|---|
-| credo.sectors.1 | Bez pevné sektorové teze; technologičtí zakladatelé | supported | https://www.credoventures.com/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| depo.sectors.1 | Defence; space; fintech; Industry 4.0; energie | supported | https://depoventures.com/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| inibio.sectors.1 | Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví | supported | https://www.inibio.eu/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| reflex.sectors.1 | Technologické firmy; mandát sektorů není na použité stránce formalizován | partial | https://www.reflexcapital.com/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| inven.stage.1 | growth | supported | https://cvca.cz/en/inven-capital-2/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| tilia.stage.1 | early-stage | supported | https://tilia.vc/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| jt.stage.1 | pre-seed až Series A | supported | https://www.jtventures.cz/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| reflex.stage.1 | startup / venture; přesné fáze nezjištěny | partial | https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? |  |
-| kaya.ticket.1 | 1,000,000-3,000,000 USD (ticket) | supported | https://www.kaya.vc/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. |  |
-| nation1.ticket.1 | 100,000-1,000,000 USD (typical_first_investment) | supported | https://n1.rocks/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. |  |
-| tensor.ticket.1 | 250,000-1,000,000 EUR (preferred_investment) | historical_unconfirmed | https://cvca.cz/en/tensor-ventures/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. |  |
-| purple.ticket.1 | 250,000-400,000 EUR (initial_ticket) | partial | https://www.purple-ventures.com/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. |  |
-| purple.ticket.2 | 250,000-500,000 EUR (initial_ticket) | undated_reference | https://cz.linkedin.com/company/purple-ventures | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. |  |
-| credo.capital_reference.1 | 170,000,000 EUR (manager_aum) | historical_unconfirmed | https://cvca.cz/en/credo-ventures-2/ | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? |  |
-| inibio.capital_reference.1 | cca 47,000,000 EUR (fund_closed_size) | historical_unconfirmed | https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? |  |
-| inibio.capital_reference.2 | >53,000,000 EUR (fund_reported_managed_capital) | undated_reference | https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? |  |
-| kaya.total_investment_capital.1 | 500,000,000 USD (manager_aum) | supported | https://www.kaya.vc/ | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? |  |
-| nation1.total_investment_capital.1 | 60,000,000 USD (manager_aum) | supported | https://n1.rocks/ | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? |  |
+| credo.sectors.1 | Bez pevné sektorové teze; technologičtí zakladatelé | supported | https://www.credoventures.com/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | supported |
+| depo.sectors.1 | Defence; space; fintech; Industry 4.0; energie | supported | https://depoventures.com/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | supported |
+| inibio.sectors.1 | Life sciences; drug discovery; medtech; diagnostika; AI ve zdravotnictví | supported | https://www.inibio.eu/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | supported |
+| reflex.sectors.1 | Technologické firmy; mandát sektorů není na použité stránce formalizován | partial | https://www.reflexcapital.com/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | uncertain |
+| inven.stage.1 | growth | supported | https://cvca.cz/en/inven-capital-2/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | uncertain |
+| tilia.stage.1 | early-stage | supported | https://tilia.vc/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | supported |
+| jt.stage.1 | pre-seed až Series A | supported | https://www.jtventures.cz/ | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | supported |
+| reflex.stage.1 | startup / venture; přesné fáze nezjištěny | partial | https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky | Dokládá zdroj tento investiční mandát, nebo jde pouze o odvození z portfolia? | uncertain |
+| kaya.ticket.1 | 1,000,000-3,000,000 USD (ticket) | supported | https://www.kaya.vc/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. | supported |
+| nation1.ticket.1 | 100,000-1,000,000 USD (typical_first_investment) | supported | https://n1.rocks/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. | supported |
+| tensor.ticket.1 | 250,000-1,000,000 EUR (preferred_investment) | historical_unconfirmed | https://cvca.cz/en/tensor-ventures/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. | uncertain |
+| purple.ticket.1 | 250,000-400,000 EUR (initial_ticket) | partial | https://www.purple-ventures.com/ | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. | supported |
+| purple.ticket.2 | 250,000-500,000 EUR (initial_ticket) | undated_reference | https://cz.linkedin.com/company/purple-ventures | Dokládá zdroj celé rozpětí, měnu a význam ticketu? Porovnejte i alternativní tvrzení stejného investora. | supported |
+| credo.capital_reference.1 | 170,000,000 EUR (manager_aum) | historical_unconfirmed | https://cvca.cz/en/credo-ventures-2/ | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? | uncertain |
+| inibio.capital_reference.1 | cca 47,000,000 EUR (fund_closed_size) | historical_unconfirmed | https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? | uncertain |
+| inibio.capital_reference.2 | >53,000,000 EUR (fund_reported_managed_capital) | undated_reference | https://www.inibio.eu/news/experienced-businessmen-join-forces-with-excellent-science%2C-invest-%E2%82%AC2m-in-the-fund-at-the-iocb | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? | supported |
+| kaya.total_investment_capital.1 | 500,000,000 USD (manager_aum) | supported | https://www.kaya.vc/ | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? | supported |
+| nation1.total_investment_capital.1 | 60,000,000 USD (manager_aum) | supported | https://n1.rocks/ | Dokládá zdroj přesně částku, měnu, rozsah (fond/správce), typ kapitálu a datum? Nejde o cíl, historickou částku nebo proinvestovaný kapitál vydávaný za AUM? | supported |
 
 ## Chybějící údaje - samostatná kontrola rozsahu hledání
 

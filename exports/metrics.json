@@ -76,12 +76,14 @@
     }
   },
   "claims": {
-    "human_reviewed": 0,
+    "human_reviewed": 18,
     "total": 110,
+    "uncertain": 6,
+    "incorrect": 0,
     "missing_value_reviews": 0,
-    "correct": 0,
-    "resolved": 0,
-    "accuracy": null
+    "correct": 12,
+    "resolved": 12,
+    "accuracy": 1.0
   },
   "source_link_coverage": {
     "numerator": 121,

@@ -5,7 +5,7 @@ Praktická úloha A pro Junior AI Developer. Výsledek: malý evidenční pilot 
 <!-- METRICS:START -->
 Publikováno **11 investorů** z 20 zmrazených kandidátů; lidská klasifikace 20/20. Původní AI: {'needs_review': 2, 'exclude': 8, 'include': 10}. Aktuální AI: {'needs_review': 1, 'exclude': 8, 'include': 11}. Lidská reference: {'include': 11, 'exclude': 9}. 47 zdrojů, 121 tvrzení, 13 investičních důkazů.
 
-**Precision původních pozitivních klasifikací: 10/10 na záměrně vybraném vzorku.** Recall v kontrolovaném seznamu: 10/11; původní abstence Purple snižuje recall. To neznamená 100% správnost celé databáze ani odhad přesnosti světového trhu. Lidský audit atributů: 0 kontrol; správnost atributů je samostatná veličina.
+**Precision původních pozitivních klasifikací: 10/10 na záměrně vybraném vzorku.** Recall v kontrolovaném seznamu: 10/11; původní abstence Purple snižuje recall. To neznamená 100% správnost celé databáze ani odhad přesnosti světového trhu. Lidský audit atributů: 18 kontrol, 12 supported, 0 incorrect, 6 uncertain. Shoda vyřešených tvrzení s lidskou referencí: 12/12. Uncertain jsou mimo jmenovatel; nejde o potvrzení všech kontrolovaných ani všech databázových atributů. Supported u historického nebo rozporného údaje potvrzuje oporu v příslušném zdroji, nikoli současnou platnost či vyřešení rozporu.
 
 Úplnost supported atributů publikovaných investorů: sectors 10/11; stage 10/11; ticket 8/11; total_investment_capital 2/11. Úplnost není přesnost.
 <!-- METRICS:END -->
@@ -16,7 +16,7 @@ Publikováno **11 investorů** z 20 zmrazených kandidátů; lidská klasifikace
 - [Přesnost a úplnost](reports/ACCURACY.md) - rozsah měření a omezení Wilsonova intervalu.
 - [Plán a pravidla](PLAN.md), [globální rozsah a náklady](reports/GLOBAL_SCOPE_AND_COST.md).
 - [Datový model](docs/DATA_MODEL.md), [ověření databáze](reports/DATABASE_TESTING.md).
-- [18 tvrzení pro lidský audit](reports/CLAIM_AUDIT.md) a [vyplnitelný CSV přehled](exports/claim_audit_worksheet.csv).
+- [Výsledky auditu 18 tvrzení](reports/CLAIM_AUDIT.md) a [vyplnitelný CSV přehled](exports/claim_audit_worksheet.csv).
 - [Cílená rešerše kapitálu](reports/CAPITAL_RESEARCH.md) - rozsah hledání a rozlišení veličin.
 
 ## Spuštění
@@ -53,7 +53,7 @@ AI připravila plán, zmrazila kandidáty a první predikce, otevřela veřejné
 
 Kontroly mají tři vrstvy: AI opravuje vlastní přepis; kód ověřuje strukturu a reprodukovatelnost; uživatel poskytl skutečné klasifikační štítky v sedmi kolech, uložené v review/labels.csv a review/round-*.md. Klasifikační štítky nejsou systematickým auditem všech atributů. review/claims.csv se nevyplňuje za člověka.
 
-Konkrétní chyby AI: záměny jmenovců Lighthouse a hledání neověřených domén Nation1; přehlédnutí adresy Purple vedoucí k původní abstenci; odvozování mandátu Reflex z portfolia, následně snížené na partial; nesprávné SQLite placeholdery a nezavřená spojení na Windows; ručně přepsaný rozpočet, který neodpovídal výpočtu. Opravy jsou evidované v [WORKLOG](ai-log/WORKLOG.md). Nové opravy odstraňují pevné human_verified=False, oddělují rozhodnutí a metriky a připravují skutečně prázdný atributový audit.
+Konkrétní chyby AI: záměny jmenovců Lighthouse a hledání neověřených domén Nation1; přehlédnutí adresy Purple vedoucí k původní abstenci; odvozování mandátu Reflex z portfolia, následně snížené na partial; nesprávné SQLite placeholdery a nezavřená spojení na Windows; ručně přepsaný rozpočet, který neodpovídal výpočtu. Opravy jsou evidované v [WORKLOG](ai-log/WORKLOG.md). Nové opravy odstraňují pevné human_verified=False, oddělují rozhodnutí a metriky a připravily předem vybraný atributový audit. Uživatel následně dodal rozhodnutí a potvrdil kontrolora Ferstl a datum 22. 10. 2026; AI tyto štítky pouze zapsala.
 
 Uživatelem dodaný redigovaný Markdown export a průběžný snapshot zůstávají doplňkovými historickými podklady s manifesty v [ai-log](ai-log/README.md). Způsob nativního exportu nebyl nezávisle potvrzen; obsah není rekonstruován ani doplňován o tuto novou etapu.
 
@@ -61,4 +61,4 @@ Uživatelem dodaný redigovaný Markdown export a průběžný snapshot zůstáv
 
 Aktuální výsledky kontrol a stav CI pro konkrétní commit: [FINAL_CHECKS.md](reports/FINAL_CHECKS.md). Zelený lokální checklist nedokazuje pravdivost externích zdrojů.
 
-Lidská klasifikace je dokončena. Zbývá otevřít zdroje u 18 připravených tvrzení, posoudit přesnou hodnotu, význam a datum, vyplnit odpovídající řádky review/claims.csv a znovu sestavit výstupy. Vybraná tvrzení zahrnují i rozpory, historické částky a částečné mandáty. Přesnost atributů zůstává do té doby nezměřena. Existující lidská rozhodnutí ani původní predikce nebyly kvůli výsledkům změněny.
+Lidská klasifikace i první kolo malého atributového auditu jsou zapsány. Šest uncertain případů vyžaduje další dohledání úplných zdrojů, mandátu nebo významu veličiny; konkrétní ID a důvody jsou v review/claims.csv a reports/CLAIM_AUDIT.md. Potvrzené rozporné tickety Purple se neslučují a historické částky se nemění na současné AUM. Audit nepokrývá všechny databázové atributy. Původní predikce a lidská klasifikace nebyly kvůli výsledkům změněny.

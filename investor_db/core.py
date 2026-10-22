@@ -425,8 +425,11 @@ def claim_audit_packet(root, pilot, claim_reviews):
     claims = {c['id']: c for c in pilot['claims']}
     sources = {s['id']: s for s in pilot['sources']}
     reviews = {r['claim_id']: r for r in claim_reviews}
+    selected = [reviews[cid] for cid in config['claim_ids'] if cid in reviews]
+    counts = Counter(r['label'] for r in selected)
     lines = ['# Malý lidský audit atributů', '', config['selection_rule'], '',
              'Výběr byl stanoven před vyplněním lidských štítků. Jde o záměrný rizikový audit, nikoli reprezentativní odhad. Kontroly AI nejsou lidské štítky.', '',
+             f"Vyplněno {len(selected)}/{len(config['claim_ids'])}: supported {counts['supported']}, incorrect {counts['incorrect']}, uncertain {counts['uncertain']}. Uncertain neznamená chybu ani potvrzení; nepatří do jmenovatele přesnosti vyřešených tvrzení.", '',
              'Vyplňte odpovídající řádky v review/claims.csv: label (supported / incorrect / uncertain), reviewer, reviewed_on a reason. Datum, identitu ani čas za kontrolora nedoplňujeme. Čas lze nově měřit; historický čas zůstává neznámý.', '',
              '| ID tvrzení | Hodnota | Stav AI | Přesná URL | Kontrolní otázka | Lidský štítek |', '|---|---|---|---|---|---|']
     rows = []
@@ -496,11 +499,18 @@ def report(root, pilot, candidates, metrics, predictions, reviews):
     if p["value"] is not None and metrics["classification"]["pending"]:
         val = f"PRŮBĚŽNĚ {p['numerator']}/{p['denominator']} vyhodnocených pozitivních predikcí správně; kontrola vzorku není dokončena"
     recall = metrics['classification']['recall_in_reviewed_candidate_set']
+    cm = metrics['claims']
+    attribute_result = (f"Lidský audit atributů: {cm['human_reviewed']} kontrol, {cm['correct']} supported, "
+                        f"{cm['incorrect']} incorrect, {cm['uncertain']} uncertain. "
+                        f"Shoda vyřešených tvrzení s lidskou referencí: {cm['correct']}/{cm['resolved']}. "
+                        "Uncertain jsou mimo jmenovatel; nejde o potvrzení všech kontrolovaných ani všech databázových atributů. "
+                        "Supported u historického nebo rozporného údaje potvrzuje oporu v příslušném zdroji, nikoli současnou platnost či vyřešení rozporu."
+                        if cm['resolved'] else f"Lidský audit atributů: {cm['human_reviewed']} kontrol; přesnost vyřešených tvrzení nezměřena.")
     quality = ["# Výsledek měření", "", f"Precision původních pozitivních klasifikací: **{p['numerator']}/{p['denominator']} na záměrně vybraném vzorku** ({val}).", "",
                f"Zkontrolováno člověkem: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']} kandidátů. Precision TP/(TP+FP).", "",
                f"Recall v kontrolovaném seznamu: {recall['numerator']}/{recall['denominator']} ({recall['value']:.1%}). Původní abstence u Purple s lidským include snižuje recall; opravená AI predikce nepřepisuje původní měření." if recall['value'] is not None else "Recall nebyl změřen.", "",
                "Výsledek precision neznamená 100% správnost celé databáze ani odhad přesnosti na světovém trhu. Správnost atributů se měří odděleně; úplnost měří dostupnost údajů, nikoli jejich pravdivost.", "",
-               f"Audit pozitivních faktických tvrzení: {metrics['claims']['human_reviewed']} lidských kontrol; přesnost {metrics['claims']['accuracy'] if metrics['claims']['accuracy'] is not None else 'nezměřena'}. Podklady: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",
+               attribute_result + " Podklady: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",
                "Bez lidské kontroly neuvádíme procento přesnosti. Automatická validace kontroluje strukturu, nikoli pravdivost.", "",
                "## Úplnost přijatých organizací", "", "Počítají se jen tvrzení se stavem supported; historické a částečné hodnoty jsou v datech, ale tuto úplnost nezvyšují.", "",
                "| Pole | Doloženo |", "|---|---|"]
@@ -521,11 +531,11 @@ def report(root, pilot, candidates, metrics, predictions, reviews):
                      f"**Precision původních pozitivních klasifikací: {p['numerator']}/{p['denominator']} na záměrně vybraném vzorku.** "
                      f"Recall v kontrolovaném seznamu: {recall['numerator']}/{recall['denominator']}; původní abstence Purple snižuje recall. "
                      f"To neznamená 100% správnost celé databáze ani odhad přesnosti světového trhu. "
-                     f"Lidský audit atributů: {metrics['claims']['human_reviewed']} kontrol; správnost atributů je samostatná veličina.\n\n"
+                     + attribute_result + "\n\n"
                      "Úplnost supported atributů publikovaných investorů: " + '; '.join(f"{k} {v['numerator']}/{v['denominator']}" for k, v in metrics['coverage'].items()) + f". Úplnost není přesnost.\n{end}")
             text = text[:text.index(start)] + block + text[text.index(end)+len(end):]
             readme.write_text(text, encoding='utf-8')
-    packet = ["# Podklady pro ruční kontrolu", "", f"Klasifikace zkontrolována: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. Zdroje níže zůstávají podkladem pro opakovanou kontrolu. Zbývající atributový audit: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",
+    packet = ["# Podklady pro ruční kontrolu", "", f"Klasifikace zkontrolována: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. Zdroje níže zůstávají podkladem pro opakovanou kontrolu. Výsledky atributového auditu a nejisté případy: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",
               "Pozitivní případ: skutečný přímý VC investor s českou kanceláří a konkrétní doloženou investicí. PE může být skutečný investor, ale mimo tento VC pilot.", "",
               "Otevřete původní zdroje, nespoléhejte na parafráze AI. Datum přístupu nenahrazuje datum transakce. K nejasné identitě patří needs_review."]
     by_decision = {d["candidate_id"]: d for d in pilot["decisions"]}
@@ -562,6 +572,8 @@ def build(root):
     metrics = dict(as_of=pilot["as_of"], classification=classification_metrics(predictions["predictions"], reviews),
                    coverage=coverage(pilot, accepted),
                    claims={"human_reviewed": len(factual_reviews), "total": len(factual_ids),
+                           "uncertain": sum(r['label'] == 'uncertain' for r in factual_reviews),
+                           "incorrect": sum(r['label'] == 'incorrect' for r in factual_reviews),
                            "missing_value_reviews": len(claim_reviews)-len(factual_reviews),
                            "correct": sum(r["label"] == "supported" for r in resolved_claims),
                            "resolved": len(resolved_claims),

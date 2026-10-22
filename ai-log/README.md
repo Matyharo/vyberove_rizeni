@@ -12,3 +12,5 @@ Filtrace vynechává interní instrukce, interní uvažování, technická metad
 ## Historie exportu
 
 Před dodáním souboru uživatelem byl vyzkoušen nativní CLI export; pokus skončil kvůli zámku otevřené desktopové relace. Export tím nevznikl. Později uživatel dodal Markdown a jeho redakce je zachycena v manifestu. Detailní historický záznam zůstává ve WORKLOG.md. Žádný nový nativní export není vyžadován: citované zadání požaduje popis práce s AI v README. Existující soubory jsou doplňkové a neobsahují tuto novou etapu finálních oprav.
+
+Nové kolo malého atributového auditu je zaznamenáno v WORKLOG.md a review/claims.csv. Historický export konverzace nebyl rekonstruován ani doplněn o toto kolo.
