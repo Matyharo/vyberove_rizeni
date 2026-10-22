@@ -8,14 +8,14 @@ nation1,include,Ferstl,2026-10-22,Uživatel potvrdil early-stage VC a pražskou 
 tensor,include,Ferstl,2026-10-22,Uživatel potvrdil deep-tech VC a kancelář v Karlíně; Tensor vedl seed kolo Openvibe za celkových 800 tis. USD v lednu 2025. Vlastní vklad není doložen.,tensor-home;tensor-news
 tilia,include,Ferstl,2026-10-22,"Uživatel potvrdil early-stage impact investování, pražskou kancelář a účast v LetsData dne 15. 1. 2025. 1,6 mil. USD je celé kolo, nikoli vlastní vklad Tilia.",tilia-home;letsdata
 purple,include,Ferstl,2026-10-22,"Uživatel potvrdil přímé pre-seed/seed investování, kancelář Masarykova 26 Brno a investici do Hedepy doloženou webem a referencí CEO. Datum této investice v odpovědi neuvedeno.",purple-home;purple-linkedin
-jt,,,,,
+jt,include,Ferstl,2026-10-22,"Uživatel potvrdil přímé VC investování od pre-seed po Series A, kancelář Sokolovská 700/113a Praha 8 a investici do grid.online společně s Reflex a Grid Invest. 1,5 mil. EUR je celé kolo.",jt-home;jt-approach;grid
 lighthouse,exclude,Ferstl,2026-10-22,Uživatel ověřil dva různé subjekty se stejným názvem. Původní discovery kandidát nelze zaměnit s českým fondem.,lighthouse-discovery;lighthouse-home
-reflex,,,,,
+reflex,include,Ferstl,2026-10-22,"Uživatel potvrdil vlastní startupové investice, kancelář Rašínovo nábřeží 2000/78 Praha 2 a účast v grid.online doloženou spoluinvestorem J&T. Celé kolo 1,5 mil. EUR není vlastním vkladem Reflex.",reflex-home;reflex-portfolio;grid
 genesis,exclude,Ferstl,2026-10-22,Mimo VC pilot; na pokyn uživatele evidován samostatně jako skutečný PE / growth equity investor.,genesis;genesis-home
 arx,exclude,Ferstl,2026-10-22,Na pokyn uživatele evidovat jako skutečného PE investora mimo VC pilot; mandát akvizic a manažerských odkupů.,arx
 akat,exclude,Ferstl,2026-10-22,Uživatel ověřil asociační činnost pro společnosti kolektivního investování a správy aktiv; zdroj nedokládá vlastní přímou VC investici.,akat
 bdo,exclude,Ferstl,2026-10-22,Uživatel doložil auditní a poradenské služby včetně poradenství fondům PE a VC; účast v roli poradce není přímá investice.,bdo
 fundlift,exclude,Ferstl,2026-10-22,Uživatel ověřil crowdfundingovou platformu propojující investory a firmy; financování přes platformu nedokládá vlastní přímou VC investici Fundlift.,fundlift
-startovac,,,,,
+startovac,exclude,Ferstl,2026-10-22,Uživatel ověřil crowdfundingovou platformu pro podporu kreativních projektů veřejností; profil nedokládá vlastní přímou VC investici.,startovac
 cvca,,,,,
 startupstart,,,,,

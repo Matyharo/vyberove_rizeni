@@ -59,3 +59,7 @@ Uživatel zařadil N1 a Tensor a vyřadil AKAT jako asociaci. Historický důkaz
 ## Pátá skutečná ruční kontrola — 22. 10. 2026
 
 Uživatel zařadil Tilia a Purple a vyřadil Fundlift jako crowdfundingovou platformu. Rozhodnutí zapsána odděleně od atributové kontroly. Hedepy ponecháno jako nedatovaný důkaz v poznámce kontroly; žádné datum či vlastní vklad nedoplňujeme odhadem. Celkem 15/20 rozhodnutí, osm původních pozitivních predikcí správně, dvě čekají. Purple zůstává v původní matici abstencí. Podrobnosti `review/round-05.md`.
+
+## Šestá skutečná ruční kontrola — 22. 10. 2026
+
+Uživatel zařadil J&T a Reflex a vyřadil Startovač. Zapsáno 18/20 rozhodnutí; všech deset původních pozitivních predikcí je potvrzeno. Výsledek platí pro záměrně vybraný vzorek. Zachováno rozlišení celkové velikosti kola grid.online od neznámých vlastních vkladů. Nový odkaz na kontaktní stránku Reflex je zachycen jako podklad uživatele v `review/round-06.md`. Čas kontroly nezměřen.

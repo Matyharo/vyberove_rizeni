@@ -312,3 +312,33 @@ U každého prosím stejný verdikt: **zařadit / vyřadit / nelze rozhodnout**,
 ## 2026-10-22T08:17:54.005Z — assistant
 
 Zapíšu tyto tři verdikty do ručního hodnocení a přepočítám výsledky. U Purple rozliším doloženou investici do Hedepy od jejího zatím neuvedeného data.
+
+## 2026-10-22T08:19:05.191Z — assistant
+
+Zapsáno a zveřejněno na [GitHubu](https://github.com/Matyharo/vyberove_rizeni). Máme **15/20 ručních rozhodnutí**, všech 17 testů prošlo. U Purple zůstává datum investice do Hedepy neuvedené.
+
+Další trojice:
+
+| Kandidát | Zdroje k posouzení |
+|---|---|
+| **J&T Ventures** | [Web](https://www.jtventures.cz/) · [Investiční přístup](https://www.jtventures.cz/pristup) · [Investice do grid.online](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky) |
+| **Reflex Capital** | [Web a kontakt](https://www.reflexcapital.com/) · [Portfolio](https://www.reflexcapital.com/portfolio/) · stejné oznámení grid.online výše |
+| **Startovač** | [Profil na CzechStartups](https://czechstartups.gov.cz/investori_en/startovac/) |
+
+Prosím opět **zařadit / vyřadit / nelze rozhodnout** a krátké zdůvodnění přímého VC investování, české kanceláře a konkrétní investice.
+
+## 2026-10-22T08:20:08.155Z — user
+
+
+
+| Kandidát           | Přímé VC investování                                                                                                                                                                                       | Česká kancelář                                                                                                                                                                                  | Konkrétní doložená investice                                                                                                                                                                                                                                                                                                                                                                                                | Verdikt                                 |
+| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| **J&T Ventures**   | Ano. Nezávislý VC fond investuje od pre-seed po Series A prostřednictvím podílů a konvertibilních půjček.                                                                                                  | **Sokolovská 700/113a, Praha 8 - Karlín**, budova J&T Banky, 5. patro. ([J&T Ventures](https://www.jtventures.cz/pristup?utm_source=chatgpt.com "Přístup"))                                     | **grid.online** - oznámení J&T Ventures potvrzuje investici společně s Reflex Capital a Grid Invest v celkovém objemu **1,5 mil. EUR**. ([J&T Ventures](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky?utm_source=chatgpt.com "grid.online přináší lépe zaplacené kurýry, levnější dopravu i méně aut ve městech, říká Ondřej Krátký")) | **Zařadit**                             |
+| **Reflex Capital** | Ano. Přímé startupové investice dokládá vlastní portfolio i účast v grid.online. ([reflexcapital.com](https://www.reflexcapital.com/portfolio/?utm_source=chatgpt.com "OUR INVESTMENTS × Reflex Capital")) | **Rašínovo nábřeží 2000/78, Praha 2** - web výslovně popisuje zdejší kanceláře. ([reflexcapital.com](https://www.reflexcapital.com/contact/?utm_source=chatgpt.com "Contact × Reflex Capital")) | **grid.online** - účast Reflex Capital potvrzuje spoluinvestor J&T Ventures ve stejném oznámení. ([J&T Ventures](https://www.jtventures.cz/blog/grid-online-prinasi-lepe-zaplacene-kuryry-levnejsi-dopravu-i-mene-aut-ve-mestech-rika-ondrej-kratky?utm_source=chatgpt.com "grid.online přináší lépe zaplacené kurýry, levnější dopravu i méně aut ve městech, říká Ondřej Krátký"))                                        | **Zařadit**                             |
+| **Startovač**      | Ne. Profil popisuje platformu, přes kterou kreativní projekty získávají finanční podporu přímo od veřejnosti.                                                                                              | Pro rozhodnutí není nutné dále ověřovat.                                                                                                                                                        | Podpora projektů přes platformu nedokládá vlastní přímou VC investici Startovače. ([CzechStartups.gov.cz](https://czechstartups.gov.cz/investori_en/startovac/?utm_source=chatgpt.com "Startovač"))                                                                                                                                                                                                                         | **Vyřadit - crowdfundingová platforma** |
+
+
+
+## 2026-10-22T08:20:11.717Z — assistant
+
+Zapíšu J&T Ventures a Reflex jako zařazené a Startovač jako vyřazený. Tím bude ověřeno všech deset původních pozitivních predikcí; do dokončení vzorku zbývají CVCA a Startupstart.
