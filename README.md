@@ -26,7 +26,7 @@ python -m investor_db build
 python -m investor_db check-release
 ```
 
-`build` obnoví CSV, SQLite, metriky a přehledy. Existující lidské štítky nepřepisuje. `check-release` má zatím vrátit kód 2: chybí finální nativní export konverzace. Je to kontrolní seznam, ne doklad pravosti lidských štítků nebo dostupnosti vzdáleného repozitáře.
+`build` obnoví CSV, SQLite, metriky a přehledy. Existující lidské štítky nepřepisuje. `check-release` nyní prochází: ruční klasifikace, veřejná URL a export jsou přítomné. Je to kontrolní seznam, ne doklad pravosti lidských štítků nebo dostupnosti vzdáleného repozitáře.
 
 Výstupy lze prohlédnout bez spuštění:
 
@@ -71,12 +71,12 @@ Konkrétní omyly a problémy:
 - První SQLite export měl 11 placeholderů pro 10 sloupců. Opraveno a pokryto integračním testem. Windows testy také odhalily, že transakční context manager SQLite sám nezavírá spojení; opravili jsme uzavírání a umístění dočasných souborů.
 - Ručně přepsaný základní čtvrtletní rozpočet neodpovídal přepočtu; opraven na 12 360 USD a pokryt testem.
 
-Autentický průběžný výřez veřejných zpráv je v `ai-log/conversation-snapshot.md`, s popisem filtrace a manifestem. **Není to finální nativní export.** Po dokončení konverzace vložit finální export jako `ai-log/conversation-export.md`. Podrobný protokol: [ai-log/WORKLOG.md](ai-log/WORKLOG.md).
+Autentický průběžný výřez veřejných zpráv je v `ai-log/conversation-snapshot.md`, s popisem filtrace a manifestem. **Není to finální nativní export.** Uživatel následně dodal Markdown export celé dosavadní konverzace. Jeho veřejná redigovaná verze je v `ai-log/conversation-export.md`; původ a úpravy dokumentuje `ai-log/export-manifest.json`. Konkrétní použití příkazu /export nebylo nezávisle ověřeno. Podrobný protokol: [ai-log/WORKLOG.md](ai-log/WORKLOG.md).
 
 ## Ověření a zbývající práce
 
 Lokálně prochází 17 testů a strukturální validace. Integrační test skutečně vytváří databázi, kontroluje cizí klíče, opakované sestavení a zachování štítků. Syntetické testovací štítky nejsou výsledkem měření. GitHub Actions mají stejné kontroly připravené; výsledek vzdáleného běhu zatím nebyl ověřen.
 
-Ruční klasifikace všech 20 kandidátů je dokončena a výstupy přepočteny. Čas kontroly nebyl měřen; zpětně jej nevymýšlíme a rozpočet zůstává scénářovým odhadem. Kontrola jednotlivých atributů nebyla systematicky změřena. Před odevzdáním doplnit finální nativní export konverzace a aktualizovat veřejný repozitář. URL je uvedena v `release.json` v poli `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
+Ruční klasifikace všech 20 kandidátů je dokončena a výstupy přepočteny. Čas kontroly nebyl měřen; zpětně jej nevymýšlíme a rozpočet zůstává scénářovým odhadem. Kontrola jednotlivých atributů nebyla systematicky změřena. Uživatelem dodaný export je doplněn, redakce technických bloků a domovských cest jsou zdokumentované. Repozitář je připraven k odevzdání s uvedenými omezeními. URL je uvedena v `release.json` v poli `public_repository_url`. Lidská kontrola faktů, úplnost a veřejný zdroj jsou různé věci; žádnou nenahrazuje zelený test.
 
 Termín: **30. 10. 2026**.

@@ -1,0 +1,16 @@
+{
+  "received_on": "2026-10-22",
+  "prepared_utc": "2026-10-22T08:27:39.210156+00:00",
+  "source": "User-supplied Markdown conversation export attachment",
+  "source_sha256": "06c98e66cf4378b8af697d6dc73ecdc79c023eed8073e5bd109be3e64bad710a",
+  "source_bytes": 157741,
+  "published_sha256": "45c666a334b992e1121a16fadaddf5db340e63fc8c6ee80294bcd9deacaec606",
+  "published_bytes": 47621,
+  "removed_tool_blocks": 23,
+  "redacted_home_path_occurrences": 1,
+  "native_command_independently_verified": false,
+  "content_endpoint": "Assistant response giving CLI resume and /export instructions, before attachment handoff",
+  "retained": "User and public assistant conversation text, including human classification rounds",
+  "excluded": "Technical tool detail blocks; user home paths anonymized",
+  "raw_attachment_published": false
+}

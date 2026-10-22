@@ -71,3 +71,7 @@ Uživatel vyřadil CVCA jako asociaci a Startupstart jako propojovací platformu
 ## Pokus o nativní export — 22. 10. 2026
 
 Na pokyn uživatele AI ověřila oficiální dokumentaci a dostupnost Codex CLI, poté zkusila otevřít konkrétní existující relaci pouze pro export. První pokus narazil na zápis provozního stavu mimo sandbox; druhý s potřebným oprávněním a --no-daemon načetl historii, ale CLI ohlásilo zámek kvůli otevření v desktopové aplikaci. Nebyla spuštěna inference, fork ani nový agent. CLI ukončeno q. Nativní export nevznikl. Přesný postup pro dokončení po zavření desktopové relace je v ai-log/README.md; stav vydání zůstává awaiting_final_native_conversation_export.
+
+## Dodání exportu uživatelem — 22. 10. 2026
+
+Uživatel předal Markdown export konverzace v příloze. AI ověřila začátek, konec, přítomnost posledního kontrolního kola a vzory přihlašovacích údajů. Pro veřejnou verzi odstranila celé technické bloky nástrojů včetně vrácených instrukcí a anonymizovala domovské cesty; veřejné zprávy nebyly rekonstruovány. Výsledek conversation-export.md, kontrolní součty a přesné počty úprav v export-manifest.json. Způsob spuštění nativního exportu nelze ze souboru nezávisle potvrdit. Soubor končí před jeho předáním zpět asistentovi.

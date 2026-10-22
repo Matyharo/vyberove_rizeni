@@ -1,4 +1,5 @@
 {
   "public_repository_url": "https://github.com/Matyharo/vyberove_rizeni",
-  "status": "awaiting_final_native_conversation_export"
+  "status": "ready_for_submission_with_documented_limits",
+  "conversation_export": "user_supplied_markdown_redacted"
 }
