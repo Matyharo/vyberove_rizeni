@@ -50,3 +50,11 @@ Pole human_verified bylo odstraněno ze zdrojových investorů a exportů, proto
 Úplnost se počítá pro publikované investory a z podporovaných nenulových údajů. Přesnost atributů zahrnuje pouze nenulová tvrzení s vyřešenou lidskou referencí supported/incorrect; uncertain se počítají mezi kontroly, ale ne do jmenovatele přesnosti. Kontroly null mají vlastní missing_value_reviews a nevstupují do přesnosti pozitivních tvrzení. Prázdná hodnota není automaticky chyba. Malý předem určený audit má samostatný výběr data/claim_audit_sample.json; jeho tabulka se generuje a původní lidské řádky zůstávají zachovány.
 
 capital_reference nově rozlišuje také committed_capital, available_for_new_investments a fund_target_size. Tyto částky nejsou manager_aum a nezvyšují úplnost total_investment_capital. Datum validity u historického plánu znamená datum oznámeného plánu; null výslovně znamená neurčený referenční okamžik. Nová rešerše a nejistoty jsou v reports/CAPITAL_RESEARCH.md.
+
+## Statický webový balíček
+
+`investor_db/web.py` po validaci a sestavení exportů vytváří `site/data.json`. Obsahuje pouze organizace z publication_ids s explicitním published=true, jejich nezměněné claims a transakce, fondy, související zdroje, classification (původní/aktuální AI a skutečná reference), metriky a původ kontrol. Claims připojují review se štítkem, kontrolorem, datem a důvodem; příznaky se odvozují ze stejných vstupů jako běžné exporty. Poznámky AI se nestávají lidskou referencí.
+
+Pole conflicts prezentuje již zaznamenané rozpory: různé nenulové hodnoty téhož pole, jejichž kurátorská poznámka výslovně uvádí rozpor. Obsahuje původní ID tvrzení. Historické alternativy samotné nevytvářejí současný rozpor. Pole nemění tvrzení, klasifikaci ani metriky.
+
+JSON nemá proměnlivý čas sestavení ani data kontroly odvozená z návštěvy UI, takže opakovaný offline build je deterministický. Do site se kopíruje souhrnné CSV a metriky. Frontend data needituje ani nezapisuje lidské kontroly. Null zůstává null a zobrazuje se jako Nezjištěno.

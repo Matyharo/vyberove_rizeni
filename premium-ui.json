@@ -1,0 +1,16 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["frontend"],
+  "locale": "cs-CZ",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Select/Listbox", "Form", "Date", "Scrollbar"],
+  "ownership": {"Select/Listbox": "native", "Date": "typed"},
+  "requiredCommands": ["unit", "model"],
+  "commands": {
+    "unit": "python -m unittest discover -s tests -v",
+    "model": "node --test frontend/tests/*.test.mjs"
+  },
+  "evidence": {
+    "failurePaths": "frontend/tests/model.test.mjs"
+  }
+}

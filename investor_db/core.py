@@ -621,4 +621,6 @@ def build(root):
     dump_json(out / "manifest.json", {str(p.relative_to(root)).replace('\\', '/'): hashlib.sha256(p.read_bytes()).hexdigest()
                                     for p in (root / "data/candidates.json", root / "data/predictions.json", root / "data/pilot.json",
                                               root / "review/labels.csv", root / "review/claims.csv", root / "data/claim_audit_sample.json") if p.exists()})
+    from .web import build_site
+    build_site(root, pilot, candidates, predictions, reviews, claim_reviews, metrics, accepted)
     return metrics

@@ -1,5 +1,7 @@
 # Aktuální stav protokolu
 
+23. 10. 2026: na nové podrobné zadání uživatele doplněn statický read-only frontend. Datová a lidská klasifikace zůstaly zachovány. Nové změny nebyly zveřejněny ani pushnuty. Podrobnosti této etapy jsou na konci protokolu.
+
 Klasifikace dokončena v sedmi kolech; následně uživatel dodal malý atributový audit 18 tvrzení (12 supported, 6 uncertain), kontrolor Ferstl, datum 22. 10. 2026. Čas klasifikace nebyl měřen. Markdown export je volitelný doplněk, bez nového požadavku na nativní export. Následující průběžné záznamy včetně tehdejších čekajících kroků jsou historie, nikoli současný seznam úkolů.
 
 # Protokol práce s AI
@@ -91,3 +93,11 @@ Uživatel poskytl podrobné nové zadání finálních oprav. Pracoval jeden asi
 ## Zápis lidského atributového auditu - 22. 10. 2026
 
 Uživatel dodal tabulku 18 tvrzení se štítky a důvody. Na dotaz na původ, kontrolora a skutečné datum odpověděl „Ferstl 22.10.2026“. AI zapsala dodané výsledky s tímto označením a datem do review/claims.csv; nedoplňovala žádné vlastní lidské rozhodnutí. Dvanáct supported potvrzuje oporu ve zdroji u vyřešených tvrzení, šest uncertain zůstává mimo jmenovatel přesnosti. Neurčité mandáty Reflex, nedostupné úplné stránky CVCA a sporný význam fund_closed_size nejsou prohlášeny za chyby ani za ověřená fakta. Oba tickety Purple mají potvrzený přepis zdrojů, ale jejich rozpor a současnost nebyly vyřešeny. Čas kontroly nebyl dodán ani odhadován. Výsledky byly regenerovány; změny této etapy jsou lokální.
+
+## Statický frontend - 23. 10. 2026
+
+Uživatel výslovně rozšířil původní datový projekt o prohlížeč investorů s tabulkou, detailem, filtry, dohledatelnými zdroji a viditelnou nejistotou. AI pracovala bez subagentů. Náhled pracovního přehledu vznikl vestavěným Image Gen; sloužil pouze jako vizuální koncept, nikoli zdroj faktů. Vlastní implementace je HTML/CSS/JavaScript bez knihoven, nová část Python buildu sestavuje samostatný statický balíček ze skutečných dat. Frontend přebírá podmínku publikace a skutečně zapsané reference, nepřisuzuje AI kontrole nezávislost člověka.
+
+Browser QA proběhla v Chromium pro desktop, tablet a mobilní viewport včetně přesné projektové cesty, URL, filtrů, exportů, focusu a chybových scénářů. Opravena dvojí obnova tabulky po změně historie, která rušila vrácený focus; absolutně umístěný přístupný caption dostal správného vlastníka scrollu, aby nerozšiřoval mobilní dokument. Testy zahrnuly škodlivé texty a URL v dočasně podvrženém datasetu; žádné takové řádky nebyly zapsány do skutečných dat. Zdrojové stránky nebyly hromadně ověřovány jako pravdivé ani dostupné.
+
+První pokus vestavěného prohlížeče skončil timeoutem kvůli sandboxu lokálního serveru; po povoleném spuštění lokálního serveru mimo sandbox fungoval i náhled v aplikaci. Rozšířené testy využily lokální Playwright Chromium. Jednorázový lint DESIGN.md použil npm nástroj, bez přidání produkční závislosti. Počáteční statický audit nerozpoznával modulové addEventListener. Základní HTML nyní záměrně deaktivuje tlačítka do navázání obsluh, což současně zlepšuje chování při nenačteném JavaScriptu. Následný strict audit prošel bez nálezů; skutečné akce byly otestovány v prohlížeči. Workflow pro Pages se zveřejněním je připravené, ale vyžaduje výslovné ruční spuštění. Push ani nasazení nebyly provedeny. Souhrn ověření a pokyny jsou v README.

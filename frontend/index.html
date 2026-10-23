@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pilot investorů s českou přítomností. Investiční zaměření, částky a dohledatelné zdroje včetně omezení údajů.">
+  <meta name="theme-color" content="#17685b">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'none'">
+  <title>Databáze investorů</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2317685b'/%3E%3Cpath d='M9 9h14M9 16h14M9 23h9' stroke='white' stroke-width='3'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#prehled">Přejít na přehled investorů</a>
+  <main class="workspace" id="app">
+    <header class="masthead">
+      <div><h1>Databáze investorů</h1><p class="subtitle">Pilot investorů s českou přítomností</p></div>
+      <nav aria-label="Hlavní navigace">
+        <span class="as-of" id="as-of">Načítání stavu dat…</span>
+        <a href="#metodika" id="method-link">Metodika</a>
+        <a href="#exporty" id="export-link">Exporty</a>
+        <a id="repo-link" hidden target="_blank" rel="noopener noreferrer">Repozitář <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <section class="metrics" aria-label="Rozsah a dostupnost údajů" id="metrics"></section>
+
+    <section aria-labelledby="filter-heading" class="filters-section">
+      <h2 class="sr-only" id="filter-heading">Vyhledávání a filtry</h2>
+      <form id="filters" novalidate inert>
+        <div class="field search-field"><label for="search">Hledat investora nebo zaměření</label>
+          <div class="search-box"><span aria-hidden="true">⌕</span><input type="search" id="search" name="q" placeholder="Např. technologie, biotech…" autocomplete="off" spellcheck="false"><button type="button" disabled id="clear-search" aria-label="Vymazat hledání" hidden>×</button></div>
+        </div>
+        <div class="field"><label for="sector">Zaměření</label><select id="sector" name="sector"><option value="">Všechna zaměření</option></select></div>
+        <div class="field"><label for="stage">Investiční fáze</label><select id="stage" name="stage"><option value="">Všechny fáze</option></select></div>
+        <div class="field"><label for="availability">Dostupnost údajů</label><select id="availability" name="availability"><option value="">Všechny záznamy</option></select></div>
+      </form>
+      <p class="filter-help">Filtry zachovávají znění zdrojů. Částečné a odvozené údaje zůstávají označené.</p>
+    </section>
+
+    <section id="prehled" aria-label="Publikovaní investoři" tabindex="-1">
+      <div class="table-toolbar"><p id="result-count" role="status" aria-live="polite">Načítání investorů…</p><button type="button" disabled class="text-button" id="reset">Vymazat filtry</button></div>
+      <div class="load-state" id="load-state" role="status"><span class="spinner" aria-hidden="true"></span><p>Načítáme publikovaný pilot a jeho zdroje.</p></div>
+      <div class="error-state" id="error-state" hidden role="alert"><h2>Data se nepodařilo načíst</h2><p>Zkontrolujte připojení a zkuste načtení znovu. Pokud problém trvá, otevřete repozitář nebo se vraťte později.</p><button type="button" disabled class="primary" id="retry">Zkusit znovu</button></div>
+      <div class="table-scroll" id="table-scroll" hidden tabindex="0" role="region" aria-label="Tabulka investorů, na úzké obrazovce posuvná vodorovně">
+        <table><caption class="sr-only">Publikovaní investoři. Doložení zdrojem neznamená ověření všech atributů člověkem.</caption>
+          <colgroup><col class="col-name"><col class="col-sector"><col class="col-stage"><col class="col-ticket"><col class="col-capital"><col class="col-limits"><col class="col-detail"></colgroup>
+          <thead><tr><th scope="col" aria-sort="ascending" id="name-heading"><button id="sort" type="button" disabled>Investor <span aria-hidden="true" id="sort-arrow">↑</span><span class="sr-only" id="sort-description">, řazeno vzestupně, změnit na sestupné řazení</span></button></th><th scope="col">Zaměření</th><th scope="col">Investiční fáze</th><th scope="col">Obvyklá investice</th><th scope="col">Spravovaný kapitál</th><th scope="col">Omezení údajů</th><th scope="col"><span class="sr-only">Detail</span></th></tr></thead>
+          <tbody id="investors"></tbody>
+        </table>
+      </div>
+      <div id="empty-state" class="empty-state" hidden><h2>Tomuto výběru neodpovídá žádný investor</h2><p>Zkuste obecnější hledání nebo vymažte filtry.</p><button type="button" disabled class="secondary" id="empty-reset">Vymazat filtry</button></div>
+    </section>
+    <footer class="page-footer"><p>Údaje se zdroji, včetně jejich omezení.</p><p>Nezjištěná hodnota není nula. Historická částka není současný kapitál.</p></footer>
+  </main>
+
+  <dialog id="detail" class="drawer" aria-labelledby="detail-title">
+    <div class="drawer-top"><span id="detail-kind">Detail investora</span><button type="button" disabled class="close" id="close-detail" aria-label="Zavřít detail">×</button></div>
+    <div id="detail-content"></div>
+  </dialog>
+  <noscript><p class="no-script">Pro prohlížení a filtrování zapněte JavaScript. <a href="./exports/investor_summary.csv">Stáhnout celý publikovaný přehled CSV</a>.</p></noscript>
+</body>
+</html>
