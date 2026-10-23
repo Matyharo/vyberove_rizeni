@@ -1,0 +1,47 @@
+{
+  "received_on": "2026-10-23",
+  "prepared_utc": "2026-10-23T10:32:35.024155+00:00",
+  "source": "User-supplied Markdown conversation export attachment; explicit request to publish on GitHub",
+  "source_sha256": "1485734610e14eab85374230879e3d813978a7e5bab67f5dbbc988a53bb59564",
+  "source_bytes": 185077,
+  "published_file": "conversation-export-2026-10-23.md",
+  "published_sha256": "49351c294379364585891b2fd74fde267f0ec1f9ebeb82a6db7f62dad90754ed",
+  "published_bytes": 20370,
+  "removed_top_level_technical_detail_blocks": 22,
+  "redacted_home_path_occurrences": 2,
+  "replaced_local_image_references": 3,
+  "native_command_independently_verified": false,
+  "content_endpoint": "Assistant confirmation of frontend push e3469cb, before this archive request",
+  "retained": "Public conversation text and original previous-messages folding; no reconstructed prompts or messages",
+  "excluded": "Technical tool detail blocks and their outputs; local image contents; home path identity",
+  "raw_attachment_published": false,
+  "secret_pattern_scan_counts": {
+    "openai_api_key": 0,
+    "github_token": 0,
+    "private_key": 0,
+    "internal_instruction_markers": 0
+  },
+  "scan_scope": "Pattern scan and review of retained text; not a guarantee that every kind of private information is detectable",
+  "complete_account_archive": false,
+  "coverage": "This supplied conversation only; previous supplied conversation and overlapping snapshot remain separate",
+  "related_task_attachments": [
+    {
+      "published_file": "prompts/final-repairs.md",
+      "source": "Actual user-supplied task attachment referenced by the exported conversation",
+      "source_sha256": "a8c23ac30f79b83cc903c8be589345a212f08ac6313277d5c1d4e233d96ea5f8",
+      "source_bytes": 7635,
+      "published_sha256": "60d77aef97614a01f7e995e31f48bd0d8534beeb233a0831664515c16d62fd16",
+      "published_bytes": 7524,
+      "changes": "Only CRLF to LF line-ending normalization, if applicable; prompt text not reconstructed"
+    },
+    {
+      "published_file": "prompts/frontend.md",
+      "source": "Actual user-supplied task attachment referenced by the exported conversation",
+      "source_sha256": "7dd66f68e0752573af6d00054184dd2629b5292216c600f89777f516773535d9",
+      "source_bytes": 10095,
+      "published_sha256": "52586ab104d2d63844700ff577b0915fecfc90dbf1bebe71a49764537719289d",
+      "published_bytes": 9893,
+      "changes": "Only CRLF to LF line-ending normalization, if applicable; prompt text not reconstructed"
+    }
+  ]
+}

@@ -100,7 +100,7 @@ Kontroly mají tři vrstvy: AI opravuje vlastní přepis; kód ověřuje struktu
 
 Konkrétní chyby AI: záměny jmenovců Lighthouse a hledání neověřených domén Nation1; přehlédnutí adresy Purple vedoucí k původní abstenci; odvozování mandátu Reflex z portfolia, následně snížené na partial; nesprávné SQLite placeholdery a nezavřená spojení na Windows; ručně přepsaný rozpočet, který neodpovídal výpočtu. Opravy jsou evidované v [WORKLOG](ai-log/WORKLOG.md). Nové opravy odstraňují pevné human_verified=False, oddělují rozhodnutí a metriky a připravily předem vybraný atributový audit. Uživatel následně dodal rozhodnutí a potvrdil kontrolora Ferstl a datum 22. 10. 2026; AI tyto štítky pouze zapsala.
 
-Uživatelem dodaný redigovaný Markdown export a průběžný snapshot zůstávají doplňkovými historickými podklady s manifesty v [ai-log](ai-log/README.md). Způsob nativního exportu nebyl nezávisle potvrzen; obsah není rekonstruován ani doplňován o tuto novou etapu.
+Oba uživatelem dodané redigované Markdown exporty, skutečná zadání finálních oprav a frontendu a průběžný snapshot jsou v [archivu konverzací s AI](ai-log/README.md). Nový export z 23. 10. 2026 zachycuje také finální opravy, atributový audit a frontend až po push e3469cb. Manifesty uvádějí původ, kontrolní součty a redakce. Technické bloky nástrojů a lokální obrazové přílohy jsou vynechané; domovské cesty anonymizované. Způsob nativního exportu nebyl nezávisle potvrzen, obsah není rekonstruovaný.
 
 ## Ověření a zbývající práce
 

@@ -1,0 +1,4 @@
+# Keep the published archive hashes reproducible on Windows and Unix.
+ai-log/conversation-export-2026-10-23.md text eol=lf
+ai-log/export-manifest-2026-10-23.json text eol=lf
+ai-log/prompts/*.md text eol=lf
