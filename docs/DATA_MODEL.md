@@ -58,3 +58,7 @@ capital_reference nově rozlišuje také committed_capital, available_for_new_in
 Pole conflicts prezentuje již zaznamenané rozpory: různé nenulové hodnoty téhož pole, jejichž kurátorská poznámka výslovně uvádí rozpor. Obsahuje původní ID tvrzení. Historické alternativy samotné nevytvářejí současný rozpor. Pole nemění tvrzení, klasifikaci ani metriky.
 
 JSON nemá proměnlivý čas sestavení ani data kontroly odvozená z návštěvy UI, takže opakovaný offline build je deterministický. Do site se kopíruje souhrnné CSV a metriky. Frontend data needituje ani nezapisuje lidské kontroly. Null zůstává null a zobrazuje se jako Nezjištěno.
+
+## Navigační vrstva webu
+
+Datový balíček obsahuje odvozené `navigation.sectors` a `navigation.stage`: ID, název, `claim_ids` a `source_statuses`. Pravidla jsou v [NAVIGATION.md](NAVIGATION.md). Původní tvrzení ani 18 atributových hodnocení se tím nemění.

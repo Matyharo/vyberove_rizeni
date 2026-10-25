@@ -1,4 +1,4 @@
-import {STATUS, CAPITAL, BASIS, safeURL, dateText, valueText, money, firstClaim, claimsFor, available, filterTokens, filterInvestors, limitations} from './model.js';
+import {STATUS, CAPITAL, BASIS, safeURL, dateText, valueText, money, firstClaim, claimsFor, filterOptions, readFilterState, filterInvestors, limitations} from './model.js';
 
 const $ = id => document.getElementById(id);
 const form = $('filters'), dialog = $('detail');
@@ -17,8 +17,7 @@ function externalLink(label, url) {
   a.append(el('span', ' ↗')); return a;
 }
 function stateFromURL() {
-  const p = new URLSearchParams(location.search);
-  return {q: p.get('q') || '', sector: p.get('sector') || '', stage: p.get('stage') || '', availability: p.get('availability') || '', sort: p.get('sort') === 'desc' ? 'desc' : 'asc'};
+  return readFilterState(location.search, published);
 }
 function writeFilters() {
   const url = new URL(location.href);
@@ -32,6 +31,12 @@ function writeFilters() {
 function restoreFilters() {
   const state = stateFromURL();
   for (const key of ['q', 'sector', 'stage', 'availability']) form.elements.namedItem(key).value = state[key];
+  // Canonical IDs make shared URLs and the selected form values identical.
+  const url = new URL(location.href);
+  for (const key of ['sector', 'stage', 'availability']) {
+    if (state[key]) url.searchParams.set(key, state[key]); else url.searchParams.delete(key);
+  }
+  history.replaceState(history.state, '', url);
 }
 function resetFilters() {
   form.reset();
@@ -45,10 +50,8 @@ function initFilters() {
   for (const [id, field] of [['sector', 'sectors'], ['stage', 'stage']]) {
     const select = $(id);
     select.replaceChildren(select.options[0]);
-    const values = [...new Set(published.flatMap(inv => filterTokens(inv, field)))].sort((a, b) => a.localeCompare(b, 'cs'));
-    for (const value of values) {
-      const partial = published.some(inv => claimsFor(inv, field).some(c => c.value !== null && String(c.value).split(';').map(s => s.trim()).includes(value) && c.status !== 'supported'));
-      option(select, value, value + (partial ? ' (omezená opora)' : ''));
+    for (const category of filterOptions(published, field)) {
+      option(select, category.id, category.label + (category.limited ? ' (omezená opora)' : ''));
     }
   }
   const select = $('availability'); select.replaceChildren(select.options[0]);
@@ -206,6 +209,7 @@ function methodology() {
     'Publikujeme pouze shodu aktuálního rozhodnutí AI a uživatelem dodané referenční klasifikace: přímý VC investor s doloženou českou přítomností a konkrétní pojmenovanou investicí. Nevyřešené identity nejsou v seznamu.',
     'Jednotkou je investiční organizace nebo značka. Jednotlivé fondy jsou vedeny samostatně. Česká kontaktní adresa není dokladem českého domicilu fondu ani fyzické návštěvy kanceláře.',
     'Odkaz dokládá původ tvrzení, nikoli automaticky jeho pravdivost. Kontrola stránky, publikace a platnost částky jsou různá data. Zdroje nejsou kompletně archivované a mohou se změnit.',
+    'Kategorie filtrů jsou navigační pomůcka normalizovaná z původních tvrzení, nikoli nové nezávisle ověřené údaje. Sektorově otevřený mandát neznamená automatické zařazení do všech sektorů. Raná fáze bez přesného rozsahu se nerozepisuje na jednotlivá kola.',
     'Úplnost vyjadřuje podíl publikovaných investorů s podporovaným nenulovým údajem. Neříká, že je údaj pravdivý. Částečné, historické či rozporné tickety dostupnost bez rozporu nezvyšují.',
     'Pilot je malý záměrný kontrastní vzorek českých VC organizací. Výsledky nelze přenést na celý světový trh, jiné typy investorů nebo soukromé osoby.',
     'Částky se zobrazují v původních měnách bez přepočtů. AUM není disponibilní kapitál. Velikosti historických fondů se nesčítají do současného kapitálu.',

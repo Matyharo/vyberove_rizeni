@@ -525,14 +525,13 @@ def report(root, pilot, candidates, metrics, predictions, reviews):
         start, end = '<!-- METRICS:START -->', '<!-- METRICS:END -->'
         if start in text and end in text:
             block = (f"{start}\n"
-                     f"Publikováno **{len(published)} investorů** z {metrics['classification']['candidates']} zmrazených kandidátů; lidská klasifikace {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. "
-                     f"Původní AI: {metrics['classification']['initial_decisions']}. Aktuální AI: {dict(Counter(d['prediction'] for d in pilot['decisions']))}. Lidská reference: {dict(Counter(r['label'] for r in reviews))}. "
-                     f"{len(pilot['sources'])} zdrojů, {len(pilot['claims'])} tvrzení, {len(pilot['transactions'])} investičních důkazů.\n\n"
-                     f"**Precision původních pozitivních klasifikací: {p['numerator']}/{p['denominator']} na záměrně vybraném vzorku.** "
-                     f"Recall v kontrolovaném seznamu: {recall['numerator']}/{recall['denominator']}; původní abstence Purple snižuje recall. "
-                     f"To neznamená 100% správnost celé databáze ani odhad přesnosti světového trhu. "
-                     + attribute_result + "\n\n"
-                     "Úplnost supported atributů publikovaných investorů: " + '; '.join(f"{k} {v['numerator']}/{v['denominator']}" for k, v in metrics['coverage'].items()) + f". Úplnost není přesnost.\n{end}")
+                     f"**{len(published)} publikovaných investorů** z {metrics['classification']['candidates']} kandidátů; "
+                     f"klasifikační kontrola {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. "
+                     f"{len(pilot['sources'])} zdrojů, {len(pilot['claims'])} tvrzení a {len(pilot['transactions'])} investičních důkazů.\n\n"
+                     f"Obvyklá investice doložena bez rozporu u {metrics['coverage']['ticket']['numerator']}/{metrics['coverage']['ticket']['denominator']} investorů; "
+                     f"celkový spravovaný kapitál u {metrics['coverage']['total_investment_capital']['numerator']}/{metrics['coverage']['total_investment_capital']['denominator']}. Jde o úplnost, nikoli přesnost.\n\n"
+                     f"Precision původních pozitivních klasifikací: **{p['numerator']}/{p['denominator']} na záměrném vzorku**. "
+                     f"Recall pouze v kontrolovaném seznamu: **{recall['numerator']}/{recall['denominator']}**. Výsledek nepotvrzuje správnost celé databáze ani světového trhu.\n{end}")
             text = text[:text.index(start)] + block + text[text.index(end)+len(end):]
             readme.write_text(text, encoding='utf-8')
     packet = ["# Podklady pro ruční kontrolu", "", f"Klasifikace zkontrolována: {metrics['classification']['human_reviewed']}/{metrics['classification']['candidates']}. Zdroje níže zůstávají podkladem pro opakovanou kontrolu. Výsledky atributového auditu a nejisté případy: [CLAIM_AUDIT.md](CLAIM_AUDIT.md).", "",

@@ -1,0 +1,59 @@
+{
+  "verified_on": "2026-10-25",
+  "public_url": "https://matyharo.github.io/vyberove_rizeni/",
+  "http_status": 200,
+  "data_http_status": 200,
+  "deployed_commit": "e3469cbe969b4a5b99ec65561ecd432c6e30f01d",
+  "workflow_name": "Build and publish investor browser",
+  "workflow_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199",
+  "workflow_conclusion": "success",
+  "jobs": [
+    {
+      "name": "build",
+      "url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366455982",
+      "conclusion": "success"
+    },
+    {
+      "name": "deploy",
+      "url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366554855",
+      "conclusion": "success"
+    }
+  ],
+  "deployment_id": 7275923210,
+  "deployment_statuses": [
+    {
+      "log_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366554855",
+      "environment_url": "https://matyharo.github.io/vyberove_rizeni/",
+      "state": "success",
+      "created_at": "2026-10-23T10:28:24Z"
+    },
+    {
+      "log_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366554855",
+      "environment_url": "",
+      "state": "in_progress",
+      "created_at": "2026-10-23T10:28:15Z"
+    },
+    {
+      "log_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366554855",
+      "environment_url": "",
+      "state": "queued",
+      "created_at": "2026-10-23T10:28:13Z"
+    },
+    {
+      "log_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366554855",
+      "environment_url": "",
+      "state": "queued",
+      "created_at": "2026-10-23T10:28:13Z"
+    },
+    {
+      "log_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199/job/120366554855",
+      "environment_url": "",
+      "state": "waiting",
+      "created_at": "2026-10-23T10:28:12Z"
+    }
+  ],
+  "checked_ci_commit": "680276e845b48aea839370b270da470284c19002",
+  "ci_conclusion": "success",
+  "ci_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39940157324",
+  "new_local_changes_published": false
+}

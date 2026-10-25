@@ -30,6 +30,10 @@ class StaticWebTests(unittest.TestCase):
         payload = self.payload()
         self.assertEqual({i['id'] for i in payload['investors']}, publication_ids(pilot, reviews))
         self.assertEqual(payload['metrics'], read_json(self.root / 'exports/metrics.json'))
+        jt = next(i for i in payload['investors'] if i['id'] == 'jt')
+        self.assertEqual({c['id'] for c in jt['navigation']['stage']}, {'pre-seed', 'seed', 'series-a'})
+        inibio = next(i for i in payload['investors'] if i['id'] == 'inibio')
+        self.assertEqual({c['id'] for c in inibio['navigation']['stage']}, {'early-stage'})
         purple = next(i for i in payload['investors'] if i['id'] == 'purple')
         tickets = [c for c in purple['claims'] if c['field'] == 'ticket']
         self.assertEqual({c['value']['max'] for c in tickets}, {400000, 500000})

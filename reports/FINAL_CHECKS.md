@@ -1,3 +1,17 @@
+# Aktuální ověření - 25. 10. 2026
+
+Výchozí commit 680276e845b48aea839370b270da470284c19002. Nové lokální úpravy nejsou commitnuté, pushnuté ani nasazené.
+
+Prošly validate, databázový audit (7 invariantů), všech 34 Python testů, build, check-release a všech 5 JavaScript testů. Opakovaný build vytvořil byte-identické exporty, webový balíček a README. Datové vstupy a review soubory odpovídají HEAD po normalizaci konců řádků. Všech 18 atributových hodnocení zůstalo na výslovný pokyn uživatele ve stejném zařazení, se stejnými metadaty a metrikami (12 supported, 6 uncertain).
+
+Chromium přes Playwright ověřil normalizované nabídky, rozvinutí explicitního rozpětí do Seed, nezahrnutí obecného early-stage do Seed, shodu formuláře a sdílené URL, převod původního názvu sektoru v URL a reset. Při šířkách 1536, 768 a 390 px nevzniká horizontální přetečení dokumentu. Bez runtime a console chyb. Browser plugin nebyl dostupný; použit lokální Playwright. Skript a screenshot zůstávají mimo repozitář v pracovních vizualizacích.
+
+Živý web i data odpověděly HTTP 200. Úspěšné [Pages nasazení](https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199) patří commitu e3469cbe969b4a5b99ec65561ecd432c6e30f01d; úspěšné [CI](https://github.com/Matyharo/vyberove_rizeni/actions/runs/39940157324) patří výchozímu 680276e. Tyto běhy nepotvrzují nové lokální změny. Přesné důkazy: [PUBLICATION_STATUS.json](PUBLICATION_STATUS.json).
+
+---
+
+# Historické ověření
+
 # Aktuální ověření po zápisu atributového auditu
 
 Provedeno 22. 10. 2026 nad lokálním stromem vycházejícím z commitu fdae4afd30b5c29f24c0c84ce7a1f9e1c683f318. Předchozí finální opravy již byly pushnuty v tomto výchozím commitu. Nové změny obsahující atributové štítky zatím nebyly commitnuty ani pushnuty.

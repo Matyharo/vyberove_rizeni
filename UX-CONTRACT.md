@@ -12,7 +12,7 @@ Jeden read-only tok: přehled -> investor -> původ údaje. Neexistují žádné
 | Data a publikace | investor_db/core.py -> investor_db/web.py | publication_ids | Pouze publikované organizace | Python integrační testy |
 | Stav a navigace | URL search + hash, app.js | URL | Sdílené filtry a #investor=id | Zpět, direct link, zachování filtrů |
 
-Hledání je lokální, bez diakritiky. Sektor a fáze jsou doslovné části zdrojových tvrzení oddělené středníkem. Částečná opora je výslovně uvedena, nevzniká nová přesná klasifikace. Částky nelze řadit. Všechny exporty vždy obsahují celý publikovaný pilot bez ohledu na filtry.
+Hledání je lokální, bez diakritiky. Sektor a fáze používají explicitně normalizované navigační kategorie se stabilními ID, shodnými pro formulář a URL. Obecné early-stage neimplikuje konkrétní kola. Částečná opora je výslovně uvedena, nevzniká nová přesná klasifikace. Částky nelze řadit. Všechny exporty vždy obsahují celý publikovaný pilot bez ohledu na filtry.
 
 Načítání má klidný indikátor, chyby vlastní text a retry, prázdný výsledek reset. Načítání se přeruší po 15 sekundách; není nekonečný spinner. Do načtení jsou filtry inertní. URL s nepublikovaným či neznámým ID ukáže vysvětlení, nikoli neověřeného investora.
 

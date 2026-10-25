@@ -9,6 +9,7 @@ import json
 import re
 import shutil
 from pathlib import Path
+from .navigation import navigation_categories
 
 
 def build_site(root, pilot, candidates, predictions, reviews, claim_reviews, metrics, published):
@@ -62,6 +63,7 @@ def build_site(root, pilot, candidates, predictions, reviews, claim_reviews, met
         investors.append(dict(inv, published=True,
                               **verification_flags(pilot, iid, reviews, claim_reviews),
                               claims=claims, transactions=transactions,
+                              navigation={field: navigation_categories(claims, field) for field in ('sectors', 'stage')},
                               funds=[f for f in pilot['funds'] if f['investor_id'] == iid],
                               conflicts=conflicts,
                               classification=dict(initial_ai=initial[iid]['prediction'],

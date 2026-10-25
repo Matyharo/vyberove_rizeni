@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-22",
-  "checked_base_commit": "fdae4afd30b5c29f24c0c84ce7a1f9e1c683f318",
+  "date": "2026-10-25",
+  "checked_base_commit": "680276e845b48aea839370b270da470284c19002",
   "commands": [
     {
       "command": "python -m investor_db validate",
@@ -23,7 +23,7 @@
       "exit_code": 0
     }
   ],
-  "test_count": 28,
+  "test_count": 34,
   "rebuild_identical": true,
   "frozen_inputs_unchanged": true,
   "candidate_reviews_unchanged": true,
@@ -41,7 +41,7 @@
   },
   "audit_sample_size": 18,
   "audit_sample_investors": 11,
-  "ci_status": "not_checked_for_current_base",
+  "ci_status": "success_for_base_only",
   "historical_ci_evidence": {
     "checked_commit": "9fe06728dafb2ec008cff790b2fa1f02d7b94b39",
     "evidence": {
@@ -51,5 +51,23 @@
       "web_actions_page": "fetch failed"
     }
   },
-  "local_changes_pushed": false
+  "local_changes_pushed": false,
+  "javascript_test_count": 5,
+  "attribute_reviews_reassigned": false,
+  "publication_evidence": "PUBLICATION_STATUS.json",
+  "browser_qa": {
+    "passed": true,
+    "browser": "Chromium via Playwright",
+    "routing_reason": "Browser plugin not available",
+    "checks": [
+      "normalized options",
+      "explicit Seed range",
+      "early-stage exclusion",
+      "shared URL equivalence",
+      "legacy label URL",
+      "reset",
+      "no document overflow at 1536/768/390",
+      "no runtime or console errors"
+    ]
+  }
 }

@@ -75,4 +75,4 @@ Ovládací prvky mají společný poloměr 6 px, datové řádky jsou pravoúhl�
 - Původ reference pojmenovat jako uživatelem dodanou kontrolu, kterou AI zapsala.
 - Nikdy nevytvořit společný ticket ze dvou rozporných rozsahů.
 - Historickou referenci ani cíl fundraisingu nevydávat za současné AUM.
-- Nezavádět neexistující taxonomii sektorů: filtry jsou doslovné části zdrojových tvrzení se zachovaným stavem.
+- Filtry používají explicitní navigační kategorie z Python pipeline se stopou na původní tvrzení a jejich stav; kategorie nejsou nezávislé ověření mandátu.

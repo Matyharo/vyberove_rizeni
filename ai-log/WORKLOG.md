@@ -1,4 +1,10 @@
-# Aktuální stav protokolu
+# Aktuální stav - 25. 10. 2026
+
+Doplněna explicitní navigační normalizace sektorů a fází, jednotný výklad URL a formuláře, kratší README a dokumentace. Uživatel upřesnil: „Nepřeřazuj těch 18 atributových hodnocení.“ Hodnocení, jejich zařazení, metadata a metriky proto zůstávají zachovány. Požadavek původního zadání na jejich přesun se neprovádí.
+
+Živý web a úspěšné Pages nasazení e3469cb byly ověřeny; CI pro 680276e je úspěšné. Nové lokální změny dosud nejsou publikované. Konkrétní důkazy jsou v reports/PUBLICATION_STATUS.json, lokální kontroly v reports/FINAL_CHECKS.md.
+
+# Historický stav protokolu
 
 23. 10. 2026: na nové podrobné zadání uživatele doplněn statický read-only frontend. Datová a lidská klasifikace zůstaly zachovány. Nové změny nebyly zveřejněny ani pushnuty. Podrobnosti této etapy jsou na konci protokolu.
 

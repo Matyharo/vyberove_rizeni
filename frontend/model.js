@@ -69,7 +69,26 @@ export function available(investor, field) {
   return Boolean(c && c.value !== null && c.status === 'supported' && !investor.conflicts.some(r => r.field === field));
 }
 export function filterTokens(investor, field) {
-  return claimsFor(investor, field).filter(c => c.value !== null).flatMap(c => String(c.value).split(';').map(v => v.trim()).filter(Boolean));
+  return (investor.navigation?.[field] || []).map(category => category.id);
+}
+export function filterOptions(investors, field) {
+  const categories = new Map();
+  for (const investor of investors) for (const category of investor.navigation?.[field] || []) {
+    const existing = categories.get(category.id);
+    categories.set(category.id, {id: category.id, label: category.label,
+      limited: Boolean(existing?.limited || category.source_statuses.some(status => status !== 'supported'))});
+  }
+  return [...categories.values()].sort((a, b) => a.label.localeCompare(b.label, 'cs'));
+}
+export function readFilterState(search, investors) {
+  const p = new URLSearchParams(search);
+  function category(param, field) {
+    const value = normalize(p.get(param) || '');
+    return filterOptions(investors, field).find(c => normalize(c.id) === value || normalize(c.label) === value)?.id || '';
+  }
+  return {q: p.get('q') || '', sector: category('sector', 'sectors'), stage: category('stage', 'stage'),
+    availability: ['ticket', 'capital', 'both', 'incomplete'].includes(p.get('availability')) ? p.get('availability') : '',
+    sort: p.get('sort') === 'desc' ? 'desc' : 'asc'};
 }
 export function filterInvestors(investors, state) {
   return investors.filter(inv => {
