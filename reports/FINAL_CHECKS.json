@@ -45,7 +45,7 @@
   },
   "audit_sample_size": 18,
   "audit_sample_investors": 11,
-  "ci_status": "success_for_base_only",
+  "ci_status": "success_for_release_commit",
   "historical_ci_evidence": {
     "checked_commit": "9fe06728dafb2ec008cff790b2fa1f02d7b94b39",
     "evidence": {
@@ -55,7 +55,7 @@
       "web_actions_page": "fetch failed"
     }
   },
-  "local_changes_pushed": false,
+  "local_changes_pushed": true,
   "javascript_test_count": 5,
   "attribute_reviews_reassigned": false,
   "publication_evidence": "PUBLICATION_STATUS.json",
@@ -75,5 +75,6 @@
     ],
     "verified_on": "2026-10-25",
     "repeated_in_this_round": false
-  }
+  },
+  "checked_release_commit": "4487fb744a0949082e9e236987a99a0acb3392d6"
 }

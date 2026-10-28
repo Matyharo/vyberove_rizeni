@@ -10,7 +10,7 @@ Validate, databázový audit, 34 Python testů, 5 JavaScript testů, build a che
 
 Validace při každém pushi i PR zahrnuje Python a JavaScript. Pages po úspěšném buildu a kontrolách automaticky nasazuje push do `main`; ruční spuštění zůstává možné. PR nic nepublikuje.
 
-Poslední doložené nasazení zatím patří commitu `e3469cb`. Nasazení připravovaných změn se ověřuje samostatně; dokončení se zapíše do [PUBLICATION_STATUS.json](PUBLICATION_STATUS.json) a `release.json`.
+Aplikační verze `4487fb744a0949082e9e236987a99a0acb3392d6` má úspěšné [CI](https://github.com/Matyharo/vyberove_rizeni/actions/runs/40654005018) i [Pages nasazení](https://github.com/Matyharo/vyberove_rizeni/actions/runs/40654005133). Web a všech sedm kontrolovaných souborů odpověděly HTTP 200. HTML, JavaScript, CSS, data a exporty odpovídají lokálnímu buildu po normalizaci konců řádků Windows/Linux; čtyři soubory jsou byte-identické. [Přesný stav](PUBLICATION_STATUS.json), [porovnání souborů](LIVE_PACKAGE_CHECK.json). Následující dokumentační commit pouze zapisuje tyto výsledky; aplikační zdroje a data nemění.
 
 ## Omezení a historie
 

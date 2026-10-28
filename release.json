@@ -6,10 +6,10 @@
   "attribute_review": "first_round_completed_18_claims_6_uncertain",
   "conversation_export_required": false,
   "ci": {
-    "checked_commit": "ee46be42985757ffe9a6eb360e5070e899ef00d6",
+    "checked_commit": "4487fb744a0949082e9e236987a99a0acb3392d6",
     "status": "success",
-    "url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/40191344487",
-    "local_changes_verified_by_remote_ci": false
+    "url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/40654005018",
+    "local_changes_verified_by_remote_ci": true
   },
   "attribute_reviewer": "Ferstl",
   "attribute_reviewed_on": "2026-10-22",
@@ -19,9 +19,9 @@
     "reason": "Connector returned no PR workflow runs and no combined statuses; shell DNS and web Actions access failed. Neither endpoint proves Actions success. This evidence concerns the historical checked_commit; it does not verify CI for later commits."
   },
   "publication": {
-    "deployed_commit": "e3469cbe969b4a5b99ec65561ecd432c6e30f01d",
+    "deployed_commit": "4487fb744a0949082e9e236987a99a0acb3392d6",
     "url": "https://matyharo.github.io/vyberove_rizeni/",
-    "workflow_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39939284199",
-    "new_local_changes_published": false
+    "workflow_url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/40654005133",
+    "new_local_changes_published": true
   }
 }

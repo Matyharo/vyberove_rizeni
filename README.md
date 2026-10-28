@@ -4,7 +4,7 @@ Doložený pilot investorů s českou přítomností pro praktickou úlohu Junio
 
 **[Otevřít živou aplikaci](https://matyharo.github.io/vyberove_rizeni/)**
 
-Filtry jsou commitnuté a pushnuté (`ee46be4`); jejich Python CI prošlo. Stav nasazení a aktuálních kontrol je samostatně uveden v [kontrolním přehledu](reports/FINAL_CHECKS.md).
+Aktuální aplikace (`4487fb7`) je nasazená; Python i JavaScript CI prošlo a veřejné soubory odpovídají lokálnímu buildu. [Stav publikace a kontrol](reports/FINAL_CHECKS.md).
 
 <!-- METRICS:START -->
 **11 publikovaných investorů** z 20 kandidátů; klasifikační kontrola 20/20. 47 zdrojů, 121 tvrzení a 13 investičních důkazů.

@@ -115,3 +115,5 @@ Uživatel dodal Markdown export „Dolaď databázi investorů“ a výslovně p
 ## Dotažení před odevzdáním — 28. 10. 2026
 
 Uživatel schválil všechny čtyři připomínky z kontroly projektu. Opraven popis necommitnutých filtrů, historické kontroly přesunuty do archivu, JavaScript testy přidány do push CI. Pages po úspěšných kontrolách nasazuje push do main; ruční spuštění zůstává. Data ani uživatelská hodnocení se nemění. Nasazení se dokládá konkrétním během a commitem.
+
+Commit 4487fb7 prošel vzdáleným CI i Pages nasazením. Veřejný balíček porovnán s lokálním: sedm HTTP 200, obsah shodný po normalizaci konců řádků Windows/Linux. Přesné běhy a kontrolní součty jsou v reports/PUBLICATION_STATUS.json a LIVE_PACKAGE_CHECK.json. Následný dokumentační commit zapisuje výsledky.

@@ -1,0 +1,56 @@
+{
+  "verified_on": "2026-10-28",
+  "checked_commit": "4487fb744a0949082e9e236987a99a0acb3392d6",
+  "files": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "matches_local_build": false,
+      "sha256": "899420df0e5e790b7cee4f9d66057eddcf5de6f1e26596d1917b7ab186e0e843",
+      "matches_local_text": true
+    },
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "matches_local_build": true,
+      "sha256": "f253ff6fc288f6dcf060fb83d292e6a20b5ce6f4476088222f746d0d0edc4e02",
+      "matches_local_text": true
+    },
+    {
+      "path": "model.js",
+      "http_status": 200,
+      "matches_local_build": true,
+      "sha256": "d0b763b7438767e40600f7b78bca680ec5035eab24497dd2ed4b548fd02389c0",
+      "matches_local_text": true
+    },
+    {
+      "path": "style.css",
+      "http_status": 200,
+      "matches_local_build": true,
+      "sha256": "cdb9d9c8a083373940b6c18ba6631bf0be6aed0873ec9d4b420b8154352fe4d6",
+      "matches_local_text": true
+    },
+    {
+      "path": "data.json",
+      "http_status": 200,
+      "matches_local_build": false,
+      "sha256": "1cd82935eb3908a1ec2adcd665397ccfddcf95860bd1075848fb7c115bf97c5c",
+      "matches_local_text": true
+    },
+    {
+      "path": "exports/investor_summary.csv",
+      "http_status": 200,
+      "matches_local_build": true,
+      "sha256": "8779078d2ea0e0597fdf4b5cdd95e53cf390fe42ad1dc663620aa31580212a0e",
+      "matches_local_text": true
+    },
+    {
+      "path": "exports/metrics.json",
+      "http_status": 200,
+      "matches_local_build": false,
+      "sha256": "97c6a5d96e96e579e4fa519db3a33d48f946901ca1e8fee3c4ff4cf167865c86",
+      "matches_local_text": true
+    }
+  ],
+  "comparison": "Exact bytes where possible; UTF-8 text normalized to LF across Windows and Linux builds."
+}
