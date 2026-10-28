@@ -6,9 +6,9 @@
   "attribute_review": "first_round_completed_18_claims_6_uncertain",
   "conversation_export_required": false,
   "ci": {
-    "checked_commit": "680276e845b48aea839370b270da470284c19002",
+    "checked_commit": "ee46be42985757ffe9a6eb360e5070e899ef00d6",
     "status": "success",
-    "url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/39940157324",
+    "url": "https://github.com/Matyharo/vyberove_rizeni/actions/runs/40191344487",
     "local_changes_verified_by_remote_ci": false
   },
   "attribute_reviewer": "Ferstl",

@@ -111,3 +111,7 @@ První pokus vestavěného prohlížeče skončil timeoutem kvůli sandboxu lok�
 ## Archivace další dodané konverzace - 23. 10. 2026
 
 Uživatel dodal Markdown export „Dolaď databázi investorů“ a výslovně požádal o přidání na GitHub. AI zachovala starší exporty a připravila samostatný conversation-export-2026-10-23.md, který končí potvrzením pushe e3469cb. Vynecháno 22 technických bloků nástrojů včetně jejich výstupů, anonymizovány dvě zbývající domovské cesty a nahrazeny tři lokální obrazové odkazy textovými poznámkami. Žádné zprávy ani prompty nebyly rekonstruovány. Skutečné texty obou dříve dodaných zadání byly přidány samostatně do ai-log/prompts; původní export na ně obsahuje jen lokální odkazy. Manifest obsahuje hashe původních příloh i zveřejněných kopií a rozsah redakcí. Kontrola vzorů API klíčů, GitHub tokenů, soukromých klíčů a interních instrukčních značek v publikovaném textu nic nenalezla. Archiv není vydáván za kompletní historii všech chatů účtu. Tento záznam ani současná žádost nejsou zpětně připsány do dodaného transcriptu. Publikaci commitem a pushem uživatel autorizoval v aktuálním požadavku.
+
+## Dotažení před odevzdáním — 28. 10. 2026
+
+Uživatel schválil všechny čtyři připomínky z kontroly projektu. Opraven popis necommitnutých filtrů, historické kontroly přesunuty do archivu, JavaScript testy přidány do push CI. Pages po úspěšných kontrolách nasazuje push do main; ruční spuštění zůstává. Data ani uživatelská hodnocení se nemění. Nasazení se dokládá konkrétním během a commitem.

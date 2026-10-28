@@ -1,6 +1,8 @@
 name: Build and publish investor browser
 
 on:
+  push:
+    branches: [main]
   pull_request:
   workflow_dispatch:
     inputs:
@@ -11,6 +13,10 @@ on:
 
 permissions:
   contents: read
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -28,11 +34,12 @@ jobs:
       - run: python research/audit_database.py
       - run: python -m unittest discover -s tests -v
       - run: node --test frontend/tests/*.test.mjs
+      - run: python -m investor_db check-release
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
   deploy:
-    if: github.event_name == 'workflow_dispatch' && inputs.deploy && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.deploy))
     needs: build
     runs-on: ubuntu-latest
     permissions:

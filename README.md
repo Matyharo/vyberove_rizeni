@@ -4,7 +4,7 @@ Doložený pilot investorů s českou přítomností pro praktickou úlohu Junio
 
 **[Otevřít živou aplikaci](https://matyharo.github.io/vyberove_rizeni/)**
 
-Živý web byl ověřen jako dostupný. Nasazená verze vychází z commitu `e3469cb`; následující cílené úpravy filtrů jsou zatím lokální. [Přesný stav publikace a kontrol](reports/FINAL_CHECKS.md).
+Filtry jsou commitnuté a pushnuté (`ee46be4`); jejich Python CI prošlo. Stav nasazení a aktuálních kontrol je samostatně uveden v [kontrolním přehledu](reports/FINAL_CHECKS.md).
 
 <!-- METRICS:START -->
 **11 publikovaných investorů** z 20 kandidátů; klasifikační kontrola 20/20. 47 zdrojů, 121 tvrzení a 13 investičních důkazů.
@@ -55,4 +55,4 @@ python -m investor_db build
 python -m investor_db check-release
 ```
 
-Node.js slouží pouze k vývojovým testům; aplikace ani Python build jej nepotřebují. Build nepřepisuje review soubory ani zmrazené predikce. CSV a JSON ke stažení obsahují celý publikovaný pilot bez ohledu na aktivní filtry. Publikace nových změn vyžaduje samostatný push a ruční spuštění Pages podle [provozního návodu](docs/WEB.md).
+Node.js slouží pouze k vývojovým testům; aplikace ani Python build jej nepotřebují. Build nepřepisuje review soubory ani zmrazené predikce. CSV a JSON ke stažení obsahují celý publikovaný pilot bez ohledu na aktivní filtry. Push do `main` po úspěšných kontrolách automaticky publikuje web; ruční spuštění popisuje [provozního návodu](docs/WEB.md).

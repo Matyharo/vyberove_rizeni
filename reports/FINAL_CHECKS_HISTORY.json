@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-25",
+  "checked_base_commit": "680276e845b48aea839370b270da470284c19002",
+  "commands": [
+    {
+      "command": "python -m investor_db validate",
+      "exit_code": 0
+    },
+    {
+      "command": "python research/audit_database.py",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m unittest discover -s tests -v",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m investor_db build",
+      "exit_code": 0
+    },
+    {
+      "command": "python -m investor_db check-release",
+      "exit_code": 0
+    }
+  ],
+  "test_count": 34,
+  "rebuild_identical": true,
+  "frozen_inputs_unchanged": true,
+  "candidate_reviews_unchanged": true,
+  "pilot_data_unchanged": true,
+  "attribute_labels_filled": 18,
+  "attribute_review": {
+    "human_reviewed": 18,
+    "total": 110,
+    "uncertain": 6,
+    "incorrect": 0,
+    "missing_value_reviews": 0,
+    "correct": 12,
+    "resolved": 12,
+    "accuracy": 1.0
+  },
+  "audit_sample_size": 18,
+  "audit_sample_investors": 11,
+  "ci_status": "success_for_base_only",
+  "historical_ci_evidence": {
+    "checked_commit": "9fe06728dafb2ec008cff790b2fa1f02d7b94b39",
+    "evidence": {
+      "github_connector_pr_workflow_runs": [],
+      "github_connector_combined_statuses": [],
+      "shell_github_api": "DNS failure",
+      "web_actions_page": "fetch failed"
+    }
+  },
+  "local_changes_pushed": false,
+  "javascript_test_count": 5,
+  "attribute_reviews_reassigned": false,
+  "publication_evidence": "PUBLICATION_STATUS.json",
+  "browser_qa": {
+    "passed": true,
+    "browser": "Chromium via Playwright",
+    "routing_reason": "Browser plugin not available",
+    "checks": [
+      "normalized options",
+      "explicit Seed range",
+      "early-stage exclusion",
+      "shared URL equivalence",
+      "legacy label URL",
+      "reset",
+      "no document overflow at 1536/768/390",
+      "no runtime or console errors"
+    ]
+  }
+}

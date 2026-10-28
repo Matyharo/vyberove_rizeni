@@ -13,16 +13,11 @@ Balíček zachovává původní stavy tvrzení, peněžní významy, obě rozpě
 
 ### GitHub Pages
 
-Workflow `.github/workflows/pages.yml` sestaví a otestuje web na pull requestu nebo při ručním spuštění. Původní workflow validace zůstává zachovaný. Veřejné nasazení se spouští pouze ručně a standardně je vypnuté; samotný push do main nic nenasadí.
+Workflow `validate.yml` kontroluje při pushi i PR Python a JavaScript (Node.js 22). Workflow `pages.yml` na PR sestaví a otestuje balíček bez publikace. Push do `main` po úspěšné validaci, buildu, auditu, Python/JavaScript testech a check-release automaticky nasadí GitHub Pages. Nasazení stejné větve se řadí do fronty.
 
-Po schválení zveřejnění:
+Ruční nasazení: **Actions -> Build and publish investor browser -> Run workflow**, větev `main`, zaškrtnout **Publish the built site to GitHub Pages**. Bez zaškrtnutí proběhne jen build. Pages používá zdroj GitHub Actions; případné schválení prostředí závisí na nastavení repozitáře.
 
-1. Commitnout a pushnout připravené změny do repozitáře.
-2. V repozitáři otevřít **Settings -> Pages -> Build and deployment -> Source -> GitHub Actions**.
-3. Otevřít **Actions -> Build and publish investor browser -> Run workflow**, zvolit main a zaškrtnout **Publish the built site to GitHub Pages**.
-4. Po dokončení deploy použít URL z prostředí github-pages a ověřit načtení. Případné schválení prostředí závisí na nastavení repozitáře.
-
-Základní frontend byl zveřejněn z commitu e3469cb úspěšným Pages workflow. Živý web je https://matyharo.github.io/vyberove_rizeni/. Nové lokální úpravy filtrů dosud nebyly commitnuty, pushnuty ani nasazeny; přesné ověřené běhy jsou v [FINAL_CHECKS.md](../reports/FINAL_CHECKS.md). Samostatný balíček byl lokálně ověřen také pod `/vyberove_rizeni/`; vlastní soubory a downloady používají relativní cesty.
+[Živý web](https://matyharo.github.io/vyberove_rizeni/), [aktuální kontroly a stav publikace](../reports/FINAL_CHECKS.md). Filtry jsou commitnuté v `ee46be4`; nasazení se dokládá samostatným během a commitem. Soubory a downloady používají relativní cesty; balíček byl historicky ověřen také pod `/vyberove_rizeni/`.
 
 ### Historické browser QA a opakování kontrol
 
@@ -35,7 +30,7 @@ node --test frontend/tests/*.test.mjs
 python -m investor_db check-release
 ```
 
-Node.js je potřeba jen pro čtyři vývojové modelové testy, nikoli pro Python build nebo používání webu. Není potřeba npm install. Python integrační testy porovnávají web s publikací pipeline, zachování referencí, rozporů, peněžních hodnot a determinismus sestavení.
+Node.js je potřeba jen pro pět vývojových modelových testů, nikoli pro Python build nebo používání webu. Není potřeba npm install. Python integrační testy porovnávají web s publikací pipeline, zachování referencí, rozporů, peněžních hodnot a determinismus sestavení.
 
 Browser QA 23. 10. 2026: Chromium při 1536x1024, 768x900 a 390x844. Ověřena shoda s pipeline, hledání včetně diakritiky, kombinované filtry/reset/prázdný stav, řazení, obě hodnoty Purple se zdroji, historické a chybějící hodnoty, detail/Escape/focus trap/návrat focusu/Zpět/přímé URL, tři skutečně stažené exporty a cesta `/vyberove_rizeni/`. Ověřeno také pomalé načítání, chyba dat a retry, prázdný dataset, reduced-motion a inertní vykreslení škodlivých textů/URL. Běžný tok byl bez konzolových varování a runtime chyb. Vestavěný prohlížeč byl po odstranění blokace lokálního socketu rovněž otevřen; systematické simulace běžely v lokálním Playwright Chromium.
 
